@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.title {
+  font-size: 10vw;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.containerAbout {
+  font-size: 8vw;
+  padding-top: 3vh;
+}
+
+.links {
+  padding-top: 6vh;
+  font-size: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cursor {
+  display: flex;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
+.rectangle {
+  width: 2.8vw;
+  height: inherit;
+  background: white;
+  animation: blink 1.5s linear infinite;
+}
+
+@media (min-width: 600px) and (max-width: 961px) {
+  .title {
+    font-size: 9vw;
+  }
+
+  .containerAbout {
+    font-size: 5vw;
+    padding-top: 2vh;
+  }
+
+  .links {
+    padding-top: 3vh;
+    font-size: 15vw;
+  }
+}
+
+@media (min-width: 962px) {
+  .title {
+    font-size: 8vw;
+    font-family: "Jersey 10", sans-serif;
+  }
+
+  .containerAbout {
+    font-size: 3.5vw;
+    padding-top: 2vh;
+  }
+
+  .links {
+    padding-top: 2vh;
+    font-size: 10vw;
+  }
+}
