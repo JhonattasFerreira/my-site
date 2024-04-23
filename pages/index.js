@@ -1,19 +1,14 @@
-import Head from "next/head";
 import styles from "./index.module.css";
+
+import Link from "next/link";
 
 const Index = () => (
   <>
-    <Head>
-      <title>Jhonattas</title>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-
-    <header>
+    {/* <header>
       <nav className={styles.nav}>
-        <a href="#">Blog</a>
+        <Link href="blog">Blog</Link>
       </nav>
-    </header>
+    </header> */}
 
     <main className={styles.container}>
       <section className={styles.title}>
@@ -35,11 +30,16 @@ const Index = () => (
         <a
           target="_blank"
           href="https://www.linkedin.com/in/jhonattasferreira/"
+          aria-label="Go to my LinkedIn profile"
         >
           <i className="fa fa-linkedin-square"></i>
         </a>
 
-        <a target="_blank" href="https://github.com/JhonattasFerreira">
+        <a
+          target="_blank"
+          href="https://github.com/JhonattasFerreira"
+          aria-label="Go to my GitHub profile"
+        >
           <i className="fa fa-github-square"></i>
         </a>
       </section>

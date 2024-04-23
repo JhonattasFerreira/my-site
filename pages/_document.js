@@ -2,8 +2,13 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Hi, I'm a Software Engineer with a passion for programming."
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
