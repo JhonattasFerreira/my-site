@@ -32,23 +32,6 @@
   display: flex;
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 1vw;
-  padding-top: 1vh;
-  font-size: 5vw;
-}
-
-.nav a {
-  text-decoration: none;
-}
-
-.nav a:hover {
-  color: #9ec8b9;
-}
-
 @keyframes blink {
   50% {
     opacity: 0;
@@ -78,10 +61,6 @@
     padding-top: 3vh;
     font-size: 15vw;
   }
-
-  .nav {
-    font-size: 4vw;
-  }
 }
 
 @media (min-width: 962px) {
@@ -98,9 +77,5 @@
   .links {
     padding-top: 2vh;
     font-size: 10vw;
-  }
-
-  .nav {
-    font-size: 2.7vw;
   }
 }

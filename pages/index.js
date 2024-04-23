@@ -1,14 +1,12 @@
 import styles from "./index.module.css";
 
-import Link from "next/link";
+import NavItem from "../components/NavItem";
 
 const Index = () => (
   <>
-    {/* <header>
-      <nav className={styles.nav}>
-        <Link href="blog">Blog</Link>
-      </nav>
-    </header> */}
+    <header>
+      <NavItem item={{ name: "Blog", url: "blog" }} />
+    </header>
 
     <main className={styles.container}>
       <section className={styles.title}>

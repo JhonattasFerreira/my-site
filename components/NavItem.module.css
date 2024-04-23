@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  font-size: 5vw;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #9ec8b9;
+}
+
+@media (min-width: 600px) and (max-width: 961px) {
+  .nav {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 962px) {
+  .nav {
+    font-size: 2.7vw;
+  }
+}
