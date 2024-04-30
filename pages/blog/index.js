@@ -3,75 +3,11 @@ import styles from "./blog.module.css";
 import NavItem from "../../components/NavItem";
 import truncateText from "../../helpers/TruncateText";
 import { useLanguage } from "../../hooks/LanguageContext";
+import listBlogPostsData from "./../../data/BlogList.json";
 
 const Blog = () => {
   const { language, setLanguage } = useLanguage();
-
-  const listBlogPosts = [
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title": "Criando meu site pessoal",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-    {
-      "en-title": "Creating my personal site",
-      "pt-br-title":
-        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
-      date: "2024-04-23",
-      "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-    },
-  ];
+  let listBlogPosts = listBlogPostsData.listBlogPost;
 
   return (
     <div className={styles.container}>
@@ -110,7 +46,10 @@ const Blog = () => {
                 {truncateText(post[`${language}-title`])}
               </Link>
               <div className={styles.postDate}>
-                Posted on <time dateTime={post.date}>April 23, 2024</time>
+                {language === "en" ? "Posted on " : "Publicado em "}
+                <time dateTime={post.date}>
+                  {post[`${language}-date-text`]}
+                </time>
               </div>
             </div>
           ))}
