@@ -39,21 +39,16 @@
   padding-top: 3vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .blogPostItem {
-  padding-bottom: 2vh;
+  padding-bottom: 3vh;
 }
 
 .blogPostItem a {
   font-size: 5.5vw;
   text-decoration: none;
-  width: 70vw;
-  overflow: hidden;
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .blogPostItem a:hover {
@@ -66,7 +61,21 @@
 
 @media (min-width: 600px) and (max-width: 961px) {
   .titleName {
-    font-size: 6vw;
+    font-size: 7vw;
+  }
+
+  .listBlogPosts {
+    padding-top: 4vh;
+  }
+
+  .blogPostItem a {
+    font-size: 4vw;
+  }
+
+  .postDate {
+    font-size: 2.3vw;
+    padding-top: 1vh;
+    padding-left: 1vw;
   }
 
   .button {
@@ -80,8 +89,6 @@
   }
 
   .listBlogPosts {
-    align-items: flex-start;
-    margin: auto;
     padding-top: 8vh;
   }
 
@@ -90,7 +97,7 @@
   }
 
   .postDate {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     padding-top: 0.5vh;
     padding-left: 0.5vw;
   }

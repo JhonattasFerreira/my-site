@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/NavItem";
 import { useState } from "react";
+import truncateText from "../../helpers/truncateText";
 
 const Blog = () => {
   const [language, setLanguage] = useState("en");
@@ -105,7 +106,7 @@ const Blog = () => {
           {listBlogPosts.map((post, index) => (
             <div key={`post-${index}`} className={styles.blogPostItem}>
               <Link href={post[`${language}-url`]}>
-                {post[`${language}-title`]}
+                {truncateText(post[`${language}-title`])}
               </Link>
               <div className={styles.postDate}>
                 Posted on <time dateTime={post.date}>April 23, 2024</time>
