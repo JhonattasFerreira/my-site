@@ -1,11 +1,12 @@
 import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/NavItem";
-import { useState } from "react";
-import truncateText from "../../helpers/truncateText";
+import truncateText from "../../helpers/TruncateText";
+import { useLanguage } from "../../hooks/LanguageContext";
 
 const Blog = () => {
-  const [language, setLanguage] = useState("en");
+  const { language, setLanguage } = useLanguage();
+
   const listBlogPosts = [
     {
       "en-title": "Creating my personal site",

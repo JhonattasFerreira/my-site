@@ -1,4 +1,4 @@
-const truncateText = (text) => {
+const TruncateText = (text) => {
   if (text.length > 33) {
     return text.slice(0, 33) + "...";
   }
@@ -6,4 +6,4 @@ const truncateText = (text) => {
   return text;
 };
 
-export default truncateText;
+export default TruncateText;
