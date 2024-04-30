@@ -3,12 +3,12 @@ import styles from "./index.module.css";
 import NavItem from "../components/NavItem";
 
 const Index = () => (
-  <>
+  <div className={styles.container}>
     <header>
       <NavItem item={{ name: "Blog", url: "blog" }} />
     </header>
 
-    <main className={styles.container}>
+    <main className={styles.mainContent}>
       <section className={styles.title}>
         <div>&gt; Jhonattas;</div>
         <div className={styles.cursor}>
@@ -42,7 +42,7 @@ const Index = () => (
         </a>
       </section>
     </main>
-  </>
+  </div>
 );
 
 export default Index;

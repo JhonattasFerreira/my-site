@@ -5,9 +5,74 @@ import { useState } from "react";
 
 const Blog = () => {
   const [language, setLanguage] = useState("en");
+  const listBlogPosts = [
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title": "Criando meu site pessoal",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+    {
+      "en-title": "Creating my personal site",
+      "pt-br-title":
+        "Criando meu site pessoal dsahnjjhdsajdhsakjsakhk dashjsjahndfsjnkndjsanfjnjadsknfjkjnkadsjnkfjnasjnfjnfdjnsjdnksf",
+      date: "2024-04-23",
+      "en-url": "blog/2024/04/23/creating-my-personal-site",
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
+    },
+  ];
 
   return (
-    <>
+    <div className={styles.container}>
       <header>
         <NavItem item={{ name: "Home", url: "/" }}>
           {language === "en" ? (
@@ -16,7 +81,7 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("pt-br")}
             >
-              🇧🇷
+              🇺🇸
             </button>
           ) : (
             <button
@@ -24,30 +89,32 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("en")}
             >
-              🇺🇸
+              🇧🇷
             </button>
           )}
         </NavItem>
       </header>
-      <main className={styles.container}>
+      <main className={styles.mainContent}>
         <div className={styles.title}>
           <h1 className={styles.titleName}>
             {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
           </h1>
         </div>
-        <Link
-          href={
-            language === "en"
-              ? "blog/2024/04/23/creating-my-personal-site"
-              : "blog/2024/04/23/creating-my-personal-site/pt-br"
-          }
-        >
-          {language === "en"
-            ? "Creating my personal site"
-            : "Criando meu site pessoal"}
-        </Link>
+
+        <div className={styles.listBlogPosts}>
+          {listBlogPosts.map((post, index) => (
+            <div key={`post-${index}`} className={styles.blogPostItem}>
+              <Link href={post[`${language}-url`]}>
+                {post[`${language}-title`]}
+              </Link>
+              <div className={styles.postDate}>
+                Posted on <time dateTime={post.date}>April 23, 2024</time>
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
-    </>
+    </div>
   );
 };
 

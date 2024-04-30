@@ -1,15 +1,21 @@
 .container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
   padding-left: 3vw;
   padding-right: 3vw;
   padding-bottom: 2vh;
-  align-items: center;
 }
 
 .title {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .titleName {
@@ -23,10 +29,39 @@
   padding: 0;
   margin: 0;
   outline: inherit;
-  font-size: 3vw;
+  font-size: 5vw;
   margin-bottom: auto;
   cursor: pointer;
   padding-left: 3vw;
+}
+
+.listBlogPosts {
+  padding-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogPostItem {
+  padding-bottom: 2vh;
+}
+
+.blogPostItem a {
+  font-size: 5.5vw;
+  text-decoration: none;
+  width: 70vw;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blogPostItem a:hover {
+  color: #9ec8b9;
+}
+
+.postDate {
+  font-size: 3vw;
 }
 
 @media (min-width: 600px) and (max-width: 961px) {
@@ -41,7 +76,27 @@
 
 @media (min-width: 962px) {
   .titleName {
-    font-size: 4vw;
+    font-size: 4.5vw;
+  }
+
+  .listBlogPosts {
+    align-items: flex-start;
+    margin: auto;
+    padding-top: 8vh;
+  }
+
+  .blogPostItem a {
+    font-size: 3vw;
+  }
+
+  .postDate {
+    font-size: 1.3vw;
+    padding-top: 0.5vh;
+    padding-left: 0.5vw;
+  }
+
+  .blogPostItem {
+    padding-bottom: 5vh;
   }
 
   .button {

@@ -1,6 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
   padding-left: 3vw;
   padding-right: 3vw;
   padding-bottom: 2vh;
@@ -48,6 +54,10 @@
 }
 
 @media (min-width: 600px) and (max-width: 961px) {
+  .mainContent {
+    height: 100vh;
+  }
+
   .title {
     font-size: 9vw;
   }
@@ -58,12 +68,22 @@
   }
 
   .links {
-    padding-top: 3vh;
-    font-size: 15vw;
+    margin-top: auto;
+    padding-top: 2vh;
+    font-size: 7vw;
+    justify-content: flex-end;
+  }
+
+  .links a {
+    padding: 1vw;
   }
 }
 
 @media (min-width: 962px) {
+  .mainContent {
+    height: 100vh;
+  }
+
   .title {
     font-size: 7.1vw;
     font-family: "Jersey 10", sans-serif;
@@ -75,7 +95,13 @@
   }
 
   .links {
+    margin-top: auto;
     padding-top: 2vh;
-    font-size: 10vw;
+    font-size: 4.5vw;
+    justify-content: flex-end;
+  }
+
+  .links a {
+    padding: 1vw;
   }
 }
