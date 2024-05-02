@@ -2,7 +2,7 @@ import Post from "../../../../../../../components/Post";
 
 const BlogPost = () => {
   return (
-    <Post title={"Criando meu site pessoal"} date={"2024-04-23"}>
+    <Post title={"Criando Meu Site Pessoal"} date={"2024-04-23"}>
       <>
         <p>
           Recentemente, decidi criar meu site pessoal. Eu queria ter um lugar

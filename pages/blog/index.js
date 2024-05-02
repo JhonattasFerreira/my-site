@@ -19,7 +19,7 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("pt-br")}
             >
-              🇧🇷
+              🇺🇸
             </button>
           ) : (
             <button
@@ -27,7 +27,7 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("en")}
             >
-              🇺🇸
+              🇧🇷
             </button>
           )}
         </NavItem>
