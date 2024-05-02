@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -32,6 +38,20 @@
   color: #9ec8b9;
 }
 
+.footer {
+  margin-top: auto;
+  padding-bottom: 2vh;
+  padding-right: 3vh;
+  font-size: 11.2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer a:first-child {
+  padding-right: 2.5vw;
+}
+
 @media (min-width: 600px) and (max-width: 961px) {
   .mainContent {
     font-size: 19pt;
@@ -43,9 +63,19 @@
   }
 
   .options {
-    font-size: 2.1vw;
+    font-size: 2.5vw;
     padding-top: 1.5vw;
     padding-left: 0.5vw;
+  }
+
+  .footer {
+    padding-bottom: 1.5vw;
+    padding-right: 1vw;
+    font-size: 6vw;
+  }
+
+  .footer a:first-child {
+    padding-right: 2vw;
   }
 }
 
@@ -68,5 +98,15 @@
 
   .options time {
     margin-right: 0.5vw;
+  }
+
+  .footer {
+    padding-bottom: 0.3vw;
+    padding-right: 1vw;
+    font-size: 3vw;
+  }
+
+  .footer a:first-child {
+    padding-right: 1vw;
   }
 }

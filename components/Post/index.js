@@ -21,7 +21,7 @@ const Post = ({ title, date, children }) => {
   }, []);
 
   return (
-    <>
+    <div className={styles.container}>
       <NavItem item={{ name: "Blog", url: "/blog" }} />
       <main className={styles.mainContent}>
         <h1 className={styles.title}>{title}</h1>
@@ -45,7 +45,24 @@ const Post = ({ title, date, children }) => {
         </section>
         <section className={styles.post}>{children}</section>
       </main>
-    </>
+      <footer className={styles.footer}>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/jhonattasferreira/"
+          aria-label="Go to my LinkedIn profile"
+        >
+          <i className="fa fa-linkedin-square"></i>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://github.com/JhonattasFerreira"
+          aria-label="Go to my GitHub profile"
+        >
+          <i className="fa fa-github-square"></i>
+        </a>
+      </footer>
+    </div>
   );
 };
 
