@@ -1,14 +1,25 @@
-import NavItem from "../../../../../../../components/NavItem";
+import Post from "../../../../../../../components/Post";
 
-const Post = () => {
+const BlogPost = () => {
   return (
-    <div>
-      <NavItem item={{ name: "Blog", url: "/blog" }} />
-      <h1>Criando meu site pessoal</h1>
-      <p>Postado em 23 de Abril de 2024</p>
-      <p>...</p>
-    </div>
+    <Post title={"Criando meu site pessoal"} date={"2024-04-23"}>
+      <>
+        <p>
+          Recentemente, decidi criar meu site pessoal. Eu queria ter um lugar
+          onde pudesse compartilhar um pouco sobre mim, meus projetos e
+          experiências. Eu também queria ter um lugar onde pudesse escrever
+          sobre coisas que estou aprendendo e compartilhar com os outros.
+        </p>
+
+        <p>
+          Decidi usar o Next.js para criar meu site, pois ele é uma ótima
+          ferramenta para criar aplicativos da web modernos. Ele tem uma ótima
+          documentação e uma comunidade ativa, o que facilita muito o
+          aprendizado e o desenvolvimento.
+        </p>
+      </>
+    </Post>
   );
 };
 
-export default Post;
+export default BlogPost;

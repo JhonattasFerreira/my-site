@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import NavItem from "../components/NavItem";
+import NavItem from "../components/navItem/NavItem";
 
 const Index = () => (
   <div className={styles.container}>

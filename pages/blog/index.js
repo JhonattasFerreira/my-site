@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./blog.module.css";
-import NavItem from "../../components/NavItem";
+import NavItem from "../../components/navItem/NavItem";
 import truncateText from "../../helpers/TruncateText";
 import { useLanguage } from "../../hooks/LanguageContext";
 import listBlogPostsData from "./../../data/BlogList.json";
@@ -19,7 +19,7 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("pt-br")}
             >
-              🇺🇸
+              🇧🇷
             </button>
           ) : (
             <button
@@ -27,7 +27,7 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("en")}
             >
-              🇧🇷
+              🇺🇸
             </button>
           )}
         </NavItem>

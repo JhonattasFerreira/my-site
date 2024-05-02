@@ -1,14 +1,7 @@
-import NavItem from "../../../../../../components/NavItem";
+import Post from "../../../../../../components/Post";
 
-const Post = () => {
-  return (
-    <div>
-      <NavItem item={{ name: "Blog", url: "/blog" }} />
-      <h1>Creating my personal site</h1>
-      <p>Posted on April 1, 2024</p>
-      <p>...</p>
-    </div>
-  );
+const BlogPost = () => {
+  return <Post title={"Creating my personal site"} date={"2024-04-23"} />;
 };
 
-export default Post;
+export default BlogPost;
