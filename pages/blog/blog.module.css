@@ -42,14 +42,14 @@
 }
 
 .listBlogPosts {
-  padding-top: 3vh;
+  padding-top: 9vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 3vw;
 }
 
 .blogPostItem {
-  padding-bottom: 3vh;
+  padding-bottom: 5vh;
 }
 
 .blogPostItem a {
@@ -71,7 +71,12 @@
   }
 
   .listBlogPosts {
-    padding-top: 4vh;
+    padding-top: 9vh;
+    margin: 0 6vw;
+  }
+
+  .blogPostItem {
+    padding-bottom: 8vh;
   }
 
   .blogPostItem a {
@@ -79,9 +84,8 @@
   }
 
   .postDate {
-    font-size: 2.3vw;
+    font-size: 2.1vw;
     padding-top: 1vh;
-    padding-left: 1vw;
   }
 
   .button em {
@@ -95,7 +99,12 @@
   }
 
   .listBlogPosts {
-    padding-top: 8vh;
+    padding-top: 13vh;
+    margin: 0 15vw;
+  }
+
+  .blogPostItem {
+    padding-bottom: 8vh;
   }
 
   .blogPostItem a {
@@ -105,11 +114,6 @@
   .postDate {
     font-size: 1.5vw;
     padding-top: 0.5vh;
-    padding-left: 0.5vw;
-  }
-
-  .blogPostItem {
-    padding-bottom: 5vh;
   }
 
   .button em {

@@ -42,7 +42,7 @@ const Blog = () => {
           {listBlogPosts.map((post, index) => (
             <div key={`post-${index}`} className={styles.blogPostItem}>
               <Link href={post[`${language}-url`]}>
-                {truncateText(post[`${language}-title`])}
+                {post[`${language}-title`]}
               </Link>
               <div className={styles.postDate}>
                 {language === "en" ? "Posted on " : "Publicado em "}
