@@ -12,14 +12,20 @@ const Blog = () => {
   return (
     <div className={styles.container}>
       <header>
-        <NavItem item={{ name: "Home", url: "/" }}>
+        <NavItem item={{ name: "Home", url: "/" }}></NavItem>
+      </header>
+      <main className={styles.mainContent}>
+        <div className={styles.title}>
+          <h1 className={styles.titleName}>
+            {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
+          </h1>
           {language === "en" ? (
             <button
               title="Change to Brazilian Portuguese"
               className={styles.button}
               onClick={() => setLanguage("pt-br")}
             >
-              🇺🇸
+              <em>(Versão em Português)</em>
             </button>
           ) : (
             <button
@@ -27,16 +33,9 @@ const Blog = () => {
               className={styles.button}
               onClick={() => setLanguage("en")}
             >
-              🇧🇷
+              <em>(English version)</em>
             </button>
           )}
-        </NavItem>
-      </header>
-      <main className={styles.mainContent}>
-        <div className={styles.title}>
-          <h1 className={styles.titleName}>
-            {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
-          </h1>
         </div>
 
         <div className={styles.listBlogPosts}>
