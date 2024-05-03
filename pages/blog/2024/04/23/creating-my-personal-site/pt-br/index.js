@@ -1,6 +1,6 @@
 import Post from "../../../../../../../components/Post";
 import Image from "next/image";
-import photo from "./teste.jpg";
+import photo from "../firstBlogScketch.jpg";
 
 const BlogPost = () => {
   return (
@@ -81,14 +81,14 @@ const BlogPost = () => {
         <pre>
           <code>
             @keyframes blink {"{\n"}
-            &nbsp;&nbsp;50% {"{ "}opacity: 0;{" }\n"}
-            &nbsp;&nbsp;80% {"{ "}opacity: 0.5;{" }\n"}
+            &nbsp;50% {"{ "}opacity: 0;{" }\n"}
+            &nbsp;80% {"{ "}opacity: 0.5;{" }\n"}
             {"}\n"}
             .rectangle {"{\n"}
-            &nbsp;&nbsp;width: 2.8vw; {"\n"}
-            &nbsp;&nbsp;height: inherit; {"\n"}
-            &nbsp;&nbsp;background: white; {"\n"}
-            &nbsp;&nbsp;animation: blink 1.5s linear infinite;{"\n"}
+            &nbsp;width: 2.8vw; {"\n"}
+            &nbsp;height: inherit; {"\n"}
+            &nbsp;background: white; {"\n"}
+            &nbsp;animation: blink 1.5s linear infinite;{"\n"}
             {"}\n"}
           </code>
         </pre>
