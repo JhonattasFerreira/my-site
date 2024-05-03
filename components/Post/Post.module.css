@@ -38,6 +38,10 @@
   color: #9ec8b9;
 }
 
+.post {
+  line-height: 155%;
+}
+
 .footer {
   margin-top: auto;
   padding-bottom: 2vh;
