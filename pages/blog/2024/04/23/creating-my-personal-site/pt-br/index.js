@@ -88,7 +88,8 @@ const BlogPost = () => {
             &nbsp;width: 2.8vw; {"\n"}
             &nbsp;height: inherit; {"\n"}
             &nbsp;background: white; {"\n"}
-            &nbsp;animation: blink 1.5s linear infinite;{"\n"}
+            &nbsp;animation: blink 1.5s {"\n"}
+            &nbsp;linear infinite;{"\n"}
             {"}\n"}
           </code>
         </pre>
