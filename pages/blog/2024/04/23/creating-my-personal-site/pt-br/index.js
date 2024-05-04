@@ -12,7 +12,7 @@ const BlogPost = () => {
         </p>
 
         <p>
-          Esse é o "Hello World" do meu blog (o primeiro post) vou explicar
+          Esse é o "Hello World" do meu blog (o primeiro post). vou explicar
           melhor como surgiu a ideia e como foi feito.
         </p>
 
@@ -50,7 +50,7 @@ const BlogPost = () => {
           Utilizei três bibliotecas: <strong>React</strong>,{" "}
           <strong>React-DOM</strong> e <strong>Next</strong>. A ideia é começar
           simples, porém sei que a complexidade do código vai escalar (a
-          entropia na programação é forte). O site pode ser dividido em duas
+          entropia na programação é forte 😅). O site pode ser dividido em duas
           partes principais: a Home e o Blog.
         </p>
 
@@ -102,8 +102,7 @@ const BlogPost = () => {
         <p>
           Comecei criando a página de listagem dos posts, utilizando um{" "}
           <code>JSON</code> para salvar e exibir os posts, e o{" "}
-          <code>useContext</code> do React para salvar o contexto da língua
-          escolhida.
+          <code>useContext</code> do React para salvar o idioma escolhido.
         </p>
 
         <p>
