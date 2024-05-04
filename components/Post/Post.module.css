@@ -42,6 +42,11 @@
   line-height: 155%;
 }
 
+.post img {
+  width: auto;
+  height: auto;
+}
+
 .footer {
   margin-top: auto;
   padding-bottom: 2vh;

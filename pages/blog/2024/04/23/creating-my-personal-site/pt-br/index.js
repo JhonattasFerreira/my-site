@@ -1,5 +1,6 @@
 import Post from "../../../../../../../components/Post";
-import Image from "next/image";
+import ImageResponsive from "../../../../../../../components/ImageResponsive";
+
 import photo from "../firstBlogScketch.jpg";
 
 const BlogPost = () => {
@@ -63,14 +64,11 @@ const BlogPost = () => {
           abaixo:
         </p>
 
-        <Image
+        <ImageResponsive
           src={photo}
-          alt="Uma imagem de um bloco de nota com um desenho de um site genérico. Existem poucas informações e o design é bem simples."
-          sizes="100vw"
-          style={{
-            width: "40%",
-            height: "auto",
-          }}
+          alt={
+            "Uma imagem de um bloco de nota com um desenho de um site genérico. Existem poucas informações e o design é bem simples."
+          }
         />
 
         <p>

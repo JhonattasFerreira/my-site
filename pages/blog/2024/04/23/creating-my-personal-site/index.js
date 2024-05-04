@@ -1,5 +1,5 @@
 import Post from "../../../../../../components/Post";
-import Image from "next/image";
+import ImageResponsive from "../../../../../../components/ImageResponsive";
 import photo from "./firstBlogScketch.jpg";
 
 const BlogPost = () => {
@@ -63,14 +63,11 @@ const BlogPost = () => {
           pathetic, as can be seen below:
         </p>
 
-        <Image
+        <ImageResponsive
           src={photo}
-          alt="A picture of a notepad with a drawing of a generic website. There is little information and the design is very simple."
-          sizes="100vw"
-          style={{
-            width: "40%",
-            height: "auto",
-          }}
+          alt={
+            "A picture of a notepad with a drawing of a generic website. There is little information and the design is very simple."
+          }
         />
 
         <p>
@@ -119,7 +116,7 @@ const BlogPost = () => {
 
         <p>
           I'm very happy to have put all of this online. I have a lot to
-          improve, especially in communication. Anyway, thank you for your time.
+          improve, especially in communication. Anyway, thank you for your time
           :)
         </p>
       </>
