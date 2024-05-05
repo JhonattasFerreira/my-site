@@ -12,8 +12,8 @@ const BlogPost = () => {
         </p>
 
         <p>
-          This is the 'Hello World' of my blog (the first post). I'll explain
-          better how the idea came up and how it was done.
+          This is the 'Hello World' of my blog. I'll explain better how the idea
+          came up and how it was done.
         </p>
 
         <h2>Why create a blog?</h2>
@@ -98,7 +98,7 @@ const BlogPost = () => {
         <p>After finishing the Home, I thought: what if I create a blog?</p>
         <p>
           I started by creating the post listing page, using a <code>JSON</code>{" "}
-          to save and display the posts, and the <code>useContext</code> from
+          to save and display the posts; and the <code>useContext</code> from
           React to save the chosen language.
         </p>
 

@@ -13,8 +13,8 @@ const BlogPost = () => {
         </p>
 
         <p>
-          Esse é o "Hello World" do meu blog (o primeiro post). vou explicar
-          melhor como surgiu a ideia e como foi feito.
+          Esse é o "Hello World" do meu blog. Vou explicar melhor como surgiu a
+          ideia e como foi feito.
         </p>
 
         <h2>Por que criar um blog?</h2>
@@ -99,7 +99,7 @@ const BlogPost = () => {
         <p>Depois de terminar a Home, pensei: e se eu fizer um blog?</p>
         <p>
           Comecei criando a página de listagem dos posts, utilizando um{" "}
-          <code>JSON</code> para salvar e exibir os posts, e o{" "}
+          <code>JSON</code> para salvar e exibir os posts; e o{" "}
           <code>useContext</code> do React para salvar o idioma escolhido.
         </p>
 
