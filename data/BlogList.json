@@ -1,13 +1,18 @@
 {
   "listBlogPost": [
     {
+      "en-title": "How to Host a Website",
+      "pt-br-title": "Como Hospedar um Site",
+      "date": "2024-05-08",
+      "en-url": "blog/2024/05/08/how-to-hosting-a-website",
+      "pt-br-url": "blog/2024/05/08/how-to-hosting-a-website/pt-br"
+    },
+    {
       "en-title": "Creating my personal site",
       "pt-br-title": "Criando meu site pessoal",
       "date": "2024-04-23",
       "en-url": "blog/2024/04/23/creating-my-personal-site",
-      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br",
-      "en-date-text": "April 23, 2024",
-      "pt-br-date-text": "23 de Abril de 2024"
+      "pt-br-url": "blog/2024/04/23/creating-my-personal-site/pt-br"
     }
   ]
 }
