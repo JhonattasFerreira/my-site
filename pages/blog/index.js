@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/navItem/NavItem";
-import truncateText from "../../helpers/TruncateText";
 import { useLanguage } from "../../hooks/LanguageContext";
 import listBlogPostsData from "./../../data/BlogList.json";
+import FormatDate from "../../helpers/FormatDate";
 
 const Blog = () => {
   const { language, setLanguage } = useLanguage();
@@ -45,9 +45,8 @@ const Blog = () => {
                 {post[`${language}-title`]}
               </Link>
               <div className={styles.postDate}>
-                {language === "en" ? "Posted on " : "Publicado em "}
                 <time dateTime={post.date}>
-                  {post[`${language}-date-text`]}
+                  {FormatDate(post.date, language)}
                 </time>
               </div>
             </div>
