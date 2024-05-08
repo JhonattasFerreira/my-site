@@ -6,7 +6,7 @@ import photo2 from "../allTheProcess.png";
 
 const BlogPost = () => {
   return (
-    <Post title={"Como Hospedar um Site"} date={"2024-05-08"}>
+    <Post title={"Como Hospedar um Website"} date={"2024-05-08"}>
       <>
         <p>
           Comprar um domínio/hospedar um site é uma tarefa trivial, algumas
