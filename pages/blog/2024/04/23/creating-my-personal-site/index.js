@@ -65,6 +65,7 @@ const BlogPost = () => {
 
         <ImageResponsive
           src={photo}
+          sizeMobile={"50vw"}
           alt={
             "A picture of a notepad with a drawing of a generic website. There is little information and the design is very simple."
           }
