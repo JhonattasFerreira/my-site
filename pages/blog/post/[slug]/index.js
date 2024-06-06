@@ -13,7 +13,7 @@ const Post = ({ content, frontmatter }) => {
       <ReactMarkdown
         components={{
           code: CodeBlock,
-          // img: Image,
+          img: Image,
         }}
       >
         {content}
@@ -38,7 +38,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  console.log("bbb", slug);
   const markdownWithMetadata = fs
     .readFileSync(path.join("content/posts", slug, "index.en.md"))
     .toString();
