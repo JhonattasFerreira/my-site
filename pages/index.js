@@ -2,6 +2,8 @@ import styles from "./index.module.css";
 
 import NavItem from "../components/NavItem";
 import { SEO } from "../components/Seo";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Index = () => (
   <div className={styles.container}>
@@ -33,7 +35,7 @@ const Index = () => (
         href="https://www.linkedin.com/in/jhonattasferreira/"
         aria-label="Go to my LinkedIn profile"
       >
-        <i className="fa fa-linkedin-square"></i>
+        <FaLinkedin />
       </a>
 
       <a
@@ -41,7 +43,7 @@ const Index = () => (
         href="https://github.com/JhonattasFerreira"
         aria-label="Go to my GitHub profile"
       >
-        <i className="fa fa-github-square"></i>
+        <FaGithubSquare />
       </a>
     </footer>
   </div>

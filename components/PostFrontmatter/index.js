@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 import FormatDate from "../../helpers/FormatDate";
 import styles from "./PostFrontmatter.module.css";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
@@ -63,7 +65,7 @@ const PostFrontmatter = ({ title, date, children }) => {
           href="https://www.linkedin.com/in/jhonattasferreira/"
           aria-label="Go to my LinkedIn profile"
         >
-          <i className="fa fa-linkedin-square"></i>
+          <FaLinkedin />
         </a>
 
         <a
@@ -71,7 +73,7 @@ const PostFrontmatter = ({ title, date, children }) => {
           href="https://github.com/JhonattasFerreira"
           aria-label="Go to my GitHub profile"
         >
-          <i className="fa fa-github-square"></i>
+          <FaGithubSquare />
         </a>
       </footer>
     </div>
