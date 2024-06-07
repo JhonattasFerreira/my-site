@@ -56,7 +56,7 @@ const PostFrontmatter = ({ title, date, children }) => {
       <main className={styles.mainContent}>
         <article>
           <Title />
-          <section className={styles.post}>{children}</section>
+          {/* <section className={styles.post}>{children}</section> */}
         </article>
       </main>
       <footer className={styles.footer}>
