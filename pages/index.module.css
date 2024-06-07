@@ -22,7 +22,7 @@
   padding-top: 3vh;
 }
 
-.links {
+.footer {
   padding-top: 6vh;
   font-size: 15vw;
   display: flex;
@@ -30,7 +30,7 @@
   justify-content: space-around;
 }
 
-.links a:hover {
+.footer a:hover {
   color: #9ec8b9;
 }
 
@@ -67,15 +67,15 @@
     padding-top: 2vh;
   }
 
-  .links {
-    margin-top: auto;
-    padding-top: 2vh;
+  .footer {
     font-size: 7vw;
     justify-content: flex-end;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
   }
 
-  .links a {
-    padding: 1vw;
+  .footer a {
+    padding-left: 2vw;
   }
 }
 
@@ -94,14 +94,14 @@
     padding-top: 2vh;
   }
 
-  .links {
-    margin-top: auto;
-    padding-top: 2vh;
+  .footer {
     font-size: 4.5vw;
     justify-content: flex-end;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
   }
 
-  .links a {
-    padding: 1vw;
+  .footer a {
+    padding-left: 2vw;
   }
 }

@@ -1,4 +1,4 @@
-import NavItem from "../navItem/NavItem";
+import NavItem from "../NavItem";
 import { useRouter } from "next/router";
 import { useLanguage } from "../../hooks/LanguageContext";
 import { useEffect } from "react";
@@ -20,10 +20,9 @@ const PostFrontmatter = ({ title, date, children }) => {
     }
   }, []);
 
-  return (
-    <div className={styles.container}>
-      <NavItem item={{ name: "Blog", url: "/blog" }} />
-      <main className={styles.mainContent}>
+  const Title = () => {
+    return (
+      <>
         <h1 className={styles.title}>{title}</h1>
         <section className={styles.options}>
           <time dateTime={date}>{FormatDate(date, language)}</time>
@@ -43,7 +42,20 @@ const PostFrontmatter = ({ title, date, children }) => {
             </Link>
           )}
         </section>
-        <section className={styles.post}>{children}</section>
+      </>
+    );
+  };
+
+  return (
+    <div className={styles.container}>
+      <header>
+        <NavItem item={{ name: "Blog", url: "/blog" }} />
+      </header>
+      <main className={styles.mainContent}>
+        <article>
+          <Title />
+          <section className={styles.post}>{children}</section>
+        </article>
       </main>
       <footer className={styles.footer}>
         <a

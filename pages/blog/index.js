@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./blog.module.css";
-import NavItem from "../../components/navItem/NavItem";
+import NavItem from "../../components/NavItem";
 import { useLanguage } from "../../hooks/LanguageContext";
 import FormatDate from "../../helpers/FormatDate";
 import fs from "fs";
@@ -13,46 +13,55 @@ const Blog = ({ posts }) => {
     <div className={styles.container}>
       <header>
         <NavItem item={{ name: "Home", url: "/" }}></NavItem>
+        <Header language={language} setLanguage={setLanguage} />
       </header>
       <main className={styles.mainContent}>
-        <div className={styles.title}>
-          <h1 className={styles.titleName}>
-            {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
-          </h1>
-          {language === "en" ? (
-            <button
-              title="Change to Brazilian Portuguese"
-              className={styles.button}
-              onClick={() => setLanguage("pt-br")}
-            >
-              <em>(Versão em Português)</em>
-            </button>
-          ) : (
-            <button
-              title="Change to English"
-              className={styles.button}
-              onClick={() => setLanguage("en")}
-            >
-              <em>(English version)</em>
-            </button>
-          )}
-        </div>
-
-        <div className={styles.listBlogPosts}>
-          {posts.map((post, index) => (
-            <div key={`post-${index}`} className={styles.blogPostItem}>
-              <Link href={"blog/post/" + post[`${language}-url`]}>
-                {post[`${language}-title`]}
-              </Link>
-              <div className={styles.postDate}>
-                <time dateTime={post.date}>
-                  {FormatDate(post.date, language)}
-                </time>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ListingBlogPosts posts={posts} language={language} />
       </main>
+    </div>
+  );
+};
+
+const Header = ({ language, setLanguage }) => {
+  return (
+    <div className={styles.title}>
+      <h1 className={styles.titleName}>
+        {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
+      </h1>
+      {language === "en" ? (
+        <button
+          title="Change to Brazilian Portuguese"
+          className={styles.button}
+          onClick={() => setLanguage("pt-br")}
+        >
+          <em>(Versão em Português)</em>
+        </button>
+      ) : (
+        <button
+          title="Change to English"
+          className={styles.button}
+          onClick={() => setLanguage("en")}
+        >
+          <em>(English version)</em>
+        </button>
+      )}
+    </div>
+  );
+};
+
+const ListingBlogPosts = ({ posts, language }) => {
+  return (
+    <div className={styles.listBlogPosts}>
+      {posts.map((post, index) => (
+        <article key={`post-${index}`} className={styles.blogPostItem}>
+          <Link href={"blog/post/" + post[`${language}-url`]}>
+            {post[`${language}-title`]}
+          </Link>
+          <div className={styles.postDate}>
+            <time dateTime={post.date}>{FormatDate(post.date, language)}</time>
+          </div>
+        </article>
+      ))}
     </div>
   );
 };
