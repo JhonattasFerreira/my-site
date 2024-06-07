@@ -8,6 +8,7 @@ import styles from "./PostFrontmatter.module.css";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
@@ -27,6 +28,7 @@ const PostFrontmatter = ({ title, date, children }) => {
     return (
       <>
         <SpeedInsights />
+        <Analytics />
         <h1 className={styles.title}>{title}</h1>
         <section className={styles.options}>
           <time dateTime={date}>{FormatDate(date, language)}</time>
