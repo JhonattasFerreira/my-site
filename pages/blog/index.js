@@ -1,16 +1,21 @@
 import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/NavItem";
+import { SEO } from "../../components/Seo";
 import { useLanguage } from "../../hooks/LanguageContext";
 import FormatDate from "../../helpers/FormatDate";
 import fs from "fs";
 import matter from "gray-matter";
+
+const TITLE_EN = "Last Blog Posts";
+const TITLE_PT_BR = "Últimas Postagens";
 
 const Blog = ({ posts }) => {
   const { language, setLanguage } = useLanguage();
 
   return (
     <div className={styles.container}>
+      <SEO title={TITLE_EN} />
       <header>
         <NavItem item={{ name: "Home", url: "/" }}></NavItem>
         <Header language={language} setLanguage={setLanguage} />
@@ -26,7 +31,7 @@ const Header = ({ language, setLanguage }) => {
   return (
     <div className={styles.title}>
       <h1 className={styles.titleName}>
-        {language === "en" ? "Last Blog Posts" : "Últimas Postagens"}
+        {language === "en" ? TITLE_EN : TITLE_PT_BR}
       </h1>
       {language === "en" ? (
         <button
