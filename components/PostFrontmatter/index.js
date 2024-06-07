@@ -7,12 +7,15 @@ import FormatDate from "../../helpers/FormatDate";
 import styles from "./PostFrontmatter.module.css";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
 const PostFrontmatter = ({ title, date, children }) => {
   const { asPath } = useRouter();
   const { language, setLanguage } = useLanguage();
+
+  injectSpeedInsights();
 
   useEffect(() => {
     if (REGEX_PT_BR.test(asPath)) {
