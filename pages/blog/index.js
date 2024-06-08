@@ -4,45 +4,27 @@ import NavItem from "../../components/NavItem";
 import { SEO } from "../../components/Seo";
 import { useLanguage } from "../../hooks/LanguageContext";
 import FormatDate from "../../helpers/FormatDate";
+import { GetSortedPosts } from "../../helpers/PostData";
 
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
 
-const Blog = () =>
-  // { posts }
+const Blog = ({ posts }) => {
+  const { language, setLanguage } = useLanguage();
 
-  {
-    const { language, setLanguage } = useLanguage();
-    const posts = [
-      {
-        "en-title": "How to Host a Website",
-        "pt-br-title": "Como Hospedar um Website",
-        date: "2024-05-08",
-        "en-url": "how-to-hosting-a-website",
-        "pt-br-url": `how-to-hosting-a-website/pt-br`,
-      },
-      {
-        "en-title": "Creating My Personal Site",
-        "pt-br-title": "Criando Meu Site Pessoal",
-        date: "2024-04-23",
-        "en-url": "creating-my-personal-site",
-        "pt-br-url": `creating-my-personal-site/pt-br`,
-      },
-    ];
-
-    return (
-      <div className={styles.container}>
-        <SEO title={TITLE_EN} />
-        <header>
-          <NavItem item={{ name: "Home", url: "/" }}></NavItem>
-          <Header language={language} setLanguage={setLanguage} />
-        </header>
-        <main className={styles.mainContent}>
-          <ListingBlogPosts posts={posts} language={language} />
-        </main>
-      </div>
-    );
-  };
+  return (
+    <div className={styles.container}>
+      <SEO title={TITLE_EN} />
+      <header>
+        <NavItem item={{ name: "Home", url: "/" }}></NavItem>
+        <Header language={language} setLanguage={setLanguage} />
+      </header>
+      <main className={styles.mainContent}>
+        <ListingBlogPosts posts={posts} language={language} />
+      </main>
+    </div>
+  );
+};
 
 const Header = ({ language, setLanguage }) => {
   return (
@@ -88,12 +70,12 @@ const ListingBlogPosts = ({ posts, language }) => {
   );
 };
 
-// export async function getStaticProps() {
-//   const posts = GetSortedPosts();
+export async function getStaticProps() {
+  const posts = GetSortedPosts();
 
-//   return {
-//     props: { posts },
-//   };
-// }
+  return {
+    props: { posts },
+  };
+}
 
 export default Blog;
