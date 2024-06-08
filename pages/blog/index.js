@@ -2,12 +2,12 @@ import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/navItem/NavItem";
 import { useLanguage } from "../../hooks/LanguageContext";
+import listBlogPostsData from "./../../data/BlogList.json";
 import FormatDate from "../../helpers/FormatDate";
-import fs from "fs";
-import matter from "gray-matter";
 
-const Blog = ({ posts }) => {
+const Blog = () => {
   const { language, setLanguage } = useLanguage();
+  let listBlogPosts = listBlogPostsData.listBlogPost;
 
   return (
     <div className={styles.container}>
@@ -39,9 +39,9 @@ const Blog = ({ posts }) => {
         </div>
 
         <div className={styles.listBlogPosts}>
-          {posts.map((post, index) => (
+          {listBlogPosts.map((post, index) => (
             <div key={`post-${index}`} className={styles.blogPostItem}>
-              <Link href={"blog/post/" + post[`${language}-url`]}>
+              <Link href={post[`${language}-url`]}>
                 {post[`${language}-title`]}
               </Link>
               <div className={styles.postDate}>
@@ -56,38 +56,5 @@ const Blog = ({ posts }) => {
     </div>
   );
 };
-
-export async function getStaticProps() {
-  const dirPath = `${process.cwd()}/content/posts`;
-  const files = fs.readdirSync(dirPath);
-
-  const posts = files.map((filename) => {
-    const basePath = `${dirPath}/${filename}/index`;
-
-    const getFileContent = (lang) =>
-      fs.readFileSync(`${basePath}.${lang}.md`).toString();
-    const getMetadata = (content) => matter(content).data;
-
-    const enContent = getFileContent("en");
-    const ptBrContent = getFileContent("pt-br");
-
-    const enMetadata = getMetadata(enContent);
-    const ptBrMetadata = getMetadata(ptBrContent);
-
-    return {
-      "en-title": enMetadata.title,
-      "pt-br-title": ptBrMetadata.title,
-      date: enMetadata.date,
-      "en-url": filename.replace(".md", ""),
-      "pt-br-url": `${filename.replace(".md", "")}/pt-br`,
-    };
-  });
-
-  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  return {
-    props: { posts },
-  };
-}
 
 export default Blog;

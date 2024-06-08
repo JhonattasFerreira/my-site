@@ -4,16 +4,16 @@ import { useLanguage } from "../../hooks/LanguageContext";
 import { useEffect } from "react";
 import Link from "next/link";
 import FormatDate from "../../helpers/FormatDate";
-import styles from "./PostFrontmatter.module.css";
+import styles from "./Post.module.css";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
-const PostFrontmatter = ({ title, date, children }) => {
-  const { asPath } = useRouter();
+const Post = ({ title, date, children }) => {
+  const { pathname } = useRouter();
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    if (REGEX_PT_BR.test(asPath)) {
+    if (REGEX_PT_BR.test(pathname)) {
       setLanguage("pt-br");
     } else {
       setLanguage("en");
@@ -30,14 +30,14 @@ const PostFrontmatter = ({ title, date, children }) => {
           {language === "en" ? (
             <Link
               aria-label="Change to Brazilian Portuguese"
-              href={asPath + "/pt-br"}
+              href={pathname + "/pt-br"}
             >
               <em>(Versão em Português)</em>
             </Link>
           ) : (
             <Link
               aria-label="Change to English"
-              href={asPath.replace(REGEX_PT_BR, "")}
+              href={pathname.replace(REGEX_PT_BR, "")}
             >
               <em>(English version)</em>
             </Link>
@@ -66,4 +66,4 @@ const PostFrontmatter = ({ title, date, children }) => {
   );
 };
 
-export default PostFrontmatter;
+export default Post;
