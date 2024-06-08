@@ -11,14 +11,14 @@ const GetSortedPosts = () => {
     const { title: enTitle, date } = matter(getContent("en")).data;
     const { title: ptBrTitle } = matter(getContent("pt-br")).data;
 
-    const oi = date.replaceAll("-", "/");
+    const url = "blog/post/" + filename.replace(".md", "");
 
     return {
       "en-title": enTitle,
       "pt-br-title": ptBrTitle,
       date,
-      "en-url": "blog/" + oi + "/" + filename.replace(".md", ""),
-      "pt-br-url": "blog/" + oi + "/" + `${filename.replace(".md", "")}/pt-br`,
+      "en-url": url,
+      "pt-br-url": `${url}/pt-br`,
     };
   });
 
