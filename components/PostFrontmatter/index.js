@@ -4,7 +4,7 @@ import { useLanguage } from "../../hooks/LanguageContext";
 import { useEffect } from "react";
 import Link from "next/link";
 import FormatDate from "../../helpers/FormatDate";
-import styles from "./Post.module.css";
+import styles from "./PostFrontmatter.module.css";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
