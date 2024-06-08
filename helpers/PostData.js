@@ -12,12 +12,12 @@ const GetSortedPosts = () => {
     const { title: ptBrTitle } = matter(getContent("pt-br")).data;
 
     const url = "blog/post/" + filename.replace(".md", "");
-    const oi = date.replaceAll("-", "/");
+
     return {
       "en-title": enTitle,
       "pt-br-title": ptBrTitle,
       date,
-      "en-url": "blog/" + oi + "/" + filename.replace(".md", ""),
+      "en-url": url,
       "pt-br-url": `${url}/pt-br`,
     };
   });
