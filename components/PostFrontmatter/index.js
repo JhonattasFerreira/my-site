@@ -5,10 +5,6 @@ import { useEffect } from "react";
 import Link from "next/link";
 import FormatDate from "../../helpers/FormatDate";
 import styles from "./PostFrontmatter.module.css";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 
 const REGEX_PT_BR = /\/pt-br$/;
 
@@ -27,8 +23,6 @@ const PostFrontmatter = ({ title, date, children }) => {
   const Title = () => {
     return (
       <>
-        <SpeedInsights />
-        <Analytics />
         <h1 className={styles.title}>{title}</h1>
         <section className={styles.options}>
           <time dateTime={date}>{FormatDate(date, language)}</time>
@@ -69,7 +63,7 @@ const PostFrontmatter = ({ title, date, children }) => {
           href="https://www.linkedin.com/in/jhonattasferreira/"
           aria-label="Go to my LinkedIn profile"
         >
-          <FaLinkedin />
+          <i className="fa fa-linkedin-square"></i>
         </a>
 
         <a
@@ -77,7 +71,7 @@ const PostFrontmatter = ({ title, date, children }) => {
           href="https://github.com/JhonattasFerreira"
           aria-label="Go to my GitHub profile"
         >
-          <FaGithubSquare />
+          <i className="fa fa-github-square"></i>
         </a>
       </footer>
     </div>

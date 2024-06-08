@@ -4,7 +4,8 @@ import NavItem from "../../components/NavItem";
 import { SEO } from "../../components/Seo";
 import { useLanguage } from "../../hooks/LanguageContext";
 import FormatDate from "../../helpers/FormatDate";
-import { GetSortedPosts } from "../../helpers/PostData";
+import fs from "fs";
+import matter from "gray-matter";
 
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
@@ -71,7 +72,32 @@ const ListingBlogPosts = ({ posts, language }) => {
 };
 
 export async function getStaticProps() {
-  const posts = GetSortedPosts();
+  const dirPath = `${process.cwd()}/content/posts`;
+  const files = fs.readdirSync(dirPath);
+
+  const posts = files.map((filename) => {
+    const basePath = `${dirPath}/${filename}/index`;
+
+    const getFileContent = (lang) =>
+      fs.readFileSync(`${basePath}.${lang}.md`).toString();
+    const getMetadata = (content) => matter(content).data;
+
+    const enContent = getFileContent("en");
+    const ptBrContent = getFileContent("pt-br");
+
+    const enMetadata = getMetadata(enContent);
+    const ptBrMetadata = getMetadata(ptBrContent);
+
+    return {
+      "en-title": enMetadata.title,
+      "pt-br-title": ptBrMetadata.title,
+      date: enMetadata.date,
+      "en-url": filename.replace(".md", ""),
+      "pt-br-url": `${filename.replace(".md", "")}/pt-br`,
+    };
+  });
+
+  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return {
     props: { posts },
