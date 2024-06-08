@@ -1,11 +1,9 @@
 import styles from "./index.module.css";
 
-import NavItem from "../components/NavItem";
-import { SEO } from "../components/Seo";
+import NavItem from "../components/navItem/NavItem";
 
 const Index = () => (
   <div className={styles.container}>
-    <SEO title="Jhonattas Ferreira" />
     <header>
       <NavItem item={{ name: "Blog", url: "blog" }} />
     </header>
@@ -25,25 +23,25 @@ const Index = () => (
           GitHub.
         </div>
       </section>
+
+      <section className={styles.links}>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/jhonattasferreira/"
+          aria-label="Go to my LinkedIn profile"
+        >
+          <i className="fa fa-linkedin-square"></i>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://github.com/JhonattasFerreira"
+          aria-label="Go to my GitHub profile"
+        >
+          <i className="fa fa-github-square"></i>
+        </a>
+      </section>
     </main>
-
-    <footer className={styles.footer}>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/jhonattasferreira/"
-        aria-label="Go to my LinkedIn profile"
-      >
-        <i className="fa fa-linkedin-square"></i>
-      </a>
-
-      <a
-        target="_blank"
-        href="https://github.com/JhonattasFerreira"
-        aria-label="Go to my GitHub profile"
-      >
-        <i className="fa fa-github-square"></i>
-      </a>
-    </footer>
   </div>
 );
 

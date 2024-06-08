@@ -6,12 +6,10 @@ import ReactMarkdown from "react-markdown";
 import PostFrontmatter from "../../../../../components/PostFrontmatter";
 import Image from "../../../../../components/Image";
 import CodeBlock from "../../../../../components/CodeBlock";
-import { SEO } from "../../../../../components/Seo";
 
 const Post = ({ content, frontmatter }) => {
   return (
     <PostFrontmatter title={frontmatter.title} date={frontmatter.date}>
-      <SEO title={frontmatter.title} />
       <ReactMarkdown
         components={{
           code: CodeBlock,
