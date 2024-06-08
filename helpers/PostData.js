@@ -11,14 +11,12 @@ const GetSortedPosts = () => {
     const { title: enTitle, date } = matter(getContent("en")).data;
     const { title: ptBrTitle } = matter(getContent("pt-br")).data;
 
-    const url = "blog/post/" + filename.replace(".md", "");
-
     return {
       "en-title": enTitle,
       "pt-br-title": ptBrTitle,
       date,
-      "en-url": url,
-      "pt-br-url": `${url}/pt-br`,
+      "en-url": filename.replace(".md", ""),
+      "pt-br-url": `${filename.replace(".md", "")}/pt-br`,
     };
   });
 
@@ -36,7 +34,7 @@ const getPaths = () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
