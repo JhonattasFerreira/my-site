@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "next": "^14.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
   }
 }
