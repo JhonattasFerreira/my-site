@@ -7,6 +7,7 @@ import FormatDate from "../../helpers/FormatDate";
 
 const Blog = () => {
   const { language, setLanguage } = useLanguage();
+
   let listBlogPosts = listBlogPostsData.listBlogPost;
 
   return (
