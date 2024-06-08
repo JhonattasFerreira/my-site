@@ -2,12 +2,11 @@ import Link from "next/link";
 import styles from "./blog.module.css";
 import NavItem from "../../components/navItem/NavItem";
 import { useLanguage } from "../../hooks/LanguageContext";
-import listBlogPostsData from "./../../data/BlogList.json";
 import FormatDate from "../../helpers/FormatDate";
+import { GetSortedPosts } from "../../helpers/PostData";
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   const { language, setLanguage } = useLanguage();
-  let listBlogPosts = listBlogPostsData.listBlogPost;
 
   return (
     <div className={styles.container}>
@@ -39,7 +38,7 @@ const Blog = () => {
         </div>
 
         <div className={styles.listBlogPosts}>
-          {listBlogPosts.map((post, index) => (
+          {posts.map((post, index) => (
             <div key={`post-${index}`} className={styles.blogPostItem}>
               <Link href={post[`${language}-url`]}>
                 {post[`${language}-title`]}
@@ -56,5 +55,13 @@ const Blog = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const posts = GetSortedPosts();
+
+  return {
+    props: { posts },
+  };
+}
 
 export default Blog;
