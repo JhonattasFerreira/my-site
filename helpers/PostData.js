@@ -1,5 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
+import path from "path";
 
 const GetSortedPosts = () => {
   const dirPath = `${process.cwd()}/content/posts`;
@@ -22,4 +23,34 @@ const GetSortedPosts = () => {
   return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 };
 
-export default GetSortedPosts;
+const getPaths = () => {
+  const files = fs.readdirSync("content/posts");
+
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+const getContent = (slug, lang) => {
+  const markdownWithMetadata = fs
+    .readFileSync(path.join("content/posts", slug, lang))
+    .toString();
+
+  const { data, content } = matter(markdownWithMetadata);
+
+  return {
+    props: {
+      content,
+      frontmatter: data,
+    },
+  };
+};
+
+export { GetSortedPosts, getPaths, getContent };

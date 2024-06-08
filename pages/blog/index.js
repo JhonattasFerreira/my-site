@@ -4,7 +4,7 @@ import NavItem from "../../components/NavItem";
 import { SEO } from "../../components/Seo";
 import { useLanguage } from "../../hooks/LanguageContext";
 import FormatDate from "../../helpers/FormatDate";
-import GetSortedPosts from "../../helpers/GetSortedPosts";
+import { GetSortedPosts } from "../../helpers/PostData";
 
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
