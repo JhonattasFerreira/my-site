@@ -4,6 +4,9 @@ import Image from "../Image";
 import CodeBlock from "../CodeBlock";
 
 const LayoutPost = ({ content, frontmatter }) => {
+  if (!content || !frontmatter) {
+    return null;
+  }
   return (
     <PostFrontmatter title={frontmatter.title} date={frontmatter.date}>
       <ReactMarkdown

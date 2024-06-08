@@ -36,7 +36,7 @@ const getPaths = () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
