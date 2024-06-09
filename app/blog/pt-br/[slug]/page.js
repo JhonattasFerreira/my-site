@@ -16,7 +16,7 @@ function getPostContent(slug) {
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata("content/posts", "pt-br");
-  return posts.map((post) => ({ slug: `${post.slug}/pt-br` }));
+  return posts.map((post) => ({ slug: `${post.slug}` }));
 };
 
 export async function generateMetadata({ params, searchParams }) {
