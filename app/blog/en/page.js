@@ -1,6 +1,9 @@
 import getPostMetadata from "@/utils/getPostMetadata";
 import ListingPost from "@/components/ListingPost";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 const LANGUAGE = "en";
 
 export const metadata = {
@@ -11,7 +14,13 @@ export const metadata = {
 const Blog = () => {
   const postMetadata = getPostMetadata("content/posts", LANGUAGE);
 
-  return <ListingPost postMetadata={postMetadata} language={LANGUAGE} />;
+  return (
+    <>
+      <SpeedInsights />
+      <Analytics />
+      <ListingPost postMetadata={postMetadata} language={LANGUAGE} />
+    </>
+  );
 };
 
 export default Blog;
