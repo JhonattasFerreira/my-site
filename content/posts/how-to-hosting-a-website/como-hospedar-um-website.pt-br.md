@@ -1,5 +1,5 @@
 ---
-title: Como Hospedar um Website
+title: Como Hospedar Um Website
 date: "2024-05-08"
 ---
 

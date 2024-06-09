@@ -3,11 +3,15 @@ import matter from "gray-matter";
 
 export default function getPostMetadata(basePath, language) {
   const folder = basePath + "/";
-  const files = fs.readdirSync(folder);
+  const postFolders = fs.readdirSync(folder);
 
-  const posts = files.map((filename) => {
+  const posts = postFolders.map((postFolder) => {
+    const files = fs.readdirSync(`${basePath}/${postFolder}/`);
+
+    const filename = files.find((file) => file.includes(`.${language}.md`));
+
     const fileContent = fs.readFileSync(
-      `${basePath}/${filename}/index.${language}.md`,
+      `${basePath}/${postFolder}/${filename}`,
       "utf8"
     );
 
@@ -16,7 +20,7 @@ export default function getPostMetadata(basePath, language) {
     return {
       title,
       date,
-      slug: filename.replace(".md", ""),
+      slug: filename.replace(`.${language}.md`, ""),
     };
   });
 
