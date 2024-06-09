@@ -4,6 +4,8 @@ import NavItem from "@/components/NavItem";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Jersey_10 } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const jersey_10 = Jersey_10({
   subsets: ["latin"],
@@ -15,6 +17,8 @@ const jersey_10 = Jersey_10({
 export default function Home() {
   return (
     <div className={styles.container}>
+      <SpeedInsights />
+      <Analytics />
       <header>
         <NavItem item={{ name: "Blog", url: "/blog/en" }} />
       </header>
