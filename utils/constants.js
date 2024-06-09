@@ -19,6 +19,16 @@ const LISTING_POSTS_METADATA_PT_BR = {
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
 
+//Enconding
+const ENCODING_UTF8 = "utf8";
+
+//Filename
+const FILENAME_END_EN = ".en.md";
+const FILENAME_END_PT_BR = ".pt-br.md";
+
+//Title Metadata Post Sufix
+const TITLE_METADATA_POST_SUFIX = " | JhoCore";
+
 export {
   EN_LANGUAGE,
   PT_BR_LANGUAGE,
@@ -27,4 +37,8 @@ export {
   LISTING_POSTS_METADATA_PT_BR,
   TITLE_EN,
   TITLE_PT_BR,
+  FILENAME_END_EN,
+  FILENAME_END_PT_BR,
+  TITLE_METADATA_POST_SUFIX,
+  ENCODING_UTF8,
 };
