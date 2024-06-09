@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
-import PostFrontmatter from "../PostFrontmatter";
-import Image from "../Image";
-import CodeBlock from "../CodeBlock";
+import PostFrontmatter from "@/components/PostFrontmatter";
+import Image from "@/components/Image";
+import CodeBlock from "@/components/CodeBlock";
 
 const LayoutPost = ({ content, frontmatter, slug, language }) => {
   return (
