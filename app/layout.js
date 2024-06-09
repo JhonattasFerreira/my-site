@@ -1,6 +1,4 @@
-import "./styles.css";
-
-import { LanguageProvider } from "../hooks/LanguageContext";
+import "./globals.css";
 import { Raleway } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
@@ -13,17 +11,18 @@ const raleway = Raleway({
   display: "swap",
 });
 
-export default function MyApp({ Component, pageProps }) {
+export const metadata = {
+  title: "Jhonattas Ferreira | JhoCore",
+  description: "A blog by Jhonattas Ferreira",
+};
+
+export default function RootLayout({ children }) {
   return (
-    <LanguageProvider>
+    <html lang="en">
       <SpeedInsights />
       <Analytics />
-      <style jsx global>{`
-        html {
-          font-family: ${raleway.style.fontFamily};
-        }
-      `}</style>
-      <Component className={raleway.variable} {...pageProps} />
-    </LanguageProvider>
+
+      <body className={raleway.className}>{children}</body>
+    </html>
   );
 }

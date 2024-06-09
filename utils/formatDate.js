@@ -29,7 +29,7 @@ const months = {
   ],
 };
 
-const FormatDate = (date, language) => {
+export default function formatDate(date, language) {
   const parts = date.split("-");
   const day = parts[2];
   const month = months[language][parseInt(parts[1]) - 1];
@@ -38,6 +38,4 @@ const FormatDate = (date, language) => {
   return language === "en"
     ? `Posted on ${month} ${day}, ${year}`
     : `Postado em ${day} de ${month} de ${year}`;
-};
-
-export default FormatDate;
+}
