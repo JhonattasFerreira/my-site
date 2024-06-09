@@ -1,5 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { ENCODING_UTF8 } from "@/utils/constants";
 
 export default function getPostMetadata(basePath, language) {
   const folder = basePath + "/";
@@ -12,7 +13,7 @@ export default function getPostMetadata(basePath, language) {
 
     const fileContent = fs.readFileSync(
       `${basePath}/${postFolder}/${filename}`,
-      "utf8"
+      ENCODING_UTF8
     );
 
     const { title, date } = matter(fileContent).data;

@@ -4,15 +4,9 @@ import formatDate from "@/utils/formatDate";
 import styles from "./PostFrontmatter.module.css";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
 
-const PostFrontmatter = ({
-  title,
-  date,
-  slug,
-  language,
-  children,
-  oppositeUrl,
-}) => {
+const PostFrontmatter = ({ title, date, language, children, oppositeUrl }) => {
   return (
     <div className={styles.container}>
       <header>
@@ -23,7 +17,6 @@ const PostFrontmatter = ({
           <Title
             title={title}
             date={date}
-            slug={slug}
             language={language}
             oppositeUrl={oppositeUrl}
           />
@@ -51,21 +44,24 @@ const PostFrontmatter = ({
   );
 };
 
-const Title = ({ title, date, slug, language, oppositeUrl }) => {
+const Title = ({ title, date, language, oppositeUrl }) => {
   return (
     <>
       <h1 className={styles.title}>{title}</h1>
       <section className={styles.options}>
         <time dateTime={date}>{formatDate(date, language)}</time>
-        {language === "en" ? (
+        {language === EN_LANGUAGE ? (
           <Link
             aria-label="Change to Brazilian Portuguese"
-            href={`/blog/pt-br/${oppositeUrl}`}
+            href={`/blog/${PT_BR_LANGUAGE}/${oppositeUrl}`}
           >
             <em>(Versão em Português)</em>
           </Link>
         ) : (
-          <Link aria-label="Change to English" href={`/blog/en/${oppositeUrl}`}>
+          <Link
+            aria-label="Change to English"
+            href={`/blog/${EN_LANGUAGE}/${oppositeUrl}`}
+          >
             <em>(English version)</em>
           </Link>
         )}
