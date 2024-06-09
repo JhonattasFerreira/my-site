@@ -1,3 +1,5 @@
+import { EN_LANGUAGE } from "./constants";
+
 const months = {
   "pt-br": [
     "Janeiro",
@@ -35,7 +37,7 @@ export default function formatDate(date, language) {
   const month = months[language][parseInt(parts[1]) - 1];
   const year = parts[0];
 
-  return language === "en"
+  return language === EN_LANGUAGE
     ? `Posted on ${month} ${day}, ${year}`
     : `Postado em ${day} de ${month} de ${year}`;
 }

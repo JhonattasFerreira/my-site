@@ -32,7 +32,6 @@ const Post = (props) => {
     <LayoutPost
       frontmatter={data}
       content={content}
-      slug={slug}
       language={EN_LANGUAGE}
       oppositeUrl={oppositeUrl}
     />

@@ -3,12 +3,11 @@ import PostFrontmatter from "@/components/PostFrontmatter";
 import Image from "@/components/Image";
 import CodeBlock from "@/components/CodeBlock";
 
-const LayoutPost = ({ content, frontmatter, slug, language, oppositeUrl }) => {
+const LayoutPost = ({ content, frontmatter, language, oppositeUrl }) => {
   return (
     <PostFrontmatter
       title={frontmatter.title}
       date={frontmatter.date}
-      slug={slug}
       language={language}
       oppositeUrl={oppositeUrl}
     >
