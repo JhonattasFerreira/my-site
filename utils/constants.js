@@ -15,10 +15,16 @@ const LISTING_POSTS_METADATA_PT_BR = {
   description: "Um blog de Jhonattas Ferreira",
 };
 
+// Title Listing Posts
+const TITLE_EN = "Last Blog Posts";
+const TITLE_PT_BR = "Últimas Postagens";
+
 export {
   EN_LANGUAGE,
   PT_BR_LANGUAGE,
   CONTENT_FOLDER,
   LISTING_POSTS_METADATA_EN,
   LISTING_POSTS_METADATA_PT_BR,
+  TITLE_EN,
+  TITLE_PT_BR,
 };

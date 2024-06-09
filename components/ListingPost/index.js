@@ -2,9 +2,7 @@ import Link from "next/link";
 import styles from "./listing.module.css";
 import NavItem from "@/components/NavItem";
 import formatDate from "@/utils/formatDate";
-
-const TITLE_EN = "Last Blog Posts";
-const TITLE_PT_BR = "Últimas Postagens";
+import { TITLE_EN, TITLE_PT_BR, EN_LANGUAGE } from "@/utils/constants";
 
 const ListingPost = ({ postMetadata, language }) => {
   return (
@@ -24,9 +22,9 @@ const Header = ({ language }) => {
   return (
     <div className={styles.title}>
       <h1 className={styles.titleName}>
-        {language === "en" ? TITLE_EN : TITLE_PT_BR}
+        {language === EN_LANGUAGE ? TITLE_EN : TITLE_PT_BR}
       </h1>
-      {language === "en" ? (
+      {language === EN_LANGUAGE ? (
         <Link aria-label="Change to Brazilian Portuguese" href="/blog/pt-br">
           <em>(Versão em Português)</em>
         </Link>

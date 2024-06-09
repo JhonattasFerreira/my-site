@@ -6,7 +6,7 @@ import {
   PT_BR_LANGUAGE,
   CONTENT_FOLDER,
   LISTING_POSTS_METADATA_PT_BR,
-} from "@/utils/variables";
+} from "@/utils/constants";
 
 export const metadata = LISTING_POSTS_METADATA_PT_BR;
 
