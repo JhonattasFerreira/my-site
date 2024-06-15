@@ -12,6 +12,10 @@ a:visited {
   color: white;
 }
 
+a:hover {
+  color: #9ec8b9;
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 20px;
