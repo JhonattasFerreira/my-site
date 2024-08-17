@@ -7,6 +7,7 @@ const IframeP5 = ({ href, children }) => {
         src={href}
         width="100%"
         height="400px"
+        allow="accelerometer; gyroscope"
         allowFullScreen
         style={{
           border: "none",
