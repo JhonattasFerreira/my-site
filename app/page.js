@@ -1,6 +1,7 @@
 import styles from "./home.module.css";
 
 import NavItem from "@/components/NavItem";
+import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Jersey_10 } from "next/font/google";
@@ -35,10 +36,9 @@ export default function Home() {
         </section>
 
         <section className={styles.containerAbout}>
-          <div>
-            Hi, I'm a Software Engineer with a passion for programming. I like
-            to use the knowledge I have learned to create personal projects on
-            GitHub.
+          <div>Hi, I'm a Software Engineer with a passion for programming.</div>
+          <div className={styles.checkoutBlog}>
+            Check out my <Link href={"/blog/en"}>blog</Link>. ❤️
           </div>
         </section>
       </main>
