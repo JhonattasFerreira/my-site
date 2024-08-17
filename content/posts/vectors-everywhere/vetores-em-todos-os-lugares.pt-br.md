@@ -11,7 +11,7 @@ Não me leve a mal, mas quando ainda estava no colégio alguns assuntos eram dí
 
 Mas aqui estou, fazendo normalização de vetores, descobrindo suas magnitudes e fazendo aritmética básica com eles. Tudo isso é _culpa_ do incrível livro [The Nature of Code](https://natureofcode.com/vectors/) de **Daniel Shiffman**. Este post é minha tentativa de passar o que aprendi.
 
-_Você pode conferir a postagem do capítulo anterior [aqui](/blog/pt-br/um-caminhante-aleatorio)._
+_Você pode conferir a [postagem do capítulo anterior](/blog/pt-br/um-caminhante-aleatorio)._
 
 ## Vetores
 

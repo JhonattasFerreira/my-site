@@ -11,7 +11,7 @@ Don't get me wrong, but when I was still in school, some subjects were difficult
 
 But here I am, normalizing vectors, discovering their magnitudes, and doing basic arithmetic with them. All of this is thanks to the amazing book [The Nature of Code](https://natureofcode.com/vectors/) by **Daniel Shiffman**. This post is my attempt to share what I’ve learned.
 
-_You can check out the previous chapter's post [here](/blog/en/a-random-walker)._
+_You can check out the [previous chapter's post](/blog/en/a-random-walker)._
 
 ## Vectors
 
