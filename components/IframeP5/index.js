@@ -4,6 +4,7 @@ const IframeP5 = ({ href, children }) => {
   return (
     <>
       <iframe
+        title={`p5.js iframe sketch: ${children}`}
         src={href}
         width="100%"
         height="400px"
