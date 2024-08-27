@@ -3,7 +3,7 @@ title: Vectors Everywhere
 date: "2024-08-16"
 ---
 
-![A vaporwave-style GIF with a camera moving through a checkered road under rain, palm trees on the sides, mountains in the background, and a large moon in the sky.](/vector.webp)
+![A vaporwave-style GIF with a camera moving through a checkered road under rain, palm trees on the sides, mountains in the background, and a large moon in the sky.](/vectors-everywhere/vector.webp)
 
 I thought I would never use Cartesian planes again in my life.
 
@@ -23,13 +23,13 @@ Vectors appear in many contexts, such as 2D, 3D, machine learning, and data anal
 
 Typically, we can represent a vector using an arrow:
 
-![An image containing an arrow representing a vector. The arrow is black, and the background is white.](/vectorEuclid.png)
+![An image containing an arrow representing a vector. The arrow is black, and the background is white.](/vectors-everywhere/vectorEuclid.png)
 
 _But, how can we position these points in a two-dimensional space?_
 
 By using a Cartesian plane. The representation looks like this: (3,5), where 3 is the coordinate on the X-axis and 5 on the Y-axis.
 
-![An image containing a vector (3,5) on a Cartesian plane](/vectorCartesian.png)
+![An image containing a vector (3,5) on a Cartesian plane](/vectors-everywhere/vectorCartesian.png)
 
 The vector provides the instructions to move from the origin (0,0) to the desired point, in this case, (3,5).
 
@@ -37,7 +37,7 @@ _But, how can we represent vectors in **p5.js**?_
 
 The difference is that the origin (0,0) in **_p5.js_** is represented in the top-left corner:
 
-![An image containing a vector (3,5) in p5.js](/vectorP5.png)
+![An image containing a vector (3,5) in p5.js](/vectors-everywhere/vectorP5.png)
 
 The idea in **_p5.js_** is that with each frame of the animation (**_draw_**), we can move our object a certain vertical and horizontal distance. This is a vector, with magnitude (size of the distance) and direction. In other words, a vector defines the velocity of the object.
 

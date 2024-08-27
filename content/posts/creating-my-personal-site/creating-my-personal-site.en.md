@@ -3,7 +3,7 @@ title: Creating My Personal Site
 date: "2024-04-23"
 ---
 
-![A GIF with colorful fireworks.](/fireworks.webp)
+![A GIF with colorful fireworks.](/creating-my-personal-site/fireworks.webp)
 
 Hello, my name is Jhonattas and after procrastinating for quite a while, i decided to create my blog 🎉🎉🎉
 
@@ -35,7 +35,7 @@ I used three libraries: **React**, **React-DOM** and **Next**. The idea is to st
 
 On the home page, I defined the style of the site, such as the background color, text color, font, etc. At this point, I had no idea that I would end up creating a blog. My first sketch of the site was pathetic, as can be seen below:
 
-![firstBlogScketch](/firstBlogScketch.jpg)
+![firstBlogScketch](/creating-my-personal-site/firstBlogScketch.jpg)
 
 The site had no soul, I tried to copy something I saw on the internet. In the end, I removed the images, changed to text and created a terminal cursor animation. I really enjoyed it because I learned about CSS animation. By the way, the animation code was this:
 

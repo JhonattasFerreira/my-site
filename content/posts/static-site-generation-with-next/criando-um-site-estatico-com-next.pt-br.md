@@ -3,7 +3,7 @@ title: Criando Um Site Estático Com Next
 date: "2024-06-15"
 ---
 
-![O GIF de uma caveira tomando uma bebida em uma arte old school.](/skull.webp)
+![O GIF de uma caveira tomando uma bebida em uma arte old school.](/static-site-generation-with-next/skull.webp)
 
 Este post é uma continuação das melhorias implementadas no blog. Para saber mais, confira o primeiro artigo sobre [como melhorei meu blog](/blog/pt-br/melhorando-meu-blog).
 
@@ -13,7 +13,7 @@ Antes para cada novo post, eu tinha que criar manualmente uma nova rota. Isso er
 
 Como seria bom se tivesse uma maneira de gerar rotas dinâmicas automaticamente, sem ter de fazer isso manualmente...
 
-![Um gif da Alice de Alice no País das Maravilhas. Um gif onde ela está esperando pacientemente](/alice.gif)
+![Um gif da Alice de Alice no País das Maravilhas. Um gif onde ela está esperando pacientemente](/static-site-generation-with-next/alice.gif)
 
 Senhoras e senhores, lhes apresento o **_Slug_**.
 
@@ -160,7 +160,7 @@ Usando essa estratégia todas as páginas do blog são pré renderizadas no **_b
 
 Outro ponto é que o blog fica bastante otimizado, como podemos ver no **_lighthouse_**:
 
-![A imagem do report feito pela ferramenta do Google chamada lighthouse. Na imagem é mostrado os parâmetros Performance, Accessibility, Best Practices e SEO. Todos com o valor de 100](/lighthouse.png)
+![A imagem do report feito pela ferramenta do Google chamada lighthouse. Na imagem é mostrado os parâmetros Performance, Accessibility, Best Practices e SEO. Todos com o valor de 100](/static-site-generation-with-next/lighthouse.png)
 
 Essas foram todas as mudanças que foram feitas no blog. Sim, deu bastante trabalho pra fazer esses ajustes, mas agora sinto que o blog está ficando cada vez mais robusto.
 

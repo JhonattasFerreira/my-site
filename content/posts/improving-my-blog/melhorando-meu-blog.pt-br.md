@@ -3,7 +3,7 @@ title: Melhorando Meu Blog com Gray-matter e React-markdown
 date: "2024-06-14"
 ---
 
-![Um GIF de um fluxo de imagens que remete a algo digital.](/digital.webp)
+![Um GIF de um fluxo de imagens que remete a algo digital.](/improving-my-blog/digital.webp)
 
 Grandes mudanças aconteceram no Blog 🎉🎉🎉
 
@@ -15,7 +15,7 @@ Sempre que eu fazia um novo post, precisava criar uma nova rota para a postagem 
 
 Isso não escalava e dava um trabalhão 😔
 
-![A imagem de um gato branco, triste com lágrimas nos olhos](/sadCat.jpg)
+![A imagem de um gato branco, triste com lágrimas nos olhos](/improving-my-blog/sadCat.jpg)
 
 Eu precisava melhorar o blog para que meu foco ficasse apenas em escrever novas postagens e não em me preocupar com rotas, tags **_HTML_** e coisas do tipo.
 

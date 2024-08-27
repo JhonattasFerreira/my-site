@@ -3,7 +3,7 @@ title: Um Caminhante Aleatório
 date: "2024-07-26"
 ---
 
-![Um GIF de uma menina caminhando com um fundo colorido estático.](/walking.webp)
+![Um GIF de uma menina caminhando com um fundo colorido estático.](/a-random-walker/walking.webp)
 
 Era uma noite de sábado, chovia, quando descobri o incrível canal [The Coding Train](https://www.youtube.com/@TheCodingTrain) do **Daniel Shiffman** e, devorando vários vídeos em sequência, senti uma empolgação com programação que há tempos não sentia.
 

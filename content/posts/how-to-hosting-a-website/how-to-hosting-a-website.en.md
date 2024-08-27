@@ -3,7 +3,7 @@ title: How to Host a Website
 date: "2024-05-08"
 ---
 
-![A GIF of an old computer with pixel art.](/computer.webp)
+![A GIF of an old computer with pixel art.](/how-to-hosting-a-website/computer.webp)
 
 Buying a domain/hosting a website is a trivial task, a few configurations here and there, and voilà, a brand new website is up and running. But do you know how to do that?
 
@@ -57,12 +57,12 @@ So the Recursive Resolver asks the Authoritative Server:
 
 With the final IP, the browser can access Google.
 
-![A diagram image showing the sequence from the root server, to the TLD, and ending at the Authoritative Server.](/whereIsSite.png)
+![A diagram image showing the sequence from the root server, to the TLD, and ending at the Authoritative Server.](/how-to-hosting-a-website/whereIsSite.png)
 
 ## But, how does this relate to Web Hosting?
 
 Everything! You buy a domain from a Registrar, like GoDaddy, and it's responsible for passing this information to the Registry (each country has its own Registry). The Registry is responsible for putting your domain in the TLD. With this, in the Registrar you can choose to point to the Authoritative Server of your choice (e.g., Vercel).
 
-![An image of a diagram showing the sequence from the Registrant, to the Registrar, to the Registry, and ending at the TLD.](/allTheProcess.png)
+![An image of a diagram showing the sequence from the Registrant, to the Registrar, to the Registry, and ending at the TLD.](/how-to-hosting-a-website/allTheProcess.png)
 
 In the end, to have a website, you just need to buy a domain and in the domain settings, choose the authoritative server you want to use.

@@ -3,7 +3,7 @@ title: Improving My Blog with Gray-matter and React-markdown
 date: "2024-06-14"
 ---
 
-![A GIF of a stream of images reminiscent of something digital.](/digital.webp)
+![A GIF of a stream of images reminiscent of something digital.](/improving-my-blog/digital.webp)
 
 Big changes have happened on the Blog 🎉🎉🎉
 
@@ -15,7 +15,7 @@ Every time I made a new post, I had to create a new route for the English post a
 
 This didn’t scale and was a lot of work 😔
 
-![An image of a white cat, sad with tears in its eyes.](/sadCat.jpg)
+![An image of a white cat, sad with tears in its eyes.](/improving-my-blog/sadCat.jpg)
 
 I needed to improve the blog so that my focus could solely be on writing new posts, without worrying about routes, **_HTML_** tags, and such.
 

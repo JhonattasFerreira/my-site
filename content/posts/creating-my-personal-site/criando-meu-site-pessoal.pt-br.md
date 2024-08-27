@@ -3,7 +3,7 @@ title: Criando Meu Site Pessoal
 date: "2024-04-23"
 ---
 
-![Um GIF com fogos de atírifico colorido](/fireworks.webp)
+![Um GIF com fogos de atírifico colorido](/creating-my-personal-site/fireworks.webp)
 
 Olá, meu nome é Jhonattas e depois de procrastinar bastante, resolvi criar meu Blog 🎉🎉🎉
 
@@ -35,7 +35,7 @@ Utilizei três bibliotecas: **React**, **React-DOM** e **Next**. A ideia é come
 
 Na home, defini o estilo do site, como a cor do background e do texto, fonte, etc. Neste momento, não tinha noção de que acabaria criando um blog. Meu primeiro rascunho do site foi patético, como pode ser visto abaixo:
 
-![firstBlogScketch](/firstBlogScketch.jpg)
+![firstBlogScketch](/creating-my-personal-site/firstBlogScketch.jpg)
 
 O site não tinha alma, eu tentei copiar algo que vi na internet. No fim, removi as imagens, mudei para texto e fiz uma animação de cursor do terminal. Eu curti bastante porque aprendi sobre animação no CSS. Aliás, o código da animação foi esse:
 

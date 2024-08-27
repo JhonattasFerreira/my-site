@@ -3,7 +3,7 @@ title: Vetores Em Todos Os Lugares
 date: "2024-08-16"
 ---
 
-![Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.](/vector.webp)
+![Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.](/vectors-everywhere/vector.webp)
 
 Eu pensei que nunca mais usaria planos cartesianos na vida.
 
@@ -23,13 +23,13 @@ Vetores aparecem em muitos contextos, como 2D, 3D, machine learning e análise d
 
 Tipicamente podemos representar um vetor através de uma seta:
 
-![Uma imagem que contém uma seta representando um vetor. A seta é preta e o fundo é branco.](/vectorEuclid.png)
+![Uma imagem que contém uma seta representando um vetor. A seta é preta e o fundo é branco.](/vectors-everywhere/vectorEuclid.png)
 
 _Mas, como podemos posicionar esses pontos em um espaço bidimensional?_
 
 Usando um plano cartesiano. A representação é assim: (3,5), onde 3 é a coordenada no eixo X e 5 no eixo Y.
 
-![Uma imagem que contém um vetor (3,5) em um plano cartesiano](/vectorCartesian.png)
+![Uma imagem que contém um vetor (3,5) em um plano cartesiano](/vectors-everywhere/vectorCartesian.png)
 
 O vetor fornece as instruções para sair da origem (0,0) e chegar ao ponto desejado, neste caso, (3,5).
 
@@ -37,7 +37,7 @@ _Mas, como podemos representar vetores no **p5.js**?_
 
 A diferença é que a origem (0,0) no **_p5.js_** é representada no canto superior esquerdo:
 
-![Uma imagem que contém um vetor (3,5) em p5.js](/vectorP5.png)
+![Uma imagem que contém um vetor (3,5) em p5.js](/vectors-everywhere/vectorP5.png)
 
 A ideia no **_p5.js_** é que, a cada quadro da animação (**_draw_**), possamos mover nosso objeto uma certa distância vertical e horizontal. Isso é um vetor, com magnitude (tamanho da distância) e direção. Em outras palavras, um vetor define a velocidade do objeto.
 
