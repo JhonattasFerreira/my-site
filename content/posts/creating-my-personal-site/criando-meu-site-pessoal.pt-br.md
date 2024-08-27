@@ -3,6 +3,8 @@ title: Criando Meu Site Pessoal
 date: "2024-04-23"
 ---
 
+![Um GIF com fogos de atírifico colorido](/fireworks.webp)
+
 Olá, meu nome é Jhonattas e depois de procrastinar bastante, resolvi criar meu Blog 🎉🎉🎉
 
 Esse é o "Hello World" do meu blog. Vou explicar melhor como surgiu a ideia e como foi feito.

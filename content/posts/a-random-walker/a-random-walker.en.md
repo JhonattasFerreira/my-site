@@ -3,6 +3,8 @@ title: A Random Walker
 date: "2024-07-26"
 ---
 
+![A GIF of a girl walking with a static colorful background.](/walking.webp)
+
 It was a rainy Saturday night when I discovered the incredible YouTube channel [The Coding Train](https://www.youtube.com/@TheCodingTrain) by **Daniel Shiffman**. As I devoured several videos in a row, I felt an excitement for programming that I hadn't experienced in a long time.
 
 In one video, he mentioned his book, [The Nature of Code](https://natureofcode.com/). The name piqued my curiosity; how could nature and code be together? So, I started reading it.

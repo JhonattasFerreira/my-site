@@ -3,6 +3,8 @@ title: Creating My Personal Site
 date: "2024-04-23"
 ---
 
+![A GIF with colorful fireworks.](/fireworks.webp)
+
 Hello, my name is Jhonattas and after procrastinating for quite a while, i decided to create my blog 🎉🎉🎉
 
 This is the 'Hello World' of my blog. I'll explain better how the idea came up and how it was done.

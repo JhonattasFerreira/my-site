@@ -3,6 +3,8 @@ title: Criando Um Site Estático Com Next
 date: "2024-06-15"
 ---
 
+![O GIF de uma caveira tomando uma bebida em uma arte old school.](/skull.webp)
+
 Este post é uma continuação das melhorias implementadas no blog. Para saber mais, confira o primeiro artigo sobre [como melhorei meu blog](/blog/pt-br/melhorando-meu-blog).
 
 Após automatizar a criação de posts no blog usando arquivos Markdown, percebi que também precisava automatizar a criação de rotas.

@@ -3,6 +3,8 @@ title: How to Host a Website
 date: "2024-05-08"
 ---
 
+![A GIF of an old computer with pixel art.](/computer.webp)
+
 Buying a domain/hosting a website is a trivial task, a few configurations here and there, and voilà, a brand new website is up and running. But do you know how to do that?
 
 ## Where is the website?

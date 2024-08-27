@@ -3,6 +3,8 @@ title: Como Hospedar Um Website
 date: "2024-05-08"
 ---
 
+![Um GIF de um computador antigo em pixel art.](/computer.webp)
+
 Comprar um domínio/hospedar um site é uma tarefa trivial, algumas configurações aqui e ali, e pronto, um site novinho no ar. Mas você sabe como fazer isso?
 
 ## Onde o site está?

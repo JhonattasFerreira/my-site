@@ -3,6 +3,8 @@ title: Improving My Blog with Gray-matter and React-markdown
 date: "2024-06-14"
 ---
 
+![A GIF of a stream of images reminiscent of something digital.](/digital.webp)
+
 Big changes have happened on the Blog 🎉🎉🎉
 
 Before explaining what changed, it's important to explain how the blog was structured.

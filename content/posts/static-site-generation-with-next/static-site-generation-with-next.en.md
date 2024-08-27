@@ -3,6 +3,8 @@ title: Creating a Static Site with Next
 date: "2024-06-15"
 ---
 
+![The GIF of a skull drinking a beverage in an old-school art style.](/skull.webp)
+
 This post is a continuation of the improvements implemented on the blog. To learn more, check out the first article on how [I improved my blog](/blog/en/improving-my-blog).
 
 After automating the creation of posts on the blog using Markdown files, I realized I also needed to automate the creation of routes.

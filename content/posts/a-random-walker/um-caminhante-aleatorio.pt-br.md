@@ -3,6 +3,8 @@ title: Um Caminhante Aleatório
 date: "2024-07-26"
 ---
 
+![Um GIF de uma menina caminhando com um fundo colorido estático.](/walking.webp)
+
 Era uma noite de sábado, chovia, quando descobri o incrível canal [The Coding Train](https://www.youtube.com/@TheCodingTrain) do **Daniel Shiffman** e, devorando vários vídeos em sequência, senti uma empolgação com programação que há tempos não sentia.
 
 Em um vídeo, ele mencionou seu livro, [The Nature of Code](https://natureofcode.com/). O nome despertou minha curiosidade; como pode natureza e código estarem juntos? Então, comecei a lê-lo.
