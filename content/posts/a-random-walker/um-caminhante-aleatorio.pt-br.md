@@ -13,7 +13,7 @@ Em um vídeo, ele mencionou seu livro, [The Nature of Code](https://natureofcode
 
 A proposta deste livro é simples: como simular, com código, fenômenos do mundo físico.
 
-[Minha triste tentativa de criar uma abelha em um campo verde](https://editor.p5js.org/jhocore/full/DODgq6suN)
+![Minha triste tentativa de criar uma abelha em um campo verde $ https://editor.p5js.org/jhocore/sketches/DODgq6suN](/a-random-walker/p5Examples/bee)
 
 Pelo que entendi, a ideia de **The Nature of Code (NOC)** é dividir o mundo natural em partes menores e transformá-las em código usando JavaScript.
 
@@ -45,7 +45,7 @@ A aleatoriedade na computação é uma **mentira**. Na verdade, os computadores 
 
 Com isso somos introduzidos ao conceito do **_Walker_** (caminhante). Um ponto no canvas que se move de forma aleatória:
 
-[Um **_Walker_** simples](https://editor.p5js.org/jhocore/full/dBdk-VWmu)
+![Um Walker simples $ https://editor.p5js.org/jhocore/sketches/dBdk-VWmu](/a-random-walker/p5Examples/simpleWalker)
 
 Como algo tão simples pode ser tão legal?
 
@@ -59,13 +59,13 @@ A distribuição Gaussiana é uma forma onde os números se agrupam em torno de 
 
 Podemos ver isso neste desenho:
 
-[Pontos que aperecem seguindo a distribuição Gaussiana](https://editor.p5js.org/jhocore/full/z1KDRMB32)
+![Pontos que aperecem seguindo a distribuição Gaussiana $ https://editor.p5js.org/jhocore/sketches/z1KDRMB32](/a-random-walker/p5Examples/gaussianDistribution)
 
 Se você deslizar o **_slider_** para direita, os pontos ficam mais aleatório, mas para a esquerda, os pontos tendem a se concentrar no meio.
 
 Dessa forma, o **_Walker_** utilizando a distribuição Gaussiana fica assim:
 
-[O **_Walker_** utilizando distribuição Gaussiana](https://editor.p5js.org/jhocore/full/5NaMxvyjs)
+![O Walker utilizando distribuição Gaussiana $ https://editor.p5js.org/jhocore/sketches/5NaMxvyjs](/a-random-walker/p5Examples/walkerGausian)
 
 Porém, existe um problema com o **_Walker_** que utiliza a aleatoriedade pura e a distribuição Gaussiana: eles retornam várias vezes para posições ja visitadas (**_oversampling_**). O **_NOC_** apresenta uma solução: os **Voos de Lévy**
 
@@ -79,7 +79,7 @@ Um forma simples de implementar os Voos de Lévy é: quanto maior passo, menor a
 
 Ficando assim dessa forma:
 
-[Um **_Walker_** com uma implementação simples dos Voos de Lévy](https://editor.p5js.org/jhocore/full/_TVeoYjAw)
+![Um Walker com uma implementação simples dos Voos de Lévy $ https://editor.p5js.org/jhocore/sketches/_TVeoYjAw](/a-random-walker/p5Examples/walkerLevy)
 
 O problema é que os Voos de Lévy não são tão suaves, é aí que entra os **Ruídos de Perlin**.
 
@@ -95,17 +95,17 @@ Ele mostra isso através da função vertex que cria vértices, basta você pass
 
 Nesse caso o valor de **_y_** (altura) é gerado por **_random_**:
 
-[Vértices com alturas geradas a partir da função **_random_**](https://editor.p5js.org/jhocore/full/0020FfYPA)
+![Vértices com alturas geradas a partir da função random $ https://editor.p5js.org/jhocore/sketches/0020FfYPA](/a-random-walker/p5Examples/randomVertices)
 
 Já neste outro caso, **_y_** (altura) é gerado pelo **_noise_**:
 
-[Vértices com alturas geradas a partir da função **_noise_**](https://editor.p5js.org/jhocore/full/V07H-n-bT)
+![Vértices com alturas geradas a partir da função noise $ https://editor.p5js.org/jhocore/sketches/V07H-n-bT](/a-random-walker/p5Examples/noiseVertices)
 
 Eu não sei você, mas eu achei isso incrível, o jeito que a linha é desenhada de forma orgânica porém é tudo gerado de forma aleatória. Isso me encantou.
 
 Por fim, o **_Walker_** com Ruído de Perlin:
 
-[Um **_Walker_** simples com Ruído de Perlin](https://editor.p5js.org/jhocore/full/0lEbvMagJ)
+![Um Walker simples com Ruído de Perlin $ https://editor.p5js.org/jhocore/sketches/0lEbvMagJ](/a-random-walker/p5Examples/walkerNoise)
 
 O livro continua explicando mais assuntos, e eu recomendo muitíssimo a leitura dele. É totalmente **_grátis_**.
 
