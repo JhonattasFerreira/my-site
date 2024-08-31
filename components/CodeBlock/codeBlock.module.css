@@ -1,12 +1,7 @@
 .fontCode {
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 
-@media (min-width: 600px) and (max-width: 961px) {
-  .fontCode {
-    font-size: 0.7rem;
-  }
-}
 @media (min-width: 962px) {
   .fontCode {
     font-size: 1rem;
