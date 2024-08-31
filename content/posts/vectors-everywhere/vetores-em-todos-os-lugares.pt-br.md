@@ -5,8 +5,6 @@ gif: /vectors-everywhere/vector.webp
 altTextGif: Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.
 ---
 
-![Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.](/vectors-everywhere/vector.webp)
-
 Eu pensei que nunca mais usaria planos cartesianos na vida.
 
 Não me leve a mal, mas quando ainda estava no colégio alguns assuntos eram díficies para mim, como química orgânica, planos cartesianos e nomes de nuvem.

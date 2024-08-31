@@ -5,8 +5,6 @@ gif: /improving-my-blog/digital.webp
 altTextGif: Um GIF de um fluxo de imagens que remete a algo digital.
 ---
 
-![Um GIF de um fluxo de imagens que remete a algo digital.](/improving-my-blog/digital.webp)
-
 Grandes mudanças aconteceram no Blog 🎉🎉🎉
 
 Antes de explicar o que mudou, é importante explicar como o blog estava estruturado.

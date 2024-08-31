@@ -5,8 +5,17 @@ import styles from "./PostFrontmatter.module.css";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
+import Image from "@/components/Image";
 
-const PostFrontmatter = ({ title, date, language, children, oppositeUrl }) => {
+const PostFrontmatter = ({
+  title,
+  date,
+  language,
+  children,
+  oppositeUrl,
+  gif,
+  altTextGif,
+}) => {
   return (
     <div className={styles.container}>
       <header>
@@ -20,6 +29,9 @@ const PostFrontmatter = ({ title, date, language, children, oppositeUrl }) => {
             language={language}
             oppositeUrl={oppositeUrl}
           />
+          <section className={styles.gifSection}>
+            <Image src={gif} alt={altTextGif}></Image>
+          </section>
           <section className={styles.post}>{children}</section>
         </article>
       </main>

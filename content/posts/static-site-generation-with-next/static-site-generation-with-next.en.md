@@ -5,8 +5,6 @@ gif: /static-site-generation-with-next/skull.webp
 altTextGif: The GIF of a skull drinking a beverage in an old-school art style.
 ---
 
-![The GIF of a skull drinking a beverage in an old-school art style.](/static-site-generation-with-next/skull.webp)
-
 This post is a continuation of the improvements implemented on the blog. To learn more, check out the first article on how [I improved my blog](/blog/en/improving-my-blog).
 
 After automating the creation of posts on the blog using Markdown files, I realized I also needed to automate the creation of routes.

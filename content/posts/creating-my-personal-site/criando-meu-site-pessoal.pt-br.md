@@ -5,8 +5,6 @@ gif: /creating-my-personal-site/fireworks.webp
 altTextGif: Um GIF com fogos de atírifico colorido
 ---
 
-![Um GIF com fogos de atírifico colorido](/creating-my-personal-site/fireworks.webp)
-
 Olá, meu nome é Jhonattas e depois de procrastinar bastante, resolvi criar meu Blog 🎉🎉🎉
 
 Esse é o "Hello World" do meu blog. Vou explicar melhor como surgiu a ideia e como foi feito.

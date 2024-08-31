@@ -5,8 +5,6 @@ gif: /vectors-everywhere/vector.webp
 altTextGif: A vaporwave-style GIF with a camera moving through a checkered road under rain, palm trees on the sides, mountains in the background, and a large moon in the sky.
 ---
 
-![A vaporwave-style GIF with a camera moving through a checkered road under rain, palm trees on the sides, mountains in the background, and a large moon in the sky.](/vectors-everywhere/vector.webp)
-
 I thought I would never use Cartesian planes again in my life.
 
 Don't get me wrong, but when I was still in school, some subjects were difficult for me, like organic chemistry, Cartesian planes and cloud names.

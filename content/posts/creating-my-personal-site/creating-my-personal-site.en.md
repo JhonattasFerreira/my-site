@@ -5,8 +5,6 @@ gif: /creating-my-personal-site/fireworks.webp
 altTextGif: A GIF with colorful fireworks.
 ---
 
-![A GIF with colorful fireworks.](/creating-my-personal-site/fireworks.webp)
-
 Hello, my name is Jhonattas and after procrastinating for quite a while, i decided to create my blog 🎉🎉🎉
 
 This is the 'Hello World' of my blog. I'll explain better how the idea came up and how it was done.

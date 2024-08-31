@@ -11,6 +11,8 @@ const LayoutPost = ({ content, frontmatter, language, oppositeUrl }) => {
       date={frontmatter.date}
       language={language}
       oppositeUrl={oppositeUrl}
+      gif={frontmatter.gif}
+      altTextGif={frontmatter.altTextGif}
     >
       <ReactMarkdown
         components={{

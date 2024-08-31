@@ -5,8 +5,6 @@ gif: /static-site-generation-with-next/skull.webp
 altTextGif: O GIF de uma caveira tomando uma bebida em uma arte old school.
 ---
 
-![O GIF de uma caveira tomando uma bebida em uma arte old school.](/static-site-generation-with-next/skull.webp)
-
 Este post é uma continuação das melhorias implementadas no blog. Para saber mais, confira o primeiro artigo sobre [como melhorei meu blog](/blog/pt-br/melhorando-meu-blog).
 
 Após automatizar a criação de posts no blog usando arquivos Markdown, percebi que também precisava automatizar a criação de rotas.

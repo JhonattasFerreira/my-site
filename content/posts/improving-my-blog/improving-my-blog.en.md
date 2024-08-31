@@ -5,8 +5,6 @@ gif: /improving-my-blog/digital.webp
 altTextGif: A GIF of a stream of images reminiscent of something digital.
 ---
 
-![A GIF of a stream of images reminiscent of something digital.](/improving-my-blog/digital.webp)
-
 Big changes have happened on the Blog 🎉🎉🎉
 
 Before explaining what changed, it's important to explain how the blog was structured.

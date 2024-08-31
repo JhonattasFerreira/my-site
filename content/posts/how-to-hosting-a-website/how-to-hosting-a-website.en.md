@@ -5,8 +5,6 @@ gif: /how-to-hosting-a-website/computer.webp
 altTextGif: A GIF of an old computer with pixel art.
 ---
 
-![A GIF of an old computer with pixel art.](/how-to-hosting-a-website/computer.webp)
-
 Buying a domain/hosting a website is a trivial task, a few configurations here and there, and voilà, a brand new website is up and running. But do you know how to do that?
 
 ## Where is the website?
