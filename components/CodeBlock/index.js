@@ -13,7 +13,6 @@ const CodeBlock = ({ children, className }) => {
     <SyntaxHighlighter
       lineProps={{ style: { wordBreak: "break-all", whiteSpace: "pre-wrap" } }}
       wrapLines
-      showLineNumbers
       className={styles.fontCode}
       language={language}
       style={atomDark}
