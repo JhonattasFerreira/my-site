@@ -1,9 +1,9 @@
 .fontCode {
-  font-size: 5pt;
+  font-size: 1rem;
 }
 
 @media (min-width: 600px) {
   .fontCode {
-    font-size: 12pt;
+    font-size: 1.3rem;
   }
 }
