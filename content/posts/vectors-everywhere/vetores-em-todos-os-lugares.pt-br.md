@@ -15,7 +15,7 @@ _Você pode conferir a [postagem do capítulo anterior](/blog/pt-br/um-caminhant
 
 ## Vetores
 
-[Minha triste tentativa de criar uma abelha (círculo amarelo) sendo perseguida por um pássaro (triângulo azul) em um campo verde](https://editor.p5js.org/jhocore/full/g7rDGS_wN)
+![Minha triste tentativa de criar uma abelha (círculo amarelo) sendo perseguida por um pássaro (triângulo azul) em um campo verde $ https://editor.p5js.org/jhocore/sketches/g7rDGS_wN](/vectors-everywhere/p5Examples/bee)
 
 O termo vetor pode ter várias definições, mas vamos focar no vetor euclidiano, uma entidade com um tamanho e uma direção. Matematicamente, esse _tamanho_ é chamado de **magnitude**.
 
@@ -53,7 +53,7 @@ Podemos realizar as principais operações aritméticas com vetores: adição, s
 
 A adição de dois vetores resulta em um novo vetor com a soma das magnitudes. A subratração, retorna a diferença entre dois vetores.
 
-[Bola se movimentando através de vetores](https://editor.p5js.org/jhocore/full/gn-p7IYIT)
+![Bola se movimentando através de vetores $ https://editor.p5js.org/jhocore/sketches/gn-p7IYIT](/vectors-everywhere/p5Examples/ballWithVector)
 
 Primeiro, criamos dois vetores, um para **posição** e outro para a **velocidade**:
 
@@ -91,7 +91,7 @@ position.add(velocity);
 
 Por fim, o código abaixo cria uma elipse que acelera na direção do mouse:
 
-[Bola acelerando na direção do mouse](https://editor.p5js.org/jhocore/full/KZEsoXh4-)
+![Bola acelerando na direção do mouse $ https://editor.p5js.org/jhocore/sketches/KZEsoXh4-](/vectors-everywhere/p5Examples/ballFollowMouse)
 
 Chegamos ao fim dos vetores, por diversas vezes me peguei pensando em como um punhado de códigos simples pode gerar coisas tão incriveis.
 

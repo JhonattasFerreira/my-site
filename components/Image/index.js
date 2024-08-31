@@ -1,6 +1,14 @@
 import Image from "next/image";
 
+import IframeP5 from "@/components/IframeP5New";
+
+const isP5js = (srcPath) => srcPath.includes("p5Examples");
+
 const ImageBlock = ({ alt, src }) => {
+  if (isP5js(src)) {
+    return <IframeP5 src={src} metadata={alt} />;
+  }
+
   return (
     <Image
       src={src}

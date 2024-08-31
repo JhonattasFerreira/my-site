@@ -15,7 +15,7 @@ _You can check out the [previous chapter's post](/blog/en/a-random-walker)._
 
 ## Vectors
 
-[My sad attempt to create a bee (yellow circle) being chased by a bird (blue triangle) in a green field](https://editor.p5js.org/jhocore/full/g7rDGS_wN)
+![My sad attempt to create a bee (yellow circle) being chased by a bird (blue triangle) in a green field $ https://editor.p5js.org/jhocore/sketches/g7rDGS_wN](/vectors-everywhere/p5Examples/bee)
 
 The term "vector" can have various definitions, but let's focus on the Euclidean vector, an entity with size and direction. Mathematically, this _size_ is called **magnitude**.
 
@@ -53,7 +53,7 @@ We can perform the main arithmetic operations with vectors: addition, subtractio
 
 The addition of two vectors results in a new vector with the sum of their magnitudes. Subtraction returns the difference between two vectors.
 
-[Ball moving using vectors](https://editor.p5js.org/jhocore/full/gn-p7IYIT)
+![Ball moving using vectors $ https://editor.p5js.org/jhocore/sketches/gn-p7IYIT](/vectors-everywhere/p5Examples/ballWithVector)
 
 First, we create two vectors, one for **position** and another for **velocity**:
 
@@ -91,7 +91,7 @@ position.add(velocity);
 
 Finally, the code below creates an ellipse that accelerates toward the mouse:
 
-[Ball accelerating toward the mouse](https://editor.p5js.org/jhocore/full/KZEsoXh4-)
+![Ball accelerating toward the mouse $ https://editor.p5js.org/jhocore/sketches/KZEsoXh4-](/vectors-everywhere/p5Examples/ballFollowMouse)
 
 We've reached the end of vectors, and I often find myself thinking about how a bunch of simple code can create such amazing things.
 
