@@ -1,20 +1,25 @@
 import styles from "./iframeP5.module.css";
 
-const IframeP5 = ({ href, children }) => {
+const IframeP5 = ({ src, metadata }) => {
+  const [title, url] = metadata.split(" $ ");
   return (
     <>
       <iframe
-        title={`p5.js iframe sketch: ${children}`}
-        src={href}
+        title={`p5.js iframe sketch: ${title}`}
+        src={src + "/index.html"}
         width="100%"
         height="400px"
-        allow="accelerometer; gyroscope"
-        allowFullScreen
+        loading="lazy"
         style={{
           border: "none",
         }}
       ></iframe>
-      <em className={styles.spanDescription}>{children}</em>
+      <em className={styles.spanDescription}>
+        {title}{" "}
+        <a href={url} target="_blank">
+          (Source Code)
+        </a>
+      </em>
     </>
   );
 };

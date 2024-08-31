@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import IframeP5 from "@/components/IframeP5New";
+import IframeP5 from "@/components/IframeP5";
 
 const isP5js = (srcPath) => srcPath.includes("p5Examples");
 
