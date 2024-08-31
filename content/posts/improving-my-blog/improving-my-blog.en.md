@@ -1,6 +1,8 @@
 ---
-title: Improving My Blog with Gray-matter and React-markdown
+title: Improving My Blog
 date: "2024-06-14"
+gif: /improving-my-blog/digital.webp
+altTextGif: A GIF of a stream of images reminiscent of something digital.
 ---
 
 ![A GIF of a stream of images reminiscent of something digital.](/improving-my-blog/digital.webp)

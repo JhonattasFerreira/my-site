@@ -1,6 +1,8 @@
 ---
 title: Vetores Em Todos Os Lugares
 date: "2024-08-16"
+gif: /vectors-everywhere/vector.webp
+altTextGif: Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.
 ---
 
 ![Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.](/vectors-everywhere/vector.webp)

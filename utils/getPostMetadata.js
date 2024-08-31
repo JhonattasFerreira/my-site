@@ -16,11 +16,13 @@ export default function getPostMetadata(basePath, language) {
       ENCODING_UTF8
     );
 
-    const { title, date } = matter(fileContent).data;
+    const { title, date, gif, altTextGif } = matter(fileContent).data;
 
     return {
       title,
       date,
+      gif,
+      altTextGif,
       slug: filename.replace(`.${language}.md`, ""),
     };
   });

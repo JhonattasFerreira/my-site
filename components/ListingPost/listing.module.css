@@ -6,6 +6,56 @@
   padding-bottom: 2vh;
 }
 
+.articleBox {
+  width: 100%;
+  height: 25vw;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.articleBox a {
+  width: 100%;
+  text-decoration: none;
+}
+.gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+.gif:hover {
+  opacity: 0.8;
+}
+
+.articleContent {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.3rem;
+  width: calc(100% - 2rem);
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.articleTitleText {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.articleDate {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
 .title {
   display: flex;
   flex-direction: column;
@@ -33,24 +83,20 @@
   margin: 0 3vw;
 }
 
-.blogPostItem {
-  padding-bottom: 5vh;
-}
-
-.blogPostItem a {
-  font-size: 5.5vw;
-  text-decoration: none;
-}
-
-.blogPostItem a:hover {
-  color: #9ec8b9;
-}
-
-.postDate {
-  font-size: 3vw;
-}
-
 @media (min-width: 600px) and (max-width: 961px) {
+  .articleBox {
+    width: 100%;
+    height: 20vw;
+  }
+
+  .articleTitleText {
+    font-size: 2rem;
+  }
+
+  .articleDate {
+    font-size: 1rem;
+  }
+
   .titleName {
     font-size: 7vw;
   }
@@ -60,25 +106,25 @@
     margin: 0 6vw;
   }
 
-  .blogPostItem {
-    padding-bottom: 8vh;
-  }
-
-  .blogPostItem a {
-    font-size: 4vw;
-  }
-
-  .postDate {
-    font-size: 2.1vw;
-    padding-top: 1vh;
-  }
-
   .title a {
     font-size: 13pt;
   }
 }
 
 @media (min-width: 962px) {
+  .articleBox {
+    width: 100%;
+    height: 15vw;
+  }
+
+  .articleTitleText {
+    font-size: 2.5rem;
+  }
+
+  .articleDate {
+    font-size: 1rem;
+  }
+
   .titleName {
     font-size: 4.5vw;
   }
@@ -86,19 +132,6 @@
   .listBlogPosts {
     padding-top: 13vh;
     margin: 0 15vw;
-  }
-
-  .blogPostItem {
-    padding-bottom: 8vh;
-  }
-
-  .blogPostItem a {
-    font-size: 3vw;
-  }
-
-  .postDate {
-    font-size: 1.5vw;
-    padding-top: 0.5vh;
   }
 
   .title a {

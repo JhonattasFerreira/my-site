@@ -41,11 +41,16 @@ const ListingBlogPosts = ({ posts, language }) => {
   return (
     <div className={styles.listBlogPosts}>
       {posts.map((post, index) => (
-        <article key={`post-${index}`} className={styles.blogPostItem}>
-          <Link href={"/blog/" + language + "/" + post.slug}>{post.title}</Link>
-          <div className={styles.postDate}>
-            <time dateTime={post.date}>{formatDate(post.date, language)}</time>
-          </div>
+        <article key={`post-${index}`} className={styles.articleBox}>
+          <Link href={"/blog/" + language + "/" + post.slug}>
+            <img src={post.gif} alt={post.altTextGif} className={styles.gif} />
+            <div className={styles.articleContent}>
+              <p className={styles.articleTitleText}>{post.title}</p>
+              <time dateTime={post.date} className={styles.articleDate}>
+                {formatDate(post.date, language)}
+              </time>
+            </div>
+          </Link>
         </article>
       ))}
     </div>

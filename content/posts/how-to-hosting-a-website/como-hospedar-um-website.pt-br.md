@@ -1,6 +1,8 @@
 ---
 title: Como Hospedar Um Website
 date: "2024-05-08"
+gif: /how-to-hosting-a-website/computer.webp
+altTextGif: Um GIF de um computador antigo em pixel art.
 ---
 
 ![Um GIF de um computador antigo em pixel art.](/how-to-hosting-a-website/computer.webp)

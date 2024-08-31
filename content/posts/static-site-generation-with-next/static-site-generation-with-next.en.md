@@ -1,6 +1,8 @@
 ---
 title: Creating a Static Site with Next
 date: "2024-06-15"
+gif: /static-site-generation-with-next/skull.webp
+altTextGif: The GIF of a skull drinking a beverage in an old-school art style.
 ---
 
 ![The GIF of a skull drinking a beverage in an old-school art style.](/static-site-generation-with-next/skull.webp)

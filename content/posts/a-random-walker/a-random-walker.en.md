@@ -1,6 +1,8 @@
 ---
 title: A Random Walker
 date: "2024-07-26"
+gif: /a-random-walker/walking.webp
+altTextGif: A GIF of a girl walking with a static colorful background.
 ---
 
 ![A GIF of a girl walking with a static colorful background.](/a-random-walker/walking.webp)

@@ -1,6 +1,8 @@
 ---
 title: Criando Meu Site Pessoal
 date: "2024-04-23"
+gif: /creating-my-personal-site/fireworks.webp
+altTextGif: Um GIF com fogos de atírifico colorido
 ---
 
 ![Um GIF com fogos de atírifico colorido](/creating-my-personal-site/fireworks.webp)

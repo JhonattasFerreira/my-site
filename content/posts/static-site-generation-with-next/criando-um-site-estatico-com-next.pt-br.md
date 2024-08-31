@@ -1,6 +1,8 @@
 ---
 title: Criando Um Site Estático Com Next
 date: "2024-06-15"
+gif: /static-site-generation-with-next/skull.webp
+altTextGif: O GIF de uma caveira tomando uma bebida em uma arte old school.
 ---
 
 ![O GIF de uma caveira tomando uma bebida em uma arte old school.](/static-site-generation-with-next/skull.webp)

@@ -1,6 +1,8 @@
 ---
 title: Um Caminhante Aleatório
 date: "2024-07-26"
+gif: /a-random-walker/walking.webp
+altTextGif: Um GIF de uma menina caminhando com um fundo colorido estático.
 ---
 
 ![Um GIF de uma menina caminhando com um fundo colorido estático.](/a-random-walker/walking.webp)

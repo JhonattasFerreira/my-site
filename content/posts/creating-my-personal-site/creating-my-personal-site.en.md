@@ -1,6 +1,8 @@
 ---
 title: Creating My Personal Site
 date: "2024-04-23"
+gif: /creating-my-personal-site/fireworks.webp
+altTextGif: A GIF with colorful fireworks.
 ---
 
 ![A GIF with colorful fireworks.](/creating-my-personal-site/fireworks.webp)
