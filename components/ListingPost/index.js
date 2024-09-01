@@ -51,6 +51,7 @@ const ListingBlogPosts = ({ posts, language }) => {
               alt={post.altTextGif}
               className={styles.gif}
               priority={true}
+              unoptimized={true}
             />
             <div className={styles.articleContent}>
               <p className={styles.articleTitleText}>{post.title}</p>
