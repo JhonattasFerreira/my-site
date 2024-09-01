@@ -69,7 +69,6 @@ A classe **_.articleBox_** cria a caixa, assim:
   height: 25vw;
   position: relative;
   overflow: hidden;
-  /* Other Attrs */
 }
 ```
 
@@ -107,7 +106,6 @@ O restante foi simples: posicionei o título e a data dentro da caixa e adicione
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   transition: background-color 0.2s ease;
-  /* Other Attrs */
 }
 ```
 

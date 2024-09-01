@@ -69,7 +69,6 @@ The **_.articleBox_** class creates the box like this:
   height: 25vw;
   position: relative;
   overflow: hidden;
-  /* Other Attrs */
 }
 ```
 
@@ -107,7 +106,6 @@ The rest was simple: I positioned the title and date inside the box and added a 
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   transition: background-color 0.2s ease;
-  /* Other Attrs */
 }
 ```
 
