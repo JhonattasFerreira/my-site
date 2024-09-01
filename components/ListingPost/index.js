@@ -3,6 +3,7 @@ import styles from "./listing.module.css";
 import NavItem from "@/components/NavItem";
 import formatDate from "@/utils/formatDate";
 import { TITLE_EN, TITLE_PT_BR, EN_LANGUAGE } from "@/utils/constants";
+import Image from "next/image";
 
 const ListingPost = ({ postMetadata, language }) => {
   return (
@@ -43,7 +44,14 @@ const ListingBlogPosts = ({ posts, language }) => {
       {posts.map((post, index) => (
         <article key={`post-${index}`} className={styles.articleBox}>
           <Link href={"/blog/" + language + "/" + post.slug}>
-            <img src={post.gif} alt={post.altTextGif} className={styles.gif} />
+            <Image
+              width={0}
+              height={0}
+              src={post.gif}
+              alt={post.altTextGif}
+              className={styles.gif}
+              priority={true}
+            />
             <div className={styles.articleContent}>
               <p className={styles.articleTitleText}>{post.title}</p>
               <em>
