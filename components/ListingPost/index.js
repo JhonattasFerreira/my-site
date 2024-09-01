@@ -46,9 +46,11 @@ const ListingBlogPosts = ({ posts, language }) => {
             <img src={post.gif} alt={post.altTextGif} className={styles.gif} />
             <div className={styles.articleContent}>
               <p className={styles.articleTitleText}>{post.title}</p>
-              <time dateTime={post.date} className={styles.articleDate}>
-                {formatDate(post.date, language)}
-              </time>
+              <em>
+                <time dateTime={post.date} className={styles.articleDate}>
+                  {formatDate(post.date, language)}
+                </time>
+              </em>
             </div>
           </Link>
         </article>
