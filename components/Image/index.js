@@ -9,6 +9,9 @@ const ImageBlock = ({ alt, src }) => {
     return <IframeP5 src={src} metadata={alt} />;
   }
 
+  const isGifOrWebp =
+    src.toLowerCase().endsWith(".gif") || src.toLowerCase().endsWith(".webp");
+
   return (
     <Image
       src={src}
@@ -17,6 +20,7 @@ const ImageBlock = ({ alt, src }) => {
       height={0}
       sizes="100vw"
       unoptimized
+      priority={isGifOrWebp}
       style={{
         width: "100%",
         height: "auto",

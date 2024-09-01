@@ -1,5 +1,5 @@
 ---
-title: Gifs and More
+title: GIFs and More
 date: "2024-09-01"
 gif: /gifs-and-more/cat.gif
 altTextGif: A GIF of a white cat.
