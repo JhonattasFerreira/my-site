@@ -1,22 +1,150 @@
-<xml version="1.0" encoding="UTF-8">
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url>
-            <loc>https://jhocore.com</loc>
-            <lastmod>2024-08-10</lastmod>
-            <changefreq>yearly</changefreq>
-            <priority>1</priority>
-        </url>
-        <url>
-            <loc>https://jhocore.com/blog/en</loc>
-            <lastmod>2024-08-10</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.8</priority>
-        </url>
-        <url>
-            <loc>https://jhocore.com/blog/pt-br</loc>
-            <lastmod>2024-08-10</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.8</priority>
-        </url>
-    </urlset>
-</xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://jhocore.com/</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/gifs-and-more</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/vectors-everywhere</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/a-random-walker</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/static-site-generation-with-next</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/improving-my-blog</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/how-to-hosting-a-website</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/en/creating-my-personal-site</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/gifs-e-mais</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/vetores-em-todos-os-lugares</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/um-caminhante-aleatorio</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/criando-um-site-estatico-com-next</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/melhorando-meu-blog</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/como-hospedar-um-website</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/blog/pt-br/criando-meu-site-pessoal</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/vectors-everywhere/p5Examples/bee/index.html</loc>
+  <lastmod>2024-10-30T10:46:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/vectors-everywhere/p5Examples/ballWithVector/index.html</loc>
+  <lastmod>2024-10-30T10:46:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/vectors-everywhere/p5Examples/ballFollowMouse/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/bee/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/simpleWalker/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/gaussianDistribution/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/walkerGausian/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/walkerLevy/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/randomVertices/index.html</loc>
+  <lastmod>2024-10-30T10:46:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/noiseVertices/index.html</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/a-random-walker/p5Examples/walkerNoise/index.html</loc>
+  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
