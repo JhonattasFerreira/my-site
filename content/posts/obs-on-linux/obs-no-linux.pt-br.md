@@ -3,6 +3,7 @@ title: "OBS no Linux: Como Fazer Live na Twitch"
 date: "2025-12-27"
 gif: /obs-on-linux/live.gif
 altTextGif: Um GIF onde tem escrito a palavra LIVE com um círculo roxo. O texto se move até formar a palavra LIVE novamente.
+description: "Um guia prático para configurar o OBS Studio no Linux para transmitir na Twitch, incluindo permissões, câmera virtual e problemas comuns."
 ---
 
 Contra todas as possibilidades, você decidiu fazer lives usando Linux.

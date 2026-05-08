@@ -3,6 +3,7 @@ title: Creating My Personal Site
 date: "2024-04-23"
 gif: /creating-my-personal-site/fireworks.webp
 altTextGif: A GIF with colorful fireworks.
+description: "A behind-the-scenes look at how and why I created this personal blog — the decisions, the stack, and what I learned along the way."
 ---
 
 Hello, my name is Jhonattas and after procrastinating for quite a while, i decided to create my blog 🎉🎉🎉

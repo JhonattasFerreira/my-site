@@ -3,6 +3,7 @@ title: Creating a Static Site with Next
 date: "2024-06-15"
 gif: /static-site-generation-with-next/skull.webp
 altTextGif: The GIF of a skull drinking a beverage in an old-school art style.
+description: "Learn how to use Next.js Static Site Generation to build a fast blog powered by Markdown files — no database required."
 ---
 
 This post is a continuation of the improvements implemented on the blog. To learn more, check out the first article on how [I improved my blog](/blog/en/improving-my-blog).

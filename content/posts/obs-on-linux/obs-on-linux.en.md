@@ -3,6 +3,7 @@ title: "OBS on Linux: How to Stream on Twitch"
 date: "2025-12-27"
 gif: /obs-on-linux/live.gif
 altTextGif: A GIF that displays the word LIVE with a purple circle. The text moves until it forms the word LIVE again.
+description: "A practical guide to setting up OBS Studio on Linux for Twitch streaming, including permissions, virtual camera, and common pitfalls."
 ---
 
 Against all odds, you decided to stream using Linux.

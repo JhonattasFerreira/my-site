@@ -3,6 +3,7 @@ title: Vetores Em Todos Os Lugares
 date: "2024-08-16"
 gif: /vectors-everywhere/vector.webp
 altTextGif: Um GIF em estilo vaporwave com uma câmera se movendo por uma estrada quadriculada sob chuva, coqueiros nas laterais, montanhas ao fundo e uma grande lua no céu.
+description: "Uma introdução a vetores na programação: o que são, como funcionam no p5.js e como usá-los para simular física e movimento."
 ---
 
 Eu pensei que nunca mais usaria planos cartesianos na vida.

@@ -3,6 +3,7 @@ title: Melhorando Meu Blog
 date: "2024-06-14"
 gif: /improving-my-blog/digital.webp
 altTextGif: Um GIF de um fluxo de imagens que remete a algo digital.
+description: "Uma visão geral das principais mudanças introduzidas no blog — novos recursos, melhorias visuais e as motivações por trás de cada decisão."
 ---
 
 Grandes mudanças aconteceram no Blog 🎉🎉🎉

@@ -1,5 +1,7 @@
-import "./globals.css";
+import "../globals.css";
 import { Raleway } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -14,10 +16,14 @@ export const metadata = {
   description: "A blog by Jhonattas Ferreira",
 };
 
-export default function RootLayout({ children }) {
+export default function HomeLayout({ children }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>{children}</body>
+      <body className={raleway.className}>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }

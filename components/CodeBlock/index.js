@@ -1,6 +1,6 @@
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import styles from "./codeBlock.module.css";
+import dynamic from "next/dynamic";
+
+const SyntaxHighlighterBlock = dynamic(() => import("./SyntaxHighlighterBlock"));
 
 const CodeBlock = ({ children, className }) => {
   if (!className) {
@@ -10,13 +10,9 @@ const CodeBlock = ({ children, className }) => {
   const language = className.replace("language-", "");
 
   return (
-    <SyntaxHighlighter
-      className={styles.fontCode}
-      language={language}
-      style={atomDark}
-    >
+    <SyntaxHighlighterBlock language={language}>
       {children}
-    </SyntaxHighlighter>
+    </SyntaxHighlighterBlock>
   );
 };
 

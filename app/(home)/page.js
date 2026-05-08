@@ -1,12 +1,8 @@
-import styles from "./home.module.css";
-
+import styles from "../home.module.css";
 import NavItem from "@/components/NavItem";
 import Link from "next/link";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import SocialFooter from "@/components/SocialFooter";
 import { Jersey_10 } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 
 const jersey_10 = Jersey_10({
   subsets: ["latin"],
@@ -18,10 +14,8 @@ const jersey_10 = Jersey_10({
 export default function Home() {
   return (
     <div className={styles.container}>
-      <SpeedInsights />
-      <Analytics />
       <header>
-        <NavItem item={{ name: "Blog", url: "/blog/en" }} />
+        <NavItem item={{ name: "Blog", url: "/en/blog" }} />
       </header>
 
       <main className={styles.mainContent}>
@@ -38,28 +32,12 @@ export default function Home() {
         <section className={styles.containerAbout}>
           <div>Hi, I'm a Software Engineer with a passion for programming.</div>
           <div className={styles.checkoutBlog}>
-            Check out my <Link href={"/blog/en"}>blog</Link>. ❤️
+            Check out my <Link href={"/en/blog"}>blog</Link>. ❤️
           </div>
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/jhonattasferreira/"
-          aria-label="Go to my LinkedIn profile"
-        >
-          <FaLinkedin />
-        </a>
-
-        <a
-          target="_blank"
-          href="https://github.com/JhonattasFerreira"
-          aria-label="Go to my GitHub profile"
-        >
-          <FaGithubSquare />
-        </a>
-      </footer>
+      <SocialFooter className={styles.footer} />
     </div>
   );
 }

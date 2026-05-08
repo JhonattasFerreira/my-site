@@ -2,8 +2,7 @@ import NavItem from "../NavItem";
 import Link from "next/link";
 import formatDate from "@/utils/formatDate";
 import styles from "./PostFrontmatter.module.css";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import SocialFooter from "@/components/SocialFooter";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
 import Image from "@/components/Image";
 
@@ -19,7 +18,7 @@ const PostFrontmatter = ({
   return (
     <div className={styles.container}>
       <header>
-        <NavItem item={{ name: "Blog", url: `/blog/${language}` }} />
+        <NavItem item={{ name: "Blog", url: `/${language}/blog` }} />
       </header>
       <main className={styles.mainContent}>
         <article>
@@ -35,23 +34,7 @@ const PostFrontmatter = ({
           <section className={styles.post}>{children}</section>
         </article>
       </main>
-      <footer className={styles.footer}>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/jhonattasferreira/"
-          aria-label="Go to my LinkedIn profile"
-        >
-          <FaLinkedin />
-        </a>
-
-        <a
-          target="_blank"
-          href="https://github.com/JhonattasFerreira"
-          aria-label="Go to my GitHub profile"
-        >
-          <FaGithubSquare />
-        </a>
-      </footer>
+      <SocialFooter className={styles.footer} />
     </div>
   );
 };
@@ -65,14 +48,14 @@ const Title = ({ title, date, language, oppositeUrl }) => {
         {language === EN_LANGUAGE ? (
           <Link
             aria-label="Change to Brazilian Portuguese"
-            href={`/blog/${PT_BR_LANGUAGE}/${oppositeUrl}`}
+            href={`/${PT_BR_LANGUAGE}/blog/${oppositeUrl}`}
           >
             <em>(Versão em Português)</em>
           </Link>
         ) : (
           <Link
             aria-label="Change to English"
-            href={`/blog/${EN_LANGUAGE}/${oppositeUrl}`}
+            href={`/${EN_LANGUAGE}/blog/${oppositeUrl}`}
           >
             <em>(English version)</em>
           </Link>

@@ -3,6 +3,7 @@ title: How to Host a Website
 date: "2024-05-08"
 gif: /how-to-hosting-a-website/computer.webp
 altTextGif: A GIF of an old computer with pixel art.
+description: "A practical guide on how to buy a domain and host a website, covering DNS configuration, hosting providers, and deployment basics."
 ---
 
 Buying a domain/hosting a website is a trivial task, a few configurations here and there, and voilà, a brand new website is up and running. But do you know how to do that?
