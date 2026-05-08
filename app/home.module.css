@@ -98,6 +98,49 @@
   animation: shake 0.5s ease-out forwards;
 }
 
+@keyframes jump {
+  0%   { transform: translateY(0)    scale(1); }
+  35%  { transform: translateY(-10px) scale(1.25); }
+  65%  { transform: translateY(2px)  scale(0.9); }
+  100% { transform: translateY(0)    scale(1); }
+}
+
+@keyframes tremble {
+  0%   { transform: translate(0,    0); }
+  15%  { transform: translate(-1px, 1px); }
+  30%  { transform: translate(1px,  -1px); }
+  45%  { transform: translate(-1px, -1px); }
+  60%  { transform: translate(1px,  0); }
+  75%  { transform: translate(0,    1px); }
+  90%  { transform: translate(-1px, 0); }
+  100% { transform: translate(0,    0); }
+}
+
+.ball {
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  z-index: 200;
+}
+
+.ballTrembling {
+  animation: tremble 0.4s ease-in-out infinite;
+}
+
+.ballEye {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+
+.ballJumping {
+  animation: jump 0.4s ease-out;
+}
+
 @media (min-width: 600px) and (max-width: 961px) {
   .mainContent {
     height: 100vh;
