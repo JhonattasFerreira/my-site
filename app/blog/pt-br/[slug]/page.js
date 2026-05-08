@@ -15,14 +15,15 @@ export const generateStaticParams = async () => {
   return posts.map((post) => ({ slug: `${post.slug}` }));
 };
 
-export async function generateMetadata({ params, searchParams }) {
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
   return {
-    title: `${transformString(params?.slug)}${TITLE_METADATA_POST_SUFIX}`,
+    title: `${transformString(slug)}${TITLE_METADATA_POST_SUFIX}`,
   };
 }
 
-const Post = (props) => {
-  const slug = props.params.slug;
+const Post = async (props) => {
+  const { slug } = await props.params;
   const { data, content, oppositeUrl } = getPostContent(slug, FILENAME_END_EN);
 
   return (
