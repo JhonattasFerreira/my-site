@@ -1,8 +1,6 @@
-"use client";
-
 import dynamic from "next/dynamic";
 
-const SyntaxHighlighterBlock = dynamic(() => import("./SyntaxHighlighterBlock"), { ssr: false });
+const SyntaxHighlighterBlock = dynamic(() => import("./SyntaxHighlighterBlock"));
 
 const CodeBlock = ({ children, className }) => {
   if (!className) {
