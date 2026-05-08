@@ -18,8 +18,8 @@ export const metadata = {
 
 export default function HomeLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={raleway.className}>
+    <html lang="en" style={{ overflow: "hidden" }}>
+      <body className={raleway.className} style={{ overflow: "hidden" }}>
         {children}
         <SpeedInsights />
         <Analytics />

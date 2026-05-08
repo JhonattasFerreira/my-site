@@ -50,11 +50,95 @@
     opacity: 0.5;
   }
 }
+
+@keyframes shake {
+  0%   { transform: translateY(0)    translateX(0); }
+  10%  { transform: translateY(6px)  translateX(0); }
+  20%  { transform: translateY(0)    translateX(0); }
+  30%  { transform: translateX(-8px); }
+  42%  { transform: translateX(6px); }
+  54%  { transform: translateX(-5px); }
+  65%  { transform: translateX(3px); }
+  76%  { transform: translateX(-2px); }
+  88%  { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(var(--fall-distance)) rotate(810deg);
+  }
+}
+
 .rectangle {
   width: 2.8vw;
   height: inherit;
   background: white;
   animation: blink 1.5s linear infinite;
+}
+
+.rectangleFalling {
+  position: fixed;
+  background: white;
+  animation: fall 1.2s ease-in forwards;
+  z-index: 100;
+}
+
+.rectangleResting {
+  position: fixed;
+  background: white;
+  animation: blink 1.5s linear infinite;
+  z-index: 100;
+}
+
+.containerShaking {
+  animation: shake 0.5s ease-out forwards;
+}
+
+@keyframes jump {
+  0%   { transform: translateY(0)    scale(1); }
+  35%  { transform: translateY(-10px) scale(1.25); }
+  65%  { transform: translateY(2px)  scale(0.9); }
+  100% { transform: translateY(0)    scale(1); }
+}
+
+@keyframes tremble {
+  0%   { transform: translate(0,    0); }
+  15%  { transform: translate(-1px, 1px); }
+  30%  { transform: translate(1px,  -1px); }
+  45%  { transform: translate(-1px, -1px); }
+  60%  { transform: translate(1px,  0); }
+  75%  { transform: translate(0,    1px); }
+  90%  { transform: translate(-1px, 0); }
+  100% { transform: translate(0,    0); }
+}
+
+.ball {
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  z-index: 200;
+}
+
+.ballTrembling {
+  animation: tremble 0.4s ease-in-out infinite;
+}
+
+.ballEye {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+
+.ballJumping {
+  animation: jump 0.4s ease-out;
 }
 
 @media (min-width: 600px) and (max-width: 961px) {
