@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import { Raleway } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
@@ -11,14 +11,14 @@ const raleway = Raleway({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Jhonattas Ferreira | JhoCore",
-  description: "A blog by Jhonattas Ferreira",
-};
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "pt-br" }];
+}
 
-export default function RootLayout({ children }) {
+export default async function LangLayout({ children, params }) {
+  const { lang } = await params;
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={raleway.className}>
         {children}
         <SpeedInsights />

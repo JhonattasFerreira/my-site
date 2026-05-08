@@ -11,83 +11,93 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en</loc>
+  <loc>https://jhocore.com/en/blog</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br</loc>
+  <loc>https://jhocore.com/pt-br/blog</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/gifs-and-more</loc>
+  <loc>https://jhocore.com/en/blog/gifs-and-more</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/vectors-everywhere</loc>
+  <loc>https://jhocore.com/en/blog/vectors-everywhere</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/a-random-walker</loc>
+  <loc>https://jhocore.com/en/blog/a-random-walker</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/static-site-generation-with-next</loc>
+  <loc>https://jhocore.com/en/blog/improving-my-blog</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/improving-my-blog</loc>
+  <loc>https://jhocore.com/en/blog/how-to-hosting-a-website</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/how-to-hosting-a-website</loc>
+  <loc>https://jhocore.com/en/blog/creating-my-personal-site</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/en/creating-my-personal-site</loc>
-  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <loc>https://jhocore.com/en/blog/the-linux-command-ccwc</loc>
+  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/gifs-e-mais</loc>
+  <loc>https://jhocore.com/en/blog/obs-on-linux</loc>
+  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/pt-br/blog/gifs-e-mais</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/vetores-em-todos-os-lugares</loc>
+  <loc>https://jhocore.com/pt-br/blog/vetores-em-todos-os-lugares</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/um-caminhante-aleatorio</loc>
+  <loc>https://jhocore.com/pt-br/blog/um-caminhante-aleatorio</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/criando-um-site-estatico-com-next</loc>
+  <loc>https://jhocore.com/pt-br/blog/melhorando-meu-blog</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/melhorando-meu-blog</loc>
+  <loc>https://jhocore.com/pt-br/blog/como-hospedar-um-website</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/como-hospedar-um-website</loc>
+  <loc>https://jhocore.com/pt-br/blog/criando-meu-site-pessoal</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://jhocore.com/blog/pt-br/criando-meu-site-pessoal</loc>
-  <lastmod>2024-10-30T10:46:28+00:00</lastmod>
+  <loc>https://jhocore.com/pt-br/blog/o-comando-linux-ccwc</loc>
+  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jhocore.com/pt-br/blog/obs-no-linux</loc>
+  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
@@ -144,16 +154,6 @@
   <loc>https://jhocore.com/a-random-walker/p5Examples/walkerNoise/index.html</loc>
   <lastmod>2024-10-30T10:46:28+00:00</lastmod>
   <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://jhocore.com/blog/en/the-linux-command-ccwc</loc>
-  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jhocore.com/blog/pt-br/o-comando-linux-ccwc</loc>
-  <lastmod>2024-11-30T10:46:28+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 </urlset>

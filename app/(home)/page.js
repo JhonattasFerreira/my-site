@@ -1,5 +1,4 @@
-import styles from "./home.module.css";
-
+import styles from "../home.module.css";
 import NavItem from "@/components/NavItem";
 import Link from "next/link";
 import SocialFooter from "@/components/SocialFooter";
@@ -16,7 +15,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header>
-        <NavItem item={{ name: "Blog", url: "/blog/en" }} />
+        <NavItem item={{ name: "Blog", url: "/en/blog" }} />
       </header>
 
       <main className={styles.mainContent}>
@@ -33,7 +32,7 @@ export default function Home() {
         <section className={styles.containerAbout}>
           <div>Hi, I'm a Software Engineer with a passion for programming.</div>
           <div className={styles.checkoutBlog}>
-            Check out my <Link href={"/blog/en"}>blog</Link>. ❤️
+            Check out my <Link href={"/en/blog"}>blog</Link>. ❤️
           </div>
         </section>
       </main>

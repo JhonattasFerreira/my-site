@@ -21,6 +21,7 @@ const ImageBlock = ({ alt, src }) => {
       sizes="100vw"
       unoptimized
       priority={isGifOrWebp}
+      loading={isGifOrWebp ? "eager" : "lazy"}
       style={{
         width: "100%",
         height: "auto",

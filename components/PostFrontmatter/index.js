@@ -18,7 +18,7 @@ const PostFrontmatter = ({
   return (
     <div className={styles.container}>
       <header>
-        <NavItem item={{ name: "Blog", url: `/blog/${language}` }} />
+        <NavItem item={{ name: "Blog", url: `/${language}/blog` }} />
       </header>
       <main className={styles.mainContent}>
         <article>
@@ -48,14 +48,14 @@ const Title = ({ title, date, language, oppositeUrl }) => {
         {language === EN_LANGUAGE ? (
           <Link
             aria-label="Change to Brazilian Portuguese"
-            href={`/blog/${PT_BR_LANGUAGE}/${oppositeUrl}`}
+            href={`/${PT_BR_LANGUAGE}/blog/${oppositeUrl}`}
           >
             <em>(Versão em Português)</em>
           </Link>
         ) : (
           <Link
             aria-label="Change to English"
-            href={`/blog/${EN_LANGUAGE}/${oppositeUrl}`}
+            href={`/${EN_LANGUAGE}/blog/${oppositeUrl}`}
           >
             <em>(English version)</em>
           </Link>

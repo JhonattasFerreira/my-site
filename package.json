@@ -2,7 +2,7 @@
   "name": "my-sit",
   "version": "1.0.0",
   "description": "Just my site",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

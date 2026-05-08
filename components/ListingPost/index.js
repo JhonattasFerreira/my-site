@@ -26,11 +26,11 @@ const Header = ({ language }) => {
         {language === EN_LANGUAGE ? TITLE_EN : TITLE_PT_BR}
       </h1>
       {language === EN_LANGUAGE ? (
-        <Link aria-label="Change to Brazilian Portuguese" href="/blog/pt-br">
+        <Link aria-label="Change to Brazilian Portuguese" href="/pt-br/blog">
           <em>(Versão em Português)</em>
         </Link>
       ) : (
-        <Link aria-label="Change to English" href="/blog/en">
+        <Link aria-label="Change to English" href="/en/blog">
           <em>(English version)</em>
         </Link>
       )}
@@ -43,7 +43,7 @@ const ListingBlogPosts = ({ posts, language }) => {
     <div className={styles.listBlogPosts}>
       {posts.map((post, index) => (
         <article key={post.slug} className={styles.articleBox}>
-          <Link href={"/blog/" + language + "/" + post.slug}>
+          <Link href={"/" + language + "/blog/" + post.slug}>
             <Image
               width={0}
               height={0}
@@ -51,6 +51,7 @@ const ListingBlogPosts = ({ posts, language }) => {
               alt={post.altTextGif}
               className={styles.gif}
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
               unoptimized={true}
             />
             <div className={styles.articleContent}>
