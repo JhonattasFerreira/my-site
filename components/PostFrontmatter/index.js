@@ -2,8 +2,7 @@ import NavItem from "../NavItem";
 import Link from "next/link";
 import formatDate from "@/utils/formatDate";
 import styles from "./PostFrontmatter.module.css";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import SocialFooter from "@/components/SocialFooter";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
 import Image from "@/components/Image";
 
@@ -35,23 +34,7 @@ const PostFrontmatter = ({
           <section className={styles.post}>{children}</section>
         </article>
       </main>
-      <footer className={styles.footer}>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/jhonattasferreira/"
-          aria-label="Go to my LinkedIn profile"
-        >
-          <FaLinkedin />
-        </a>
-
-        <a
-          target="_blank"
-          href="https://github.com/JhonattasFerreira"
-          aria-label="Go to my GitHub profile"
-        >
-          <FaGithubSquare />
-        </a>
-      </footer>
+      <SocialFooter className={styles.footer} />
     </div>
   );
 };

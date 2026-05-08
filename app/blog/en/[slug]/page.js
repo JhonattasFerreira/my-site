@@ -1,6 +1,5 @@
 import getPostMetadata from "@/utils/getPostMetadata";
 import LayoutPost from "@/components/LayoutPost";
-import transformString from "@/utils/transformString";
 import {
   CONTENT_FOLDER,
   EN_LANGUAGE,
@@ -17,8 +16,9 @@ export const generateStaticParams = async () => {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  const { data } = getPostContent(slug, FILENAME_END_PT_BR);
   return {
-    title: `${transformString(slug)}${TITLE_METADATA_POST_SUFIX}`,
+    title: `${data.title}${TITLE_METADATA_POST_SUFIX}`,
   };
 }
 

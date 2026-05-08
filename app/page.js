@@ -2,11 +2,8 @@ import styles from "./home.module.css";
 
 import NavItem from "@/components/NavItem";
 import Link from "next/link";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import SocialFooter from "@/components/SocialFooter";
 import { Jersey_10 } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 
 const jersey_10 = Jersey_10({
   subsets: ["latin"],
@@ -18,8 +15,6 @@ const jersey_10 = Jersey_10({
 export default function Home() {
   return (
     <div className={styles.container}>
-      <SpeedInsights />
-      <Analytics />
       <header>
         <NavItem item={{ name: "Blog", url: "/blog/en" }} />
       </header>
@@ -43,23 +38,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/jhonattasferreira/"
-          aria-label="Go to my LinkedIn profile"
-        >
-          <FaLinkedin />
-        </a>
-
-        <a
-          target="_blank"
-          href="https://github.com/JhonattasFerreira"
-          aria-label="Go to my GitHub profile"
-        >
-          <FaGithubSquare />
-        </a>
-      </footer>
+      <SocialFooter className={styles.footer} />
     </div>
   );
 }

@@ -42,7 +42,7 @@ const ListingBlogPosts = ({ posts, language }) => {
   return (
     <div className={styles.listBlogPosts}>
       {posts.map((post, index) => (
-        <article key={`post-${index}`} className={styles.articleBox}>
+        <article key={post.slug} className={styles.articleBox}>
           <Link href={"/blog/" + language + "/" + post.slug}>
             <Image
               width={0}
@@ -50,7 +50,7 @@ const ListingBlogPosts = ({ posts, language }) => {
               src={post.gif}
               alt={post.altTextGif}
               className={styles.gif}
-              priority={true}
+              priority={index === 0}
               unoptimized={true}
             />
             <div className={styles.articleContent}>

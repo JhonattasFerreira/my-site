@@ -16,7 +16,7 @@ const IframeP5 = ({ src, metadata }) => {
       ></iframe>
       <em className={styles.spanDescription}>
         {title}{" "}
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           (Source Code)
         </a>
       </em>
