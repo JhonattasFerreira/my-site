@@ -27,6 +27,7 @@ export async function generateMetadata({ params }) {
   const { data, oppositeUrl } = getPostContent(slug, filenameEnd);
   return {
     title: `${data.title}${TITLE_METADATA_POST_SUFIX}`,
+    description: data.description,
     alternates: {
       languages: {
         en: `/en/blog/${isEn ? slug : oppositeUrl}`,

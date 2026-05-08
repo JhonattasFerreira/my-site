@@ -3,6 +3,7 @@ title: Improving My Blog
 date: "2024-06-14"
 gif: /improving-my-blog/digital.webp
 altTextGif: A GIF of a stream of images reminiscent of something digital.
+description: "An overview of the major changes introduced to the blog — new features, visual improvements, and the motivations behind each decision."
 ---
 
 Big changes have happened on the Blog 🎉🎉🎉

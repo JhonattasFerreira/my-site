@@ -3,6 +3,7 @@ title: Um Caminhante Aleatório
 date: "2024-07-26"
 gif: /a-random-walker/walking.webp
 altTextGif: Um GIF de uma menina caminhando com um fundo colorido estático.
+description: "Descubra como The Nature of Code me inspirou a explorar caminhantes aleatórios, distribuições gaussianas e ruído de Perlin com p5.js."
 ---
 
 Era uma noite de sábado, chovia, quando descobri o incrível canal [The Coding Train](https://www.youtube.com/@TheCodingTrain) do **Daniel Shiffman** e, devorando vários vídeos em sequência, senti uma empolgação com programação que há tempos não sentia.

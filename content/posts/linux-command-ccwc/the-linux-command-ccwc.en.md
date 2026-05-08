@@ -3,6 +3,7 @@ title: The Linux Command CCWC
 date: "2024-11-30"
 gif: /linux-command-ccwc/linux_terminal.webp
 altTextGif: A GIF of a Linux terminal with a black background and green text.
+description: "A walkthrough of building a Rust implementation of the Linux wc command, exploring file reading, argument parsing, and CLI design."
 ---
 
 Ah, nothing like redoing the Linux **_wc_** command on a Friday night.

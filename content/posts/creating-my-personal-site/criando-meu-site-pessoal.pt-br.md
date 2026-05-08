@@ -3,6 +3,7 @@ title: Criando Meu Site Pessoal
 date: "2024-04-23"
 gif: /creating-my-personal-site/fireworks.webp
 altTextGif: Um GIF com fogos de atírifico colorido
+description: "Uma visão geral de como e por que criei este blog pessoal — as decisões, a stack e o que aprendi no processo."
 ---
 
 Olá, meu nome é Jhonattas e depois de procrastinar bastante, resolvi criar meu Blog 🎉🎉🎉

@@ -3,6 +3,7 @@ title: GIFs e Mais
 date: "2024-09-01"
 gif: /gifs-and-more/cat.gif
 altTextGif: Um GIF sobre um gato branco.
+description: "Uma atualização rápida sobre a listagem de posts do blog, incluindo GIFs animados como capas e um layout renovado."
 ---
 
 Frutas esquecidas apodrecem.

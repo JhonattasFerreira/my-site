@@ -3,6 +3,7 @@ title: Como Hospedar Um Website
 date: "2024-05-08"
 gif: /how-to-hosting-a-website/computer.webp
 altTextGif: Um GIF de um computador antigo em pixel art.
+description: "Um guia prático sobre como comprar um domínio e hospedar um website, cobrindo configuração de DNS, provedores de hospedagem e deploy."
 ---
 
 Comprar um domínio/hospedar um site é uma tarefa trivial, algumas configurações aqui e ali, e pronto, um site novinho no ar. Mas você sabe como fazer isso?

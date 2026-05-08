@@ -3,6 +3,7 @@ title: Vectors Everywhere
 date: "2024-08-16"
 gif: /vectors-everywhere/vector.webp
 altTextGif: A vaporwave-style GIF with a camera moving through a checkered road under rain, palm trees on the sides, mountains in the background, and a large moon in the sky.
+description: "An introduction to vectors in programming: what they are, how they work in p5.js, and how to use them to simulate physics and motion."
 ---
 
 I thought I would never use Cartesian planes again in my life.

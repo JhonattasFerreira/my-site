@@ -3,6 +3,7 @@ title: Criando Um Site Estático Com Next
 date: "2024-06-15"
 gif: /static-site-generation-with-next/skull.webp
 altTextGif: O GIF de uma caveira tomando uma bebida em uma arte old school.
+description: "Aprenda como usar o Static Site Generation do Next.js para construir um blog rápido com arquivos Markdown — sem banco de dados."
 ---
 
 Este post é uma continuação das melhorias implementadas no blog. Para saber mais, confira o primeiro artigo sobre [como melhorei meu blog](/blog/pt-br/melhorando-meu-blog).
