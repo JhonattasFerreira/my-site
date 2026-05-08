@@ -6,10 +6,10 @@ It was developed using React, Next.js, and gray-matter.
 
 If you'd like to learn more about how the blog was built, check out the posts where I explain the development process and how it has evolved over time:
 
-- [Creating My Personal Site](https://jhocore.com/blog/en/creating-my-personal-site)
-- [How to Host a Website](https://jhocore.com/blog/en/how-to-hosting-a-website)
-- [Improving My Blog](https://jhocore.com/blog/en/improving-my-blog)
-- [Creating a Static Site with Next](https://jhocore.com/blog/en/static-site-generation-with-next)
+- [Creating My Personal Site](https://jhocore.com/en/blog/creating-my-personal-site)
+- [How to Host a Website](https://jhocore.com/en/blog/how-to-hosting-a-website)
+- [Improving My Blog](https://jhocore.com/en/blog/improving-my-blog)
+- [Creating a Static Site with Next](https://jhocore.com/en/blog/static-site-generation-with-next)
 
 Feel free to get inspired and use the blog structure as a reference.
 
