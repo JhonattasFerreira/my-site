@@ -22,10 +22,17 @@ export const generateStaticParams = async () => {
 
 export async function generateMetadata({ params }) {
   const { lang, slug } = await params;
-  const filenameEnd = lang === EN_LANGUAGE ? FILENAME_END_PT_BR : FILENAME_END_EN;
-  const { data } = getPostContent(slug, filenameEnd);
+  const isEn = lang === EN_LANGUAGE;
+  const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;
+  const { data, oppositeUrl } = getPostContent(slug, filenameEnd);
   return {
     title: `${data.title}${TITLE_METADATA_POST_SUFIX}`,
+    alternates: {
+      languages: {
+        en: `/en/blog/${isEn ? slug : oppositeUrl}`,
+        "pt-BR": `/pt-br/blog/${isEn ? oppositeUrl : slug}`,
+      },
+    },
   };
 }
 

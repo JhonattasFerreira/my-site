@@ -10,9 +10,16 @@ import {
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return lang === EN_LANGUAGE
-    ? LISTING_POSTS_METADATA_EN
-    : LISTING_POSTS_METADATA_PT_BR;
+  const base = lang === EN_LANGUAGE ? LISTING_POSTS_METADATA_EN : LISTING_POSTS_METADATA_PT_BR;
+  return {
+    ...base,
+    alternates: {
+      languages: {
+        en: "/en/blog",
+        "pt-BR": "/pt-br/blog",
+      },
+    },
+  };
 }
 
 const Blog = async ({ params }) => {
