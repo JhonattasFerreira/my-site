@@ -50,11 +50,35 @@
     opacity: 0.5;
   }
 }
+
+@keyframes fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(var(--fall-distance)) rotate(810deg);
+  }
+}
+
 .rectangle {
   width: 2.8vw;
   height: inherit;
   background: white;
   animation: blink 1.5s linear infinite;
+}
+
+.rectangleFalling {
+  position: fixed;
+  background: white;
+  animation: fall 1.2s ease-in forwards;
+  z-index: 100;
+}
+
+.rectangleResting {
+  position: fixed;
+  background: white;
+  animation: blink 1.5s linear infinite;
+  z-index: 100;
 }
 
 @media (min-width: 600px) and (max-width: 961px) {
