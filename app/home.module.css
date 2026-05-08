@@ -51,6 +51,19 @@
   }
 }
 
+@keyframes shake {
+  0%   { transform: translateY(0)    translateX(0); }
+  10%  { transform: translateY(6px)  translateX(0); }
+  20%  { transform: translateY(0)    translateX(0); }
+  30%  { transform: translateX(-8px); }
+  42%  { transform: translateX(6px); }
+  54%  { transform: translateX(-5px); }
+  65%  { transform: translateX(3px); }
+  76%  { transform: translateX(-2px); }
+  88%  { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
 @keyframes fall {
   from {
     transform: translateY(0) rotate(0deg);
@@ -79,6 +92,10 @@
   background: white;
   animation: blink 1.5s linear infinite;
   z-index: 100;
+}
+
+.containerShaking {
+  animation: shake 0.5s ease-out forwards;
 }
 
 @media (min-width: 600px) and (max-width: 961px) {

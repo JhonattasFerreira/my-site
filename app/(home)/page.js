@@ -46,7 +46,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container}${phase === "shaking" ? ` ${styles.containerShaking}` : ""}`}
+      onAnimationEnd={phase === "shaking" ? () => setPhase("resting") : undefined}
+    >
       <header>
         <NavItem item={{ name: "Blog", url: "/en/blog" }} />
       </header>
@@ -82,11 +85,11 @@ export default function Home() {
             height: cursorPos.height,
             "--fall-distance": `${cursorPos.fallDistance}px`,
           }}
-          onAnimationEnd={() => setPhase("resting")}
+          onAnimationEnd={() => setPhase("shaking")}
         />
       )}
 
-      {phase === "resting" && (
+      {(phase === "resting" || phase === "shaking") && (
         <div
           className={styles.rectangleResting}
           style={{
