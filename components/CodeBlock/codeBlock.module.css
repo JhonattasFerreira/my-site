@@ -7,11 +7,3 @@
     font-size: 1rem;
   }
 }
-
-/* atom-dark comment tokens (#7C7C7C on #1d1f21 = ~3.9:1, fails WCAG AA) */
-.fontCode :global(.token.comment),
-.fontCode :global(.token.prolog),
-.fontCode :global(.token.doctype),
-.fontCode :global(.token.hashbang) {
-  color: #9e9e9e;
-}
