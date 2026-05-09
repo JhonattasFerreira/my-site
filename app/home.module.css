@@ -153,6 +153,26 @@
   animation: jump 0.4s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .rectangle,
+  .rectangleResting {
+    animation: none;
+  }
+
+  .rectangleFalling {
+    display: none;
+  }
+
+  .containerShaking {
+    animation: none;
+  }
+
+  .ballTrembling,
+  .ballJumping {
+    animation: none;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 961px) {
   .mainContent {
     height: 100vh;
