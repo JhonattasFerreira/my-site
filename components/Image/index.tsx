@@ -11,8 +11,8 @@ const ImageBlock = ({ alt = "", src }: Props) => {
     return <IframeP5 src={srcStr} metadata={alt} />;
   }
 
-  const isGifOrWebp =
-    srcStr.toLowerCase().endsWith(".gif") || srcStr.toLowerCase().endsWith(".webp");
+  const isGif = srcStr.toLowerCase().endsWith(".gif");
+  const isGifOrWebp = isGif || srcStr.toLowerCase().endsWith(".webp");
 
   return (
     <NextImage
@@ -21,7 +21,7 @@ const ImageBlock = ({ alt = "", src }: Props) => {
       width={0}
       height={0}
       sizes="100vw"
-      unoptimized
+      unoptimized={isGif}
       priority={isGifOrWebp}
       loading={isGifOrWebp ? "eager" : "lazy"}
       style={{
