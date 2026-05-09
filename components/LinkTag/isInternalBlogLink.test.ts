@@ -10,12 +10,12 @@ describe("isInternalBlogLink", () => {
     expect(isInternalBlogLink("/pt-br/blog/meu-post")).toBe(true);
   });
 
-  it("returns false for old-style /blog/en/ links", () => {
-    expect(isInternalBlogLink("/blog/en/my-post")).toBe(false);
+  it("returns true for legacy /blog/en/ links", () => {
+    expect(isInternalBlogLink("/blog/en/my-post")).toBe(true);
   });
 
-  it("returns false for old-style /blog/pt-br/ links", () => {
-    expect(isInternalBlogLink("/blog/pt-br/meu-post")).toBe(false);
+  it("returns true for legacy /blog/pt-br/ links", () => {
+    expect(isInternalBlogLink("/blog/pt-br/meu-post")).toBe(true);
   });
 
   it("returns false for external https links", () => {
