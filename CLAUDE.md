@@ -109,3 +109,7 @@ O componente `Image` detecta o caminho `p5Examples` e renderiza um `<iframe>` no
 - Mocks de `next/image` e `next/link` em `__mocks__/next/` — necessários porque essas libs não funcionam fora do Next.js.
 - O `CodeBlock` usa `next/dynamic`, então seus testes mocam o módulo inteiro com `vi.mock("next/dynamic")`.
 - Nomes dos `describe` e `it` sempre em inglês.
+
+## Roadmap de UI/UX
+
+O arquivo `UI_UX_ROADMAP.md` na raiz do projeto contém o diagnóstico completo de UI/UX e o checklist priorizado de melhorias. Consultar este arquivo antes de iniciar qualquer tarefa de UI/UX e atualizar o status (`[ ]` → `[x]`) e a tabela de histórico sempre que um item for concluído.

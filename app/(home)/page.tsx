@@ -62,7 +62,10 @@ export default function Home() {
   }, [cursorPos]);
 
   useEffect(() => {
-    if (window.innerWidth < 962) return;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (window.innerWidth < 962 || prefersReducedMotion) return;
 
     const timer = setTimeout(() => {
       if (rectangleRef.current) {

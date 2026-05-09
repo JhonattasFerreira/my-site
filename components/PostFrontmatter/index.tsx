@@ -64,14 +64,14 @@ const Title = ({ title, date, language, oppositeUrl }: TitleProps) => {
             aria-label="Change to Brazilian Portuguese"
             href={`/${PT_BR_LANGUAGE}/blog/${oppositeUrl}`}
           >
-            <em>(Versão em Português)</em>
+            <span className={styles.languageBadge}>🇧🇷 Versão em Português</span>
           </Link>
         ) : (
           <Link
             aria-label="Change to English"
             href={`/${EN_LANGUAGE}/blog/${oppositeUrl}`}
           >
-            <em>(English version)</em>
+            <span className={styles.languageBadge}>🇬🇧 English version</span>
           </Link>
         )}
       </section>

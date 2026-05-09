@@ -32,11 +32,11 @@ const Header = ({ language }: HeaderProps) => {
       </h1>
       {language === EN_LANGUAGE ? (
         <Link aria-label="Change to Brazilian Portuguese" href="/pt-br/blog">
-          <em>(Versão em Português)</em>
+          <span className={styles.languageBadge}>🇧🇷 Versão em Português</span>
         </Link>
       ) : (
         <Link aria-label="Change to English" href="/en/blog">
-          <em>(English version)</em>
+          <span className={styles.languageBadge}>🇬🇧 English version</span>
         </Link>
       )}
     </div>
