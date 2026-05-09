@@ -3,13 +3,18 @@ import styles from "./listing.module.css";
 import NavItem from "@/components/NavItem";
 import formatDate from "@/utils/formatDate";
 import { TITLE_EN, TITLE_PT_BR, EN_LANGUAGE } from "@/utils/constants";
-import Image from "next/image";
+import NextImage from "next/image";
+import type { Lang, PostMetadata } from "@/types";
 
-const ListingPost = ({ postMetadata, language }) => {
+type Props = { postMetadata: PostMetadata[]; language: Lang };
+type HeaderProps = { language: Lang };
+type ListingProps = { posts: PostMetadata[]; language: Lang };
+
+const ListingPost = ({ postMetadata, language }: Props) => {
   return (
     <>
       <header>
-        <NavItem item={{ name: "Home", url: "/" }}></NavItem>
+        <NavItem item={{ name: "Home", url: "/" }} />
         <Header language={language} />
       </header>
       <main className={styles.mainContent}>
@@ -19,7 +24,7 @@ const ListingPost = ({ postMetadata, language }) => {
   );
 };
 
-const Header = ({ language }) => {
+const Header = ({ language }: HeaderProps) => {
   return (
     <div className={styles.title}>
       <h1 className={styles.titleName}>
@@ -38,13 +43,13 @@ const Header = ({ language }) => {
   );
 };
 
-const ListingBlogPosts = ({ posts, language }) => {
+const ListingBlogPosts = ({ posts, language }: ListingProps) => {
   return (
     <div className={styles.listBlogPosts}>
       {posts.map((post, index) => (
         <article key={post.slug} className={styles.articleBox}>
           <Link href={"/" + language + "/blog/" + post.slug}>
-            <Image
+            <NextImage
               width={0}
               height={0}
               src={post.gif}

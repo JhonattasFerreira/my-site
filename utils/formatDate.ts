@@ -1,6 +1,7 @@
+import type { Lang } from "@/types";
 import { EN_LANGUAGE } from "./constants";
 
-const months = {
+const months: Record<Lang, string[]> = {
   "pt-br": [
     "Janeiro",
     "Fevereiro",
@@ -31,7 +32,7 @@ const months = {
   ],
 };
 
-export default function formatDate(date, language) {
+export default function formatDate(date: string, language: Lang): string {
   const parts = date.split("-");
   const day = parts[2];
   const month = months[language][parseInt(parts[1]) - 1];

@@ -1,7 +1,9 @@
 import styles from "./iframeP5.module.css";
 import { parseP5Metadata } from "./parseP5Metadata";
 
-const IframeP5 = ({ src, metadata }) => {
+type Props = { src: string; metadata: string };
+
+const IframeP5 = ({ src, metadata }: Props) => {
   const { title, url } = parseP5Metadata(metadata);
   return (
     <>
@@ -12,10 +14,8 @@ const IframeP5 = ({ src, metadata }) => {
         height="400px"
         loading="lazy"
         sandbox="allow-scripts"
-        style={{
-          border: "none",
-        }}
-      ></iframe>
+        style={{ border: "none" }}
+      />
       <em className={styles.spanDescription}>
         {title}{" "}
         <a href={url} target="_blank" rel="noopener noreferrer">
@@ -25,4 +25,5 @@ const IframeP5 = ({ src, metadata }) => {
     </>
   );
 };
+
 export default IframeP5;

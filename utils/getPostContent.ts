@@ -1,13 +1,17 @@
 import fs from "fs";
 import matter from "gray-matter";
+import type { PostContent } from "@/types";
 import { ENCODING_UTF8, CONTENT_FOLDER } from "@/utils/constants";
 
-function getPostContent(slug, filenameEnd) {
+export default function getPostContent(
+  slug: string,
+  filenameEnd: string
+): PostContent {
   const postFolders = fs.readdirSync(CONTENT_FOLDER + "/");
 
-  let filename;
-  let folderName;
-  let oppositeUrl;
+  let filename: string | undefined;
+  let folderName: string | undefined;
+  let oppositeUrl: string | undefined;
 
   for (const postFolder of postFolders) {
     const files = fs.readdirSync(`${CONTENT_FOLDER}/${postFolder}/`);
@@ -19,21 +23,17 @@ function getPostContent(slug, filenameEnd) {
     }
   }
 
-  if (!filename || !folderName) {
+  if (!filename || !folderName || !oppositeUrl) {
     throw new Error(`Post not found for slug: "${slug}"`);
   }
 
   const file = CONTENT_FOLDER + `/${folderName}/${filename}`;
-
   const content = fs.readFileSync(file, ENCODING_UTF8);
-
   const matterResult = matter(content);
 
   return {
-    data: matterResult.data,
+    data: matterResult.data as PostContent["data"],
     content: matterResult.content,
-    oppositeUrl: `${oppositeUrl.replace(filenameEnd, "")}`,
+    oppositeUrl: oppositeUrl.replace(filenameEnd, ""),
   };
 }
-
-export default getPostContent;

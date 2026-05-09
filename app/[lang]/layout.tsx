@@ -14,7 +14,12 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "pt-br" }];
 }
 
-export default async function LangLayout({ children, params }) {
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+};
+
+export default async function LangLayout({ children, params }: Props) {
   const { lang } = await params;
   return (
     <html lang={lang}>

@@ -12,18 +12,22 @@ const ptFile = "obs-no-linux.pt-br.md";
 const fileContent = "# Post content";
 const frontmatterData = { title: "OBS on Linux", date: "2024-01-01" };
 
+const mockReaddirSync = vi.mocked(fs.readdirSync) as unknown as ReturnType<typeof vi.fn>;
+const mockReadFileSync = vi.mocked(fs.readFileSync) as unknown as ReturnType<typeof vi.fn>;
+const mockMatter = vi.mocked(matter) as unknown as ReturnType<typeof vi.fn>;
+
 beforeEach(() => {
   vi.resetAllMocks();
 
-  fs.readdirSync.mockImplementation((path) => {
+  mockReaddirSync.mockImplementation((path: string) => {
     if (path === "content/posts/") return ["obs-on-linux"];
     if (path === "content/posts/obs-on-linux/") return [enFile, ptFile];
     return [];
   });
 
-  fs.readFileSync.mockReturnValue(fileContent);
+  mockReadFileSync.mockReturnValue(fileContent);
 
-  matter.mockReturnValue({ data: frontmatterData, content: fileContent });
+  mockMatter.mockReturnValue({ data: frontmatterData, content: fileContent });
 });
 
 describe("getPostContent", () => {
@@ -47,7 +51,7 @@ describe("getPostContent", () => {
   });
 
   it("returns oppositeUrl for the other language direction", () => {
-    fs.readdirSync.mockImplementation((path) => {
+    mockReaddirSync.mockImplementation((path: string) => {
       if (path === "content/posts/") return ["obs-on-linux"];
       if (path === "content/posts/obs-on-linux/") return [ptFile, enFile];
       return [];
@@ -57,7 +61,7 @@ describe("getPostContent", () => {
   });
 
   it("throws when slug is not found in any folder", () => {
-    fs.readdirSync.mockImplementation((path) => {
+    mockReaddirSync.mockImplementation((path: string) => {
       if (path === "content/posts/") return ["obs-on-linux"];
       if (path === "content/posts/obs-on-linux/") return ["other-file.en.md"];
       return [];

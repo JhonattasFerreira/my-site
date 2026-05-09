@@ -1,10 +1,18 @@
 import ReactMarkdown from "react-markdown";
 import PostFrontmatter from "@/components/PostFrontmatter";
-import Image from "@/components/Image";
+import ImageBlock from "@/components/Image";
 import CodeBlock from "@/components/CodeBlock";
 import LinkTag from "@/components/LinkTag";
+import type { Lang, PostFrontmatter as PostFrontmatterType } from "@/types";
 
-const LayoutPost = ({ content, frontmatter, language, oppositeUrl }) => {
+type Props = {
+  content: string;
+  frontmatter: PostFrontmatterType;
+  language: Lang;
+  oppositeUrl: string;
+};
+
+const LayoutPost = ({ content, frontmatter, language, oppositeUrl }: Props) => {
   return (
     <PostFrontmatter
       title={frontmatter.title}
@@ -13,11 +21,12 @@ const LayoutPost = ({ content, frontmatter, language, oppositeUrl }) => {
       oppositeUrl={oppositeUrl}
       gif={frontmatter.gif}
       altTextGif={frontmatter.altTextGif}
+      description={frontmatter.description}
     >
       <ReactMarkdown
         components={{
           code: CodeBlock,
-          img: Image,
+          img: ImageBlock,
           a: LinkTag,
         }}
       >

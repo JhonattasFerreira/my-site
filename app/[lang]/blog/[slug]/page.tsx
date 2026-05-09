@@ -12,6 +12,8 @@ import {
 } from "@/utils/constants";
 import getPostContent from "@/utils/getPostContent";
 
+type Props = { params: Promise<{ lang: string; slug: string }> };
+
 export const generateStaticParams = async () => {
   const enPosts = getPostMetadata(CONTENT_FOLDER, EN_LANGUAGE);
   const ptPosts = getPostMetadata(CONTENT_FOLDER, PT_BR_LANGUAGE);
@@ -22,7 +24,7 @@ export const generateStaticParams = async () => {
   ];
 };
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: Props) {
   const { lang, slug } = await params;
   const isEn = lang === EN_LANGUAGE;
   const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;
@@ -48,7 +50,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Post = async ({ params }) => {
+const Post = async ({ params }: Props) => {
   const { lang, slug } = await params;
   const isEn = lang === EN_LANGUAGE;
   const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;

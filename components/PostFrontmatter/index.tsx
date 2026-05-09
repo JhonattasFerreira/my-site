@@ -4,9 +4,23 @@ import formatDate from "@/utils/formatDate";
 import styles from "./PostFrontmatter.module.css";
 import SocialFooter from "@/components/SocialFooter";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
-import Image from "@/components/Image";
+import ImageBlock from "@/components/Image";
+import type { Lang, PostFrontmatter } from "@/types";
 
-const PostFrontmatter = ({
+type Props = PostFrontmatter & {
+  language: Lang;
+  oppositeUrl: string;
+  children: React.ReactNode;
+};
+
+type TitleProps = {
+  title: string;
+  date: string;
+  language: Lang;
+  oppositeUrl: string;
+};
+
+const PostFrontmatterLayout = ({
   title,
   date,
   language,
@@ -14,7 +28,7 @@ const PostFrontmatter = ({
   oppositeUrl,
   gif,
   altTextGif,
-}) => {
+}: Props) => {
   return (
     <div className={styles.container}>
       <header>
@@ -29,7 +43,7 @@ const PostFrontmatter = ({
             oppositeUrl={oppositeUrl}
           />
           <section className={styles.gifSection}>
-            <Image src={gif} alt={altTextGif}></Image>
+            <ImageBlock src={gif} alt={altTextGif} />
           </section>
           <section className={styles.post}>{children}</section>
         </article>
@@ -39,7 +53,7 @@ const PostFrontmatter = ({
   );
 };
 
-const Title = ({ title, date, language, oppositeUrl }) => {
+const Title = ({ title, date, language, oppositeUrl }: TitleProps) => {
   return (
     <>
       <h1 className={styles.title}>{title}</h1>
@@ -64,4 +78,5 @@ const Title = ({ title, date, language, oppositeUrl }) => {
     </>
   );
 };
-export default PostFrontmatter;
+
+export default PostFrontmatterLayout;
