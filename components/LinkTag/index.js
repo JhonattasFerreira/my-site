@@ -1,10 +1,8 @@
 import Link from "next/link";
+import { isInternalBlogLink } from "./isInternalBlogLink";
 
 const LinkTag = ({ href, children }) => {
-  const isPtBrBlog = "/blog/pt-br/";
-  const isEnBlog = "/blog/en/";
-
-  if (href.startsWith(isPtBrBlog) || href.startsWith(isEnBlog))
+  if (isInternalBlogLink(href))
     return (
       <Link aria-label={children} href={href}>
         {children}

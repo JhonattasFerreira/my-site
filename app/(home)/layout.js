@@ -1,19 +1,28 @@
 import "../globals.css";
 import { Raleway } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+import AnalyticsProviders from "@/components/AnalyticsProviders";
 
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
-  weights: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  styles: ["normal", "italic"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata = {
   title: "Jhonattas Ferreira | JhoCore",
-  description: "A blog by Jhonattas Ferreira",
+  description:
+    "Personal blog about software engineering, programming and creative coding.",
+  openGraph: {
+    title: "Jhonattas Ferreira | JhoCore",
+    description:
+      "Personal blog about software engineering, programming and creative coding.",
+    url: "https://jhocore.com",
+    siteName: "JhoCore",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function HomeLayout({ children }) {
@@ -21,8 +30,7 @@ export default function HomeLayout({ children }) {
     <html lang="en" style={{ overflow: "hidden" }}>
       <body className={raleway.className} style={{ overflow: "hidden" }}>
         {children}
-        <SpeedInsights />
-        <Analytics />
+        <AnalyticsProviders />
       </body>
     </html>
   );

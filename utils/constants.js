@@ -5,14 +5,34 @@ const PT_BR_LANGUAGE = "pt-br";
 // Content folder
 const CONTENT_FOLDER = "content/posts";
 
+// Site
+const BASE_URL = "https://jhocore.com";
+const SITE_NAME = "JhoCore";
+
 // Listing Posts Metadata
 const LISTING_POSTS_METADATA_EN = {
   title: "All Posts | JhoCore",
-  description: "A blog by Jhonattas Ferreira",
+  description: "Articles about software engineering, programming and creative coding.",
+  openGraph: {
+    title: "All Posts | JhoCore",
+    description: "Articles about software engineering, programming and creative coding.",
+    url: `${BASE_URL}/en/blog`,
+    siteName: SITE_NAME,
+    locale: "en_US",
+    type: "website",
+  },
 };
 const LISTING_POSTS_METADATA_PT_BR = {
   title: "Todos os Posts | JhoCore",
-  description: "Um blog de Jhonattas Ferreira",
+  description: "Artigos sobre engenharia de software, programação e creative coding.",
+  openGraph: {
+    title: "Todos os Posts | JhoCore",
+    description: "Artigos sobre engenharia de software, programação e creative coding.",
+    url: `${BASE_URL}/pt-br/blog`,
+    siteName: SITE_NAME,
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 // Title Listing Posts
@@ -33,6 +53,8 @@ export {
   EN_LANGUAGE,
   PT_BR_LANGUAGE,
   CONTENT_FOLDER,
+  BASE_URL,
+  SITE_NAME,
   LISTING_POSTS_METADATA_EN,
   LISTING_POSTS_METADATA_PT_BR,
   TITLE_EN,

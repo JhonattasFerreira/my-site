@@ -55,4 +55,15 @@ describe("getPostContent", () => {
     const result = getPostContent("obs-no-linux", ".en.md");
     expect(result.oppositeUrl).toBe("obs-on-linux");
   });
+
+  it("throws when slug is not found in any folder", () => {
+    fs.readdirSync.mockImplementation((path) => {
+      if (path === "content/posts/") return ["obs-on-linux"];
+      if (path === "content/posts/obs-on-linux/") return ["other-file.en.md"];
+      return [];
+    });
+    expect(() => getPostContent("nonexistent-slug", ".pt-br.md")).toThrow(
+      'Post not found for slug: "nonexistent-slug"'
+    );
+  });
 });

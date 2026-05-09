@@ -19,6 +19,10 @@ function getPostContent(slug, filenameEnd) {
     }
   }
 
+  if (!filename || !folderName) {
+    throw new Error(`Post not found for slug: "${slug}"`);
+  }
+
   const file = CONTENT_FOLDER + `/${folderName}/${filename}`;
 
   const content = fs.readFileSync(file, ENCODING_UTF8);
