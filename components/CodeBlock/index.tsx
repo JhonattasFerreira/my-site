@@ -2,7 +2,9 @@ import dynamic from "next/dynamic";
 
 const SyntaxHighlighterBlock = dynamic(() => import("./SyntaxHighlighterBlock"));
 
-const CodeBlock = ({ children, className }) => {
+type Props = { className?: string; children?: React.ReactNode };
+
+const CodeBlock = ({ children, className }: Props) => {
   if (!className) {
     return <code>{children}</code>;
   }
@@ -11,7 +13,7 @@ const CodeBlock = ({ children, className }) => {
 
   return (
     <SyntaxHighlighterBlock language={language}>
-      {children}
+      {String(children)}
     </SyntaxHighlighterBlock>
   );
 };

@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { isInternalBlogLink } from "./isInternalBlogLink";
 
-const LinkTag = ({ href, children }) => {
+type Props = {
+  href?: string;
+  children?: React.ReactNode;
+};
+
+const LinkTag = ({ href, children }: Props) => {
+  if (!href) return <>{children}</>;
+
   if (isInternalBlogLink(href))
     return (
-      <Link aria-label={children} href={href}>
+      <Link aria-label={String(children)} href={href}>
         {children}
       </Link>
     );

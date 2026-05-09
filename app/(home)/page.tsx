@@ -6,6 +6,7 @@ import NavItem from "@/components/NavItem";
 import Link from "next/link";
 import SocialFooter from "@/components/SocialFooter";
 import { Jersey_10 } from "next/font/google";
+import type { BallConfig, Phase } from "@/types";
 
 const jersey_10 = Jersey_10({
   subsets: ["latin"],
@@ -14,25 +15,35 @@ const jersey_10 = Jersey_10({
   adjustFontFallback: false,
 });
 
-const BALLS = [
-  { color: "#86c98e", border: null,             startY: 0,    endX: -32,  endY: 2,  trembleDelay: "0s"    },
-  { color: "#f7d070", border: null,             startY: -180, endX: -64,  endY: -8, trembleDelay: "0.1s"  },
-  { color: "#7eb8f7", border: null,             startY: 130,  endX: -96,  endY: 12, trembleDelay: "0.2s"  },
-  { color: "#f0f0f0", border: "1px solid #ccc", startY: -90,  endX: -128, endY: -4, trembleDelay: "0.3s"  },
+const BALLS: BallConfig[] = [
+  { color: "#86c98e", border: null,             startY: 0,    endX: -32,  endY: 2,  trembleDelay: "0s"   },
+  { color: "#f7d070", border: null,             startY: -180, endX: -64,  endY: -8, trembleDelay: "0.1s" },
+  { color: "#7eb8f7", border: null,             startY: 130,  endX: -96,  endY: 12, trembleDelay: "0.2s" },
+  { color: "#f0f0f0", border: "1px solid #ccc", startY: -90,  endX: -128, endY: -4, trembleDelay: "0.3s" },
 ];
 
 const BALL_SIZE = 28;
 
+type CursorPos = {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+  fallDistance: number;
+};
+
+type BallPosition = { left: number; top: number };
+
 export default function Home() {
-  const [phase, setPhase] = useState("idle");
-  const [cursorPos, setCursorPos] = useState({
+  const [phase, setPhase] = useState<Phase>("idle");
+  const [cursorPos, setCursorPos] = useState<CursorPos>({
     top: 0,
     left: 0,
     width: 0,
     height: 0,
     fallDistance: 0,
   });
-  const [ballPositions, setBallPositions] = useState(
+  const [ballPositions, setBallPositions] = useState<BallPosition[]>(
     BALLS.map(() => ({ left: 0, top: 0 }))
   );
   const [ballsVisible, setBallsVisible] = useState(false);
@@ -40,11 +51,11 @@ export default function Home() {
   const [ballsOpacity, setBallsOpacity] = useState(1);
   const [ballsTrembling, setBallsTrembling] = useState(false);
 
-  const rectangleRef = useRef(null);
-  const headerRef = useRef(null);
-  const navRef = useRef(null);
-  const cursorPosRef = useRef(cursorPos);
-  const rescueTimers = useRef([]);
+  const rectangleRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const cursorPosRef = useRef<CursorPos>(cursorPos);
+  const rescueTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
     cursorPosRef.current = cursorPos;
@@ -78,7 +89,7 @@ export default function Home() {
     const pos = cursorPosRef.current;
     const cursorRestTop = pos.top + pos.fallDistance;
 
-    const t = (fn, delay) => {
+    const t = (fn: () => void, delay: number) => {
       const id = setTimeout(fn, delay);
       rescueTimers.current.push(id);
     };
@@ -144,7 +155,7 @@ export default function Home() {
     return () => timers.forEach(clearTimeout);
   }, []);
 
-  const isRectFloating = ["resting", "approaching", "grabbing", "lifting"].includes(phase);
+  const isRectFloating = (["resting", "approaching", "grabbing", "lifting"] as Phase[]).includes(phase);
   const isLifting = phase === "lifting";
 
   return (
@@ -189,7 +200,7 @@ export default function Home() {
             width: cursorPos.width,
             height: cursorPos.height,
             "--fall-distance": `${cursorPos.fallDistance}px`,
-          }}
+          } as React.CSSProperties}
           onAnimationEnd={() => setPhase("shaking")}
         />
       )}
@@ -227,9 +238,10 @@ export default function Home() {
               background: ball.color,
               border: ball.border ?? "none",
               opacity: ballsOpacity,
-              transition: phase === "approaching"
-                ? "left 3s ease-in-out, top 3s ease-in-out, opacity 0.6s ease-out"
-                : "left 2.2s ease-in-out, top 2.2s ease-in-out, opacity 0.6s ease-out",
+              transition:
+                phase === "approaching"
+                  ? "left 3s ease-in-out, top 3s ease-in-out, opacity 0.6s ease-out"
+                  : "left 2.2s ease-in-out, top 2.2s ease-in-out, opacity 0.6s ease-out",
               animationDelay: ballsTrembling ? ball.trembleDelay : undefined,
             }}
           >

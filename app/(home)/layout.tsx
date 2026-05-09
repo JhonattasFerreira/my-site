@@ -25,7 +25,9 @@ export const metadata = {
   },
 };
 
-export default function HomeLayout({ children }) {
+type Props = { children: React.ReactNode };
+
+export default function HomeLayout({ children }: Props) {
   return (
     <html lang="en" style={{ overflow: "hidden" }}>
       <body className={raleway.className} style={{ overflow: "hidden" }}>

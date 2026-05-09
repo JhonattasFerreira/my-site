@@ -1,33 +1,36 @@
-// languages
-const EN_LANGUAGE = "en";
-const PT_BR_LANGUAGE = "pt-br";
+import type { Lang } from "@/types";
 
-// Content folder
+const EN_LANGUAGE: Lang = "en";
+const PT_BR_LANGUAGE: Lang = "pt-br";
+
 const CONTENT_FOLDER = "content/posts";
 
-// Site
 const BASE_URL = "https://jhocore.com";
 const SITE_NAME = "JhoCore";
 
-// Listing Posts Metadata
 const LISTING_POSTS_METADATA_EN = {
   title: "All Posts | JhoCore",
-  description: "Articles about software engineering, programming and creative coding.",
+  description:
+    "Articles about software engineering, programming and creative coding.",
   openGraph: {
     title: "All Posts | JhoCore",
-    description: "Articles about software engineering, programming and creative coding.",
+    description:
+      "Articles about software engineering, programming and creative coding.",
     url: `${BASE_URL}/en/blog`,
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
   },
 };
+
 const LISTING_POSTS_METADATA_PT_BR = {
   title: "Todos os Posts | JhoCore",
-  description: "Artigos sobre engenharia de software, programação e creative coding.",
+  description:
+    "Artigos sobre engenharia de software, programação e creative coding.",
   openGraph: {
     title: "Todos os Posts | JhoCore",
-    description: "Artigos sobre engenharia de software, programação e creative coding.",
+    description:
+      "Artigos sobre engenharia de software, programação e creative coding.",
     url: `${BASE_URL}/pt-br/blog`,
     siteName: SITE_NAME,
     locale: "pt_BR",
@@ -35,18 +38,14 @@ const LISTING_POSTS_METADATA_PT_BR = {
   },
 };
 
-// Title Listing Posts
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
 
-//Enconding
-const ENCODING_UTF8 = "utf8";
+const ENCODING_UTF8: BufferEncoding = "utf8";
 
-//Filename
 const FILENAME_END_EN = ".en.md";
 const FILENAME_END_PT_BR = ".pt-br.md";
 
-//Title Metadata Post Sufix
 const TITLE_METADATA_POST_SUFIX = " | JhoCore";
 
 export {

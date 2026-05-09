@@ -1,7 +1,9 @@
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-const SocialFooter = ({ className }) => (
+type Props = { className?: string };
+
+const SocialFooter = ({ className }: Props) => (
   <footer className={className}>
     <a
       target="_blank"

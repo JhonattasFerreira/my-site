@@ -8,9 +8,14 @@ import {
   LISTING_POSTS_METADATA_PT_BR,
 } from "@/utils/constants";
 
-export async function generateMetadata({ params }) {
+type Props = { params: Promise<{ lang: string }> };
+
+export async function generateMetadata({ params }: Props) {
   const { lang } = await params;
-  const base = lang === EN_LANGUAGE ? LISTING_POSTS_METADATA_EN : LISTING_POSTS_METADATA_PT_BR;
+  const base =
+    lang === EN_LANGUAGE
+      ? LISTING_POSTS_METADATA_EN
+      : LISTING_POSTS_METADATA_PT_BR;
   return {
     ...base,
     alternates: {
@@ -22,7 +27,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Blog = async ({ params }) => {
+const Blog = async ({ params }: Props) => {
   const { lang } = await params;
   const language = lang === PT_BR_LANGUAGE ? PT_BR_LANGUAGE : EN_LANGUAGE;
   const postMetadata = getPostMetadata(CONTENT_FOLDER, language);

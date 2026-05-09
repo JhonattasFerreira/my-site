@@ -1,8 +1,12 @@
 import fs from "fs";
 import matter from "gray-matter";
+import type { Lang, PostMetadata } from "@/types";
 import { ENCODING_UTF8 } from "@/utils/constants";
 
-export default function getPostMetadata(basePath, language) {
+export default function getPostMetadata(
+  basePath: string,
+  language: Lang
+): PostMetadata[] {
   const folder = basePath + "/";
   const postFolders = fs.readdirSync(folder);
 
@@ -18,16 +22,20 @@ export default function getPostMetadata(basePath, language) {
       ENCODING_UTF8
     );
 
-    const { title, date, gif, altTextGif } = matter(fileContent).data;
+    const { title, date, gif, altTextGif, description } =
+      matter(fileContent).data;
 
     return {
       title,
       date,
       gif,
       altTextGif,
+      description,
       slug: filename.replace(`.${language}.md`, ""),
-    };
+    } as PostMetadata;
   });
 
-  return posts.filter(Boolean).sort((a, b) => new Date(b.date) - new Date(a.date));
+  return posts
+    .filter((p): p is PostMetadata => p !== null)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
