@@ -11,6 +11,8 @@ export default function getPostMetadata(basePath, language) {
 
     const filename = files.find((file) => file.includes(`.${language}.md`));
 
+    if (!filename) return null;
+
     const fileContent = fs.readFileSync(
       `${basePath}/${postFolder}/${filename}`,
       ENCODING_UTF8
@@ -27,5 +29,5 @@ export default function getPostMetadata(basePath, language) {
     };
   });
 
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return posts.filter(Boolean).sort((a, b) => new Date(b.date) - new Date(a.date));
 }

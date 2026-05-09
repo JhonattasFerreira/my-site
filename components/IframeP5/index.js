@@ -1,7 +1,8 @@
 import styles from "./iframeP5.module.css";
+import { parseP5Metadata } from "./parseP5Metadata";
 
 const IframeP5 = ({ src, metadata }) => {
-  const [title, url] = metadata.split(" $ ");
+  const { title, url } = parseP5Metadata(metadata);
   return (
     <>
       <iframe
@@ -10,6 +11,7 @@ const IframeP5 = ({ src, metadata }) => {
         width="100%"
         height="400px"
         loading="lazy"
+        sandbox="allow-scripts"
         style={{
           border: "none",
         }}

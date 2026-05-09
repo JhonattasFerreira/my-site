@@ -7,6 +7,8 @@ import {
   FILENAME_END_EN,
   FILENAME_END_PT_BR,
   TITLE_METADATA_POST_SUFIX,
+  BASE_URL,
+  SITE_NAME,
 } from "@/utils/constants";
 import getPostContent from "@/utils/getPostContent";
 
@@ -25,9 +27,18 @@ export async function generateMetadata({ params }) {
   const isEn = lang === EN_LANGUAGE;
   const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;
   const { data, oppositeUrl } = getPostContent(slug, filenameEnd);
+  const title = `${data.title}${TITLE_METADATA_POST_SUFIX}`;
   return {
-    title: `${data.title}${TITLE_METADATA_POST_SUFIX}`,
+    title,
     description: data.description,
+    openGraph: {
+      title,
+      description: data.description,
+      url: `${BASE_URL}/${lang}/blog/${slug}`,
+      siteName: SITE_NAME,
+      type: "article",
+      publishedTime: data.date,
+    },
     alternates: {
       languages: {
         en: `/en/blog/${isEn ? slug : oppositeUrl}`,

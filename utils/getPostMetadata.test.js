@@ -61,4 +61,16 @@ describe("getPostMetadata", () => {
     expect(post.gif).toBe("/post-one.gif");
     expect(post.altTextGif).toBe("alt one");
   });
+
+  it("skips posts that have no file for the requested language", () => {
+    fs.readdirSync.mockImplementation((path) => {
+      if (path === "content/posts/") return ["post-one", "pt-only-post"];
+      if (path === "content/posts/post-one/") return ["post-one.en.md"];
+      if (path === "content/posts/pt-only-post/") return ["pt-only-post.pt-br.md"];
+      return [];
+    });
+    const result = getPostMetadata("content/posts", "en");
+    expect(result.length).toBe(1);
+    expect(result[0].slug).toBe("post-one");
+  });
 });

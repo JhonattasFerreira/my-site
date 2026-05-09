@@ -1,13 +1,12 @@
 import "../globals.css";
 import { Raleway } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+import AnalyticsProviders from "@/components/AnalyticsProviders";
 
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
-  weights: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  styles: ["normal", "italic"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -21,8 +20,7 @@ export default async function LangLayout({ children, params }) {
     <html lang={lang}>
       <body className={raleway.className}>
         {children}
-        <SpeedInsights />
-        <Analytics />
+        <AnalyticsProviders />
       </body>
     </html>
   );

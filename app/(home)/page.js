@@ -159,6 +159,7 @@ export default function Home() {
       </header>
 
       <main className={styles.mainContent}>
+        <h1 className={styles.srOnly}>Jhonattas Ferreira — Software Engineer</h1>
         <section className={styles.title}>
           <span className={jersey_10.className}>
             <div>&gt; Jhonattas;</div>
