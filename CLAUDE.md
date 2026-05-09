@@ -23,7 +23,8 @@ npm run test:coverage # relatório de cobertura
 - **react-syntax-highlighter** — highlight de blocos de código (Prism, carregado com lazy load)
 - **react-icons** — ícones SVG
 - **@vercel/analytics** + **@vercel/speed-insights** — analytics e métricas de performance
-- **Vitest** — testes unitários
+- **Vitest** — test runner (unit + component tests)
+- **React Testing Library** — component rendering tests (jsdom environment)
 
 ## Estrutura do Projeto
 
@@ -100,3 +101,11 @@ O componente `Image` detecta o caminho `p5Examples` e renderiza um `<iframe>` no
 - **`app/robots.ts`** gera o `robots.txt` dinamicamente apontando para o sitemap.
 - **`utils/constants.ts`** centraliza constantes globais: `BASE_URL`, `SITE_NAME`, nomes de idioma, extensões de arquivo Markdown, metadados das páginas de listagem, etc.
 - **`types/index.ts`** centraliza todos os tipos TypeScript do projeto (`Lang`, `PostFrontmatter`, `PostMetadata`, `PostContent`, etc.).
+
+## Testes
+
+- Testes de **funções puras** (`utils/`) ficam em `*.test.ts` e rodam em ambiente `node` (padrão do Vitest, ou via `// @vitest-environment node` quando necessário para mock de `fs`).
+- Testes de **componentes** (`components/`) ficam em `*.test.tsx` e rodam em ambiente `jsdom` (configurado globalmente em `vitest.config.mjs`).
+- Mocks de `next/image` e `next/link` em `__mocks__/next/` — necessários porque essas libs não funcionam fora do Next.js.
+- O `CodeBlock` usa `next/dynamic`, então seus testes mocam o módulo inteiro com `vi.mock("next/dynamic")`.
+- Nomes dos `describe` e `it` sempre em inglês.
