@@ -6,6 +6,7 @@ import {
   CONTENT_FOLDER,
   LISTING_POSTS_METADATA_EN,
   LISTING_POSTS_METADATA_PT_BR,
+  BASE_URL,
 } from "@/utils/constants";
 
 type Props = { params: Promise<{ lang: string }> };
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: Props) {
     ...base,
     alternates: {
       languages: {
-        en: "/en/blog",
-        "pt-BR": "/pt-br/blog",
+        en: `${BASE_URL}/en/blog`,
+        "pt-BR": `${BASE_URL}/pt-br/blog`,
       },
     },
   };

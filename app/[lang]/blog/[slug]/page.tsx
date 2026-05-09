@@ -43,8 +43,8 @@ export async function generateMetadata({ params }: Props) {
     },
     alternates: {
       languages: {
-        en: `/en/blog/${isEn ? slug : oppositeUrl}`,
-        "pt-BR": `/pt-br/blog/${isEn ? oppositeUrl : slug}`,
+        en: `${BASE_URL}/en/blog/${isEn ? slug : oppositeUrl}`,
+        "pt-BR": `${BASE_URL}/pt-br/blog/${isEn ? oppositeUrl : slug}`,
       },
     },
   };
