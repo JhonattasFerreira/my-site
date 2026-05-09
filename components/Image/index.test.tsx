@@ -1,6 +1,8 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import ImageBlock from "./index";
+
+vi.mock("next/image");
 
 describe("ImageBlock", () => {
   describe("when src contains p5Examples", () => {
@@ -49,6 +51,23 @@ describe("ImageBlock", () => {
     it("uses eager loading for webp", () => {
       render(<ImageBlock src="/my-post/cover.webp" alt="animated cover" />);
       expect(screen.getByRole("img")).toHaveAttribute("loading", "eager");
+    });
+  });
+
+  describe("unoptimized attribute", () => {
+    it("gif is unoptimized to preserve animation", () => {
+      render(<ImageBlock src="/my-post/cover.gif" alt="animated cover" />);
+      expect(screen.getByRole("img")).toHaveAttribute("data-unoptimized", "true");
+    });
+
+    it("webp is not unoptimized so Next.js can compress it", () => {
+      render(<ImageBlock src="/my-post/cover.webp" alt="cover" />);
+      expect(screen.getByRole("img")).not.toHaveAttribute("data-unoptimized");
+    });
+
+    it("png is not unoptimized so Next.js can compress it", () => {
+      render(<ImageBlock src="/my-post/cover.png" alt="cover" />);
+      expect(screen.getByRole("img")).not.toHaveAttribute("data-unoptimized");
     });
   });
 });

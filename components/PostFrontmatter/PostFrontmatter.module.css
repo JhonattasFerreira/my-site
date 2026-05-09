@@ -47,6 +47,7 @@
 
 .gifSection {
   margin-top: 1.5rem;
+  min-height: 300px;
 }
 
 .post {
