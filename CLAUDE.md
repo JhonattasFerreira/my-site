@@ -17,9 +17,12 @@ npm run test:coverage # relatório de cobertura
 
 - **Next.js 16** — App Router, SSG via `generateStaticParams`
 - **React 19** — UI
+- **TypeScript** — tipagem estática em todo o projeto (`strict: true`)
 - **gray-matter** — faz o parse do frontmatter dos arquivos Markdown
 - **react-markdown** — renderiza o conteúdo Markdown
 - **react-syntax-highlighter** — highlight de blocos de código (Prism, carregado com lazy load)
+- **react-icons** — ícones SVG
+- **@vercel/analytics** + **@vercel/speed-insights** — analytics e métricas de performance
 - **Vitest** — testes unitários
 
 ## Estrutura do Projeto
@@ -28,16 +31,19 @@ npm run test:coverage # relatório de cobertura
 app/
   (home)/           # route group — home page com seu próprio layout raiz (lang="en")
   [lang]/           # segmento dinâmico — páginas do blog com lang dinâmico no <html>
-    layout.js       # layout raiz do blog: define <html lang={lang}>
+    layout.tsx      # layout raiz do blog: define <html lang={lang}>
     blog/
-      page.js       # listagem de posts: /en/blog e /pt-br/blog
+      page.tsx      # listagem de posts: /en/blog e /pt-br/blog
       [slug]/
-        page.js     # página do post: /en/blog/[slug] e /pt-br/blog/[slug]
+        page.tsx    # página do post: /en/blog/[slug] e /pt-br/blog/[slug]
+  sitemap.ts        # sitemap dinâmico gerado automaticamente a partir dos posts
+  robots.ts         # robots.txt gerado dinamicamente
 
 components/         # componentes de UI
 content/posts/      # arquivos Markdown, uma pasta por post
 public/             # assets estáticos (imagens, exemplos p5.js)
-utils/              # funções puras (getPostContent, getPostMetadata, formatDate, transformString)
+types/              # tipos TypeScript globais (PostFrontmatter, PostMetadata, Lang, etc.)
+utils/              # funções puras e constantes (getPostContent, getPostMetadata, formatDate, transformString, constants)
 ```
 
 ## Estrutura de URLs
@@ -59,7 +65,8 @@ As URLs antigas (`/blog/en/*`, `/blog/pt-br/*`) redirecionam permanentemente par
    - `[slug].en.md` (inglês)
    - `[slug].pt-br.md` (português)
 3. Adicionar a imagem/GIF de capa em `public/[nome-da-pasta]/`
-4. Atualizar `public/sitemap.xml` com as novas URLs
+
+O sitemap é gerado automaticamente via `app/sitemap.ts` — não é necessário atualizar nenhum arquivo manualmente.
 
 ### Formato do frontmatter
 
@@ -85,8 +92,11 @@ O componente `Image` detecta o caminho `p5Examples` e renderiza um `<iframe>` no
 
 ## Notas de Arquitetura
 
-- **Dois layouts raiz**: `(home)/layout.js` define `lang="en"` para a home; `[lang]/layout.js` define `lang` dinamicamente a partir da URL para todas as páginas do blog.
+- **Dois layouts raiz**: `(home)/layout.tsx` define `lang="en"` para a home; `[lang]/layout.tsx` define `lang` dinamicamente a partir da URL para todas as páginas do blog. Ambos incluem o componente `AnalyticsProviders` (Vercel Analytics + Speed Insights).
 - **`getPostContent`** lê o arquivo correspondente ao slug e também retorna `oppositeUrl` — o slug do mesmo post no outro idioma. Isso alimenta os links de troca de idioma.
 - **`getPostMetadata`** lê todos os posts de um idioma, ordenados por data decrescente.
 - Todas as leituras de arquivo acontecem em tempo de build (SSG) — sem acesso ao filesystem em runtime.
-- O `sitemap.xml` é estático e deve ser atualizado manualmente quando novos posts forem publicados.
+- **`app/sitemap.ts`** gera o sitemap dinamicamente a partir dos posts via `getPostMetadata` — não há mais um `sitemap.xml` estático para manter.
+- **`app/robots.ts`** gera o `robots.txt` dinamicamente apontando para o sitemap.
+- **`utils/constants.ts`** centraliza constantes globais: `BASE_URL`, `SITE_NAME`, nomes de idioma, extensões de arquivo Markdown, metadados das páginas de listagem, etc.
+- **`types/index.ts`** centraliza todos os tipos TypeScript do projeto (`Lang`, `PostFrontmatter`, `PostMetadata`, `PostContent`, etc.).

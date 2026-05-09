@@ -2,7 +2,7 @@
 
 Welcome to the repository of my personal website. Here, you can find my blog posts as well as the overall structure of the blog.
 
-It was developed using React, Next.js, and gray-matter.
+It was developed using React, Next.js, TypeScript, and gray-matter.
 
 If you'd like to learn more about how the blog was built, check out the posts where I explain the development process and how it has evolved over time:
 
