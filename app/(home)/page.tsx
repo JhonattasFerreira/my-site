@@ -15,14 +15,18 @@ const jersey_10 = Jersey_10({
   adjustFontFallback: false,
 });
 
+// endX for each ball must be a multiple of (BALL_SIZE + gap).
+// Current gap = 4px. If BALL_SIZE changes, recalculate: -1×(BS+4), -2×(BS+4), etc.
 const BALLS: BallConfig[] = [
-  { color: "#86c98e", border: null,             startY: 0,    endX: -32,  endY: 2,  trembleDelay: "0s"   },
-  { color: "#f7d070", border: null,             startY: -180, endX: -64,  endY: -8, trembleDelay: "0.1s" },
-  { color: "#7eb8f7", border: null,             startY: 130,  endX: -96,  endY: 12, trembleDelay: "0.2s" },
-  { color: "#f0f0f0", border: "1px solid #ccc", startY: -90,  endX: -128, endY: -4, trembleDelay: "0.3s" },
+  { color: "#86c98e", border: null,             startY: 0,    endX: -26,  endY: 2,  trembleDelay: "0s"   },
+  { color: "#f7d070", border: null,             startY: -180, endX: -52,  endY: -8, trembleDelay: "0.1s" },
+  { color: "#7eb8f7", border: null,             startY: 130,  endX: -78,  endY: 12, trembleDelay: "0.2s" },
+  { color: "#f0f0f0", border: "1px solid #ccc", startY: -90,  endX: -104, endY: -4, trembleDelay: "0.3s" },
 ];
 
-const BALL_SIZE = 28;
+// Total ball formation width (N×BALL_SIZE + (N-1)×4) must fit under the "Blog"
+// nav link. If BALL_SIZE changes, adjust font-size in NavItem.module.css accordingly.
+const BALL_SIZE = 22;
 
 type CursorPos = {
   top: number;
