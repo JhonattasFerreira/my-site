@@ -4,7 +4,7 @@
   --color-accent: #9ec8b9;
   --color-accent-muted: #5c8374;
   --color-accent-dark: #1b4242;
-  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.65);
   --color-overlay-hover: rgba(0, 0, 0, 1);
   --color-badge-bg: rgba(92, 131, 116, 0.12);
   --color-badge-bg-hover: rgba(92, 131, 116, 0.3);
@@ -51,4 +51,28 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-accent-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
 }

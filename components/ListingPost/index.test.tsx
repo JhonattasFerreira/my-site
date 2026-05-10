@@ -70,4 +70,11 @@ describe("ListingPost", () => {
       ).toHaveAttribute("href", "/en/blog/post-0");
     });
   });
+
+  describe("accessibility", () => {
+    it("main element has id for skip link target", () => {
+      render(<ListingPost postMetadata={makePosts(1)} language="en" />);
+      expect(screen.getByRole("main")).toHaveAttribute("id", "main-content");
+    });
+  });
 });

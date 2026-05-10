@@ -37,7 +37,7 @@ const PostFrontmatterLayout = ({
       <header>
         <NavItem item={{ name: "Blog", url: `/${language}/blog` }} />
       </header>
-      <main className={styles.mainContent}>
+      <main id="main-content" className={styles.mainContent}>
         <article>
           <Title
             title={title}

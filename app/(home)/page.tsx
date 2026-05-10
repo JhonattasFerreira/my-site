@@ -172,19 +172,16 @@ export default function Home() {
         </div>
       </header>
 
-      <main className={styles.mainContent}>
-        <h1 className={styles.srOnly}>Jhonattas Ferreira — Software Engineer</h1>
-        <section className={styles.title}>
-          <span className={jersey_10.className}>
-            <div>&gt; Jhonattas;</div>
-            <div className={styles.cursor}>
-              &gt; I&apos;m a Software Engineer
-              {phase === "idle" && (
-                <div ref={rectangleRef} className={styles.rectangle} />
-              )}
-            </div>
+      <main id="main-content" className={styles.mainContent}>
+        <h1 className={`${styles.title} ${jersey_10.className}`}>
+          <span>&gt; Jhonattas;</span>
+          <span className={styles.cursor}>
+            &gt; I&apos;m a Software Engineer
+            {phase === "idle" && (
+              <div ref={rectangleRef} className={styles.rectangle} />
+            )}
           </span>
-        </section>
+        </h1>
 
         <section className={styles.containerAbout}>
           <div>Hi, I&apos;m a Software Engineer with a passion for programming.</div>

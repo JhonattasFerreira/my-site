@@ -17,7 +17,7 @@ const ListingPost = ({ postMetadata, language }: Props) => {
         <NavItem item={{ name: "Home", url: "/" }} />
         <Header language={language} />
       </header>
-      <main className={styles.mainContent}>
+      <main id="main-content" className={styles.mainContent}>
         <ListingBlogPosts posts={postMetadata} language={language} />
       </main>
     </>

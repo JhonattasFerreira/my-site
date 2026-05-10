@@ -31,6 +31,9 @@ export default function HomeLayout({ children }: Props) {
   return (
     <html lang="en" style={{ overflow: "hidden" }}>
       <body className={raleway.className} style={{ overflow: "hidden" }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
         <AnalyticsProviders />
       </body>

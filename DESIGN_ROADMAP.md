@@ -63,7 +63,7 @@ Centralizar todas as cores hard-coded em CSS custom properties no `globals.css`.
 
 ## Parte 2 — Acessibilidade
 
-**Status:** `[ ] pendente`  
+**Status:** `[x] concluída`  
 **Depende de:** Parte 1 (para usar variáveis de cor).
 
 ### Objetivo
@@ -684,7 +684,7 @@ As Partes 3, 4, 5 e 6 dependem apenas da Parte 1 (tokens) e podem ser feitas em 
 ## Checklist Geral
 
 - [x] Parte 1 — Design Tokens
-- [ ] Parte 2 — Acessibilidade
+- [x] Parte 2 — Acessibilidade
 - [ ] Parte 3 — Tipografia Fluida
 - [ ] Parte 4 — Estilos dos Elementos Markdown
 - [ ] Parte 5 — Layout e Cards
