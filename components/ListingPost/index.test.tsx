@@ -1,17 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import ListingPost from "./index";
-import type { PostMetadata } from "@/types";
+import { makePostMetadata } from "@/test/fixtures/posts";
 
-const makePosts = (count: number): PostMetadata[] =>
-  Array.from({ length: count }, (_, i) => ({
-    slug: `post-${i}`,
-    title: `Post ${i}`,
-    date: "2024-01-01",
-    gif: `/post-${i}/cover.gif`,
-    altTextGif: `post ${i} cover`,
-    description: `Description of post ${i}`,
-  }));
+const makePosts = makePostMetadata;
 
 describe("ListingPost", () => {
   describe("EN language", () => {

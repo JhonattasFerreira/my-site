@@ -13,22 +13,24 @@ const ptFile = "obs-no-linux.pt-br.md";
 const fileContent = "# Post content";
 const frontmatterData = { title: "OBS on Linux", date: "2024-01-01" };
 
-const mockReaddirSync = vi.mocked(fs.readdirSync) as unknown as ReturnType<typeof vi.fn>;
-const mockReadFileSync = vi.mocked(fs.readFileSync) as unknown as ReturnType<typeof vi.fn>;
-const mockMatter = vi.mocked(matter) as unknown as ReturnType<typeof vi.fn>;
+const mockReaddirSync = vi.mocked(fs.readdirSync);
+const mockReadFileSync = vi.mocked(fs.readFileSync);
+const mockMatter = vi.mocked(matter);
 
 beforeEach(() => {
   vi.resetAllMocks();
 
-  mockReaddirSync.mockImplementation((path: string) => {
+  mockReaddirSync.mockImplementation(((path: string) => {
     if (path === "content/posts/") return ["obs-on-linux"];
     if (path === "content/posts/obs-on-linux/") return [enFile, ptFile];
     return [];
-  });
+  }) as typeof fs.readdirSync);
 
-  mockReadFileSync.mockReturnValue(fileContent);
+  mockReadFileSync.mockImplementation((() => fileContent) as unknown as typeof fs.readFileSync);
 
-  mockMatter.mockReturnValue({ data: frontmatterData, content: fileContent });
+  mockMatter.mockReturnValue(
+    { data: frontmatterData, content: fileContent } as unknown as ReturnType<typeof matter>
+  );
 });
 
 describe("getPostContent", () => {
@@ -52,21 +54,21 @@ describe("getPostContent", () => {
   });
 
   it("returns oppositeUrl for the other language direction", () => {
-    mockReaddirSync.mockImplementation((path: string) => {
+    mockReaddirSync.mockImplementation(((path: string) => {
       if (path === "content/posts/") return ["obs-on-linux"];
       if (path === "content/posts/obs-on-linux/") return [ptFile, enFile];
       return [];
-    });
+    }) as typeof fs.readdirSync);
     const result = getPostContent("obs-no-linux", ".en.md");
     expect(result.oppositeUrl).toBe("obs-on-linux");
   });
 
   it("throws when slug is not found in any folder", () => {
-    mockReaddirSync.mockImplementation((path: string) => {
+    mockReaddirSync.mockImplementation(((path: string) => {
       if (path === "content/posts/") return ["obs-on-linux"];
       if (path === "content/posts/obs-on-linux/") return ["other-file.en.md"];
       return [];
-    });
+    }) as typeof fs.readdirSync);
     expect(() => getPostContent("nonexistent-slug", ".pt-br.md")).toThrow(
       'Post not found for slug: "nonexistent-slug"'
     );

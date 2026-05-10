@@ -1,7 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
 import type { Lang, PostMetadata } from "@/types";
-import { ENCODING_UTF8 } from "@/utils/constants";
 
 export default function getPostMetadata(
   basePath: string,
@@ -19,7 +18,7 @@ export default function getPostMetadata(
 
     const fileContent = fs.readFileSync(
       `${basePath}/${postFolder}/${filename}`,
-      ENCODING_UTF8
+      "utf8"
     );
 
     const { title, date, gif, altTextGif, description } =

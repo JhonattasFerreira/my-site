@@ -1,11 +1,10 @@
-import getPostMetadata from "@/utils/getPostMetadata";
+import getPostMetadata from "@/utils/post/getPostMetadata";
 import ListingPost from "@/components/ListingPost";
 import {
   EN_LANGUAGE,
   PT_BR_LANGUAGE,
   CONTENT_FOLDER,
-  LISTING_POSTS_METADATA_EN,
-  LISTING_POSTS_METADATA_PT_BR,
+  createListingMetadata,
   BASE_URL,
 } from "@/utils/constants";
 
@@ -13,12 +12,9 @@ type Props = { params: Promise<{ lang: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { lang } = await params;
-  const base =
-    lang === EN_LANGUAGE
-      ? LISTING_POSTS_METADATA_EN
-      : LISTING_POSTS_METADATA_PT_BR;
+  const language = lang === EN_LANGUAGE ? EN_LANGUAGE : PT_BR_LANGUAGE;
   return {
-    ...base,
+    ...createListingMetadata(language),
     alternates: {
       languages: {
         en: `${BASE_URL}/en/blog`,

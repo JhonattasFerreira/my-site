@@ -1,4 +1,4 @@
-import getPostMetadata from "@/utils/getPostMetadata";
+import getPostMetadata from "@/utils/post/getPostMetadata";
 import {
   CONTENT_FOLDER,
   EN_LANGUAGE,

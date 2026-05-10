@@ -4,7 +4,7 @@ import ImageBlock from "@/components/Image";
 import CodeBlock from "@/components/CodeBlock";
 import LinkTag from "@/components/LinkTag";
 import Comments from "@/components/Comments";
-import getReadingTime from "@/utils/getReadingTime";
+import getReadingTime from "@/utils/post/getReadingTime";
 import type { Lang, PostFrontmatter as PostFrontmatterType } from "@/types";
 
 type Props = {

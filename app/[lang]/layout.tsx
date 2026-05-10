@@ -1,14 +1,5 @@
 import "../globals.css";
-import { Raleway } from "next/font/google";
-import AnalyticsProviders from "@/components/AnalyticsProviders";
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway",
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+import RootShell from "../RootShell";
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "pt-br" }];
@@ -21,15 +12,5 @@ type Props = {
 
 export default async function LangLayout({ children, params }: Props) {
   const { lang } = await params;
-  return (
-    <html lang={lang}>
-      <body className={raleway.className}>
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        {children}
-        <AnalyticsProviders />
-      </body>
-    </html>
-  );
+  return <RootShell lang={lang}>{children}</RootShell>;
 }

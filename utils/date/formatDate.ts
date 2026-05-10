@@ -1,5 +1,5 @@
 import type { Lang } from "@/types";
-import { EN_LANGUAGE } from "./constants";
+import { EN_LANGUAGE } from "@/utils/constants";
 
 const months: Record<Lang, string[]> = {
   "pt-br": [

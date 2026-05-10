@@ -1,16 +1,15 @@
-import getPostMetadata from "@/utils/getPostMetadata";
+import getPostMetadata from "@/utils/post/getPostMetadata";
 import LayoutPost from "@/components/LayoutPost";
 import {
   CONTENT_FOLDER,
   EN_LANGUAGE,
   PT_BR_LANGUAGE,
-  FILENAME_END_EN,
-  FILENAME_END_PT_BR,
   TITLE_METADATA_POST_SUFIX,
   BASE_URL,
   SITE_NAME,
 } from "@/utils/constants";
-import getPostContent from "@/utils/getPostContent";
+import getPostContent from "@/utils/post/getPostContent";
+import getOppositeFilenameSuffix from "@/utils/post/getOppositeFilenameSuffix";
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
@@ -27,8 +26,8 @@ export const generateStaticParams = async () => {
 export async function generateMetadata({ params }: Props) {
   const { lang, slug } = await params;
   const isEn = lang === EN_LANGUAGE;
-  const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;
-  const { data, oppositeUrl } = getPostContent(slug, filenameEnd);
+  const language = isEn ? EN_LANGUAGE : PT_BR_LANGUAGE;
+  const { data, oppositeUrl } = getPostContent(slug, getOppositeFilenameSuffix(language));
   const title = `${data.title}${TITLE_METADATA_POST_SUFIX}`;
   return {
     title,
@@ -53,8 +52,8 @@ export async function generateMetadata({ params }: Props) {
 const Post = async ({ params }: Props) => {
   const { lang, slug } = await params;
   const isEn = lang === EN_LANGUAGE;
-  const filenameEnd = isEn ? FILENAME_END_PT_BR : FILENAME_END_EN;
   const language = isEn ? EN_LANGUAGE : PT_BR_LANGUAGE;
+  const filenameEnd = getOppositeFilenameSuffix(language);
   const { data, content, oppositeUrl } = getPostContent(slug, filenameEnd);
 
   return (

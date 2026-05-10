@@ -1,9 +1,10 @@
 import NextImage from "next/image";
 import IframeP5 from "@/components/IframeP5";
+import { P5_EXAMPLES_PATH } from "@/utils/constants";
 
 type Props = { src?: string | Blob; alt?: string };
 
-const isP5js = (srcPath: string) => srcPath.includes("p5Examples");
+const isP5js = (srcPath: string) => srcPath.includes(P5_EXAMPLES_PATH);
 
 const ImageBlock = ({ alt = "", src }: Props) => {
   const srcStr = typeof src === "string" ? src : "";

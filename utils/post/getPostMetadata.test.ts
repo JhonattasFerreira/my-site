@@ -21,28 +21,28 @@ const mockPosts: Record<string, { filename: string; content: string; data: { tit
   },
 };
 
-const mockReaddirSync = vi.mocked(fs.readdirSync) as unknown as ReturnType<typeof vi.fn>;
-const mockReadFileSync = vi.mocked(fs.readFileSync) as unknown as ReturnType<typeof vi.fn>;
-const mockMatter = vi.mocked(matter) as unknown as ReturnType<typeof vi.fn>;
+const mockReaddirSync = vi.mocked(fs.readdirSync);
+const mockReadFileSync = vi.mocked(fs.readFileSync);
+const mockMatter = vi.mocked(matter);
 
 beforeEach(() => {
   vi.resetAllMocks();
 
-  mockReaddirSync.mockImplementation((path: string) => {
+  mockReaddirSync.mockImplementation(((path: string) => {
     if (path === "content/posts/") return Object.keys(mockPosts);
     const folder = path.replace("content/posts/", "").replace("/", "");
     return mockPosts[folder] ? [mockPosts[folder].filename] : [];
-  });
+  }) as typeof fs.readdirSync);
 
-  mockReadFileSync.mockImplementation((path: string) => {
+  mockReadFileSync.mockImplementation(((path: string) => {
     const folder = Object.keys(mockPosts).find((key) => path.includes(key));
     return folder ? mockPosts[folder].content : "";
-  });
+  }) as typeof fs.readFileSync);
 
-  mockMatter.mockImplementation((content: string) => {
+  mockMatter.mockImplementation(((content: string) => {
     const post = Object.values(mockPosts).find((p) => p.content === content);
     return { data: post?.data ?? {} };
-  });
+  }) as unknown as typeof matter);
 });
 
 describe("getPostMetadata", () => {
@@ -68,12 +68,12 @@ describe("getPostMetadata", () => {
   });
 
   it("skips posts that have no file for the requested language", () => {
-    mockReaddirSync.mockImplementation((path: string) => {
+    mockReaddirSync.mockImplementation(((path: string) => {
       if (path === "content/posts/") return ["post-one", "pt-only-post"];
       if (path === "content/posts/post-one/") return ["post-one.en.md"];
       if (path === "content/posts/pt-only-post/") return ["pt-only-post.pt-br.md"];
       return [];
-    });
+    }) as typeof fs.readdirSync);
     const result = getPostMetadata("content/posts", "en");
     expect(result.length).toBe(1);
     expect(result[0].slug).toBe("post-one");

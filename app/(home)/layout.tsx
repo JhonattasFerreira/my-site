@@ -1,14 +1,5 @@
 import "../globals.css";
-import { Raleway } from "next/font/google";
-import AnalyticsProviders from "@/components/AnalyticsProviders";
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway",
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+import RootShell from "../RootShell";
 
 export const metadata = {
   title: "Jhonattas Ferreira | JhoCore",
@@ -30,15 +21,10 @@ type Props = { children: React.ReactNode };
 export default function HomeLayout({ children }: Props) {
   // overflow: hidden must be on html/body, not just .container —
   // the shake animation translates the container beyond the viewport.
+  const overflowHidden = { overflow: "hidden" } as const;
   return (
-    <html lang="en" style={{ overflow: "hidden" }}>
-      <body className={raleway.className} style={{ overflow: "hidden" }}>
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        {children}
-        <AnalyticsProviders />
-      </body>
-    </html>
+    <RootShell lang="en" htmlStyle={overflowHidden} bodyStyle={overflowHidden}>
+      {children}
+    </RootShell>
   );
 }

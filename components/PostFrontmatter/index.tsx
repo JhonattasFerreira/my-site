@@ -1,6 +1,6 @@
 import NavItem from "../NavItem";
 import Link from "next/link";
-import formatDate from "@/utils/formatDate";
+import formatDate from "@/utils/date/formatDate";
 import styles from "./PostFrontmatter.module.css";
 import SocialFooter from "@/components/SocialFooter";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";

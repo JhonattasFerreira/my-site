@@ -8,40 +8,39 @@ const CONTENT_FOLDER = "content/posts";
 const BASE_URL = "https://jhocore.com";
 const SITE_NAME = "JhoCore";
 
-const LISTING_POSTS_METADATA_EN = {
-  title: "All Posts | JhoCore",
-  description:
-    "Articles about software engineering, programming and creative coding.",
-  openGraph: {
+const LISTING_METADATA = {
+  en: {
     title: "All Posts | JhoCore",
-    description:
-      "Articles about software engineering, programming and creative coding.",
-    url: `${BASE_URL}/en/blog`,
-    siteName: SITE_NAME,
+    description: "Articles about software engineering, programming and creative coding.",
     locale: "en_US",
-    type: "website",
   },
-};
-
-const LISTING_POSTS_METADATA_PT_BR = {
-  title: "Todos os Posts | JhoCore",
-  description:
-    "Artigos sobre engenharia de software, programação e creative coding.",
-  openGraph: {
+  "pt-br": {
     title: "Todos os Posts | JhoCore",
-    description:
-      "Artigos sobre engenharia de software, programação e creative coding.",
-    url: `${BASE_URL}/pt-br/blog`,
-    siteName: SITE_NAME,
+    description: "Artigos sobre engenharia de software, programação e creative coding.",
     locale: "pt_BR",
-    type: "website",
   },
-};
+} as const;
+
+function createListingMetadata(lang: Lang) {
+  const { title, description, locale } = LISTING_METADATA[lang];
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/blog`,
+      siteName: SITE_NAME,
+      locale,
+      type: "website",
+    },
+  };
+}
+
+const P5_EXAMPLES_PATH = "p5Examples";
 
 const TITLE_EN = "Last Blog Posts";
 const TITLE_PT_BR = "Últimas Postagens";
-
-const ENCODING_UTF8: BufferEncoding = "utf8";
 
 const FILENAME_END_EN = ".en.md";
 const FILENAME_END_PT_BR = ".pt-br.md";
@@ -54,12 +53,11 @@ export {
   CONTENT_FOLDER,
   BASE_URL,
   SITE_NAME,
-  LISTING_POSTS_METADATA_EN,
-  LISTING_POSTS_METADATA_PT_BR,
+  createListingMetadata,
   TITLE_EN,
   TITLE_PT_BR,
   FILENAME_END_EN,
   FILENAME_END_PT_BR,
   TITLE_METADATA_POST_SUFIX,
-  ENCODING_UTF8,
+  P5_EXAMPLES_PATH,
 };

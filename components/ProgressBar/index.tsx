@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./progressBar.module.css";
+import useScrollProgress from "./useScrollProgress";
 
 const VINE_PATH =
   "M 0,14 C 70,3 150,24 250,11 C 340,1 430,23 540,13 C 640,5 730,25 850,11 C 950,2 1060,22 1200,14";
@@ -17,30 +18,14 @@ const LEAVES = [
 ];
 
 const ProgressBar = () => {
-  const [progress, setProgress] = useState(0);
+  const { progress, scrolled } = useScrollProgress();
   const [pathLength, setPathLength] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
   const pathRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
     if (pathRef.current && typeof pathRef.current.getTotalLength === "function") {
       setPathLength(pathRef.current.getTotalLength());
     }
-
-    const calcProgress = () => {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      return docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-    };
-
-    setProgress(calcProgress());
-
-    const update = () => {
-      setScrolled(true);
-      setProgress(calcProgress());
-    };
-
-    window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
   }, []);
 
   const dashOffset =
