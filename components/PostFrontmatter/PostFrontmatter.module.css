@@ -16,7 +16,9 @@
 }
 
 .mainContent {
-  width: 80%;
+  width: 90%;
+  max-width: 75ch;
+  margin: 0 auto;
   font-size: clamp(1.1rem, 1.5vw, 1.4rem);
 }
 
@@ -70,11 +72,12 @@
 
 .gifSection {
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
   min-height: 300px;
 }
 
 .post {
-  line-height: 155%;
+  line-height: 1.75;
 }
 
 .footer {
@@ -90,11 +93,74 @@
   padding-right: 1rem;
 }
 
-@media (min-width: 600px) and (max-width: 961px) {
-  .mainContent {
-    width: 75%;
-  }
+.post h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-accent-muted);
+  padding-bottom: 0.3rem;
+}
 
+.post h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post p {
+  margin-bottom: 1.25rem;
+}
+
+.post ul,
+.post ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.post li {
+  margin-bottom: 0.4rem;
+}
+
+.post blockquote {
+  border-left: 3px solid var(--color-accent-muted);
+  padding-left: 1rem;
+  margin-left: 0;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.post hr {
+  border: none;
+  border-top: 1px solid var(--color-accent-muted);
+  margin: 2rem 0;
+  opacity: 0.4;
+}
+
+.post strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.post table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.post th,
+.post td {
+  border: 1px solid var(--color-accent-muted);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.post th {
+  background-color: rgba(92, 131, 116, 0.15);
+  font-weight: 700;
+}
+
+@media (min-width: 600px) and (max-width: 961px) {
   .options {
     padding-top: 1rem;
   }
@@ -106,10 +172,6 @@
 }
 
 @media (min-width: 962px) {
-  .mainContent {
-    width: 59%;
-  }
-
   .options {
     padding-top: 0.9rem;
   }
