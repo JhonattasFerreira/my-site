@@ -3,7 +3,7 @@ import styles from "./listing.module.css";
 import NavItem from "@/components/NavItem";
 import formatDate from "@/utils/formatDate";
 import { TITLE_EN, TITLE_PT_BR, EN_LANGUAGE } from "@/utils/constants";
-import NextImage from "next/image";
+import GifCard from "@/components/GifCard";
 import type { Lang, PostMetadata } from "@/types";
 
 type Props = { postMetadata: PostMetadata[]; language: Lang };
@@ -49,15 +49,11 @@ const ListingBlogPosts = ({ posts, language }: ListingProps) => {
       {posts.map((post, index) => (
         <article key={post.slug} className={styles.articleBox}>
           <Link href={"/" + language + "/blog/" + post.slug}>
-            <NextImage
-              width={0}
-              height={0}
+            <GifCard
               src={post.gif}
               alt={post.altTextGif}
-              className={styles.gif}
               priority={index === 0}
               loading={index === 0 ? "eager" : "lazy"}
-              unoptimized={true}
             />
             <div className={styles.articleContent}>
               <p className={styles.articleTitleText}>{post.title}</p>

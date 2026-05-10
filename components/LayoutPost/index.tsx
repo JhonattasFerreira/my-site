@@ -3,6 +3,7 @@ import PostFrontmatter from "@/components/PostFrontmatter";
 import ImageBlock from "@/components/Image";
 import CodeBlock from "@/components/CodeBlock";
 import LinkTag from "@/components/LinkTag";
+import getReadingTime from "@/utils/getReadingTime";
 import type { Lang, PostFrontmatter as PostFrontmatterType } from "@/types";
 
 type Props = {
@@ -13,6 +14,8 @@ type Props = {
 };
 
 const LayoutPost = ({ content, frontmatter, language, oppositeUrl }: Props) => {
+  const readingTime = getReadingTime(content);
+
   return (
     <PostFrontmatter
       title={frontmatter.title}
@@ -22,6 +25,7 @@ const LayoutPost = ({ content, frontmatter, language, oppositeUrl }: Props) => {
       gif={frontmatter.gif}
       altTextGif={frontmatter.altTextGif}
       description={frontmatter.description}
+      readingTime={readingTime}
     >
       <ReactMarkdown
         components={{

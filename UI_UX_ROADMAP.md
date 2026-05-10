@@ -25,10 +25,10 @@ Diagnóstico gerado em 2026-05-08. Atualizar o status (`[ ]` → `[x]`) conforme
 
 ### Tier 2 — Impacto alto, esforço médio
 
-- [ ] **Table of Contents (ToC)** — Posts longos (`vectors-everywhere`, `a-random-walker`) não têm âncoras de navegação interna. Gerar automaticamente a partir dos headings do Markdown.
-- [ ] **Tempo estimado de leitura** — Calcular `palavras ÷ 200`. Exibir no cabeçalho do post junto à data. Define expectativa antes de o leitor começar.
-- [ ] **Link explícito "Voltar para o blog"** — Após ler um post, não há caminho visual explícito de retorno. Adicionar no `PostFrontmatter` ou no rodapé do post.
-- [ ] **Skeleton/placeholder para GIFs na listagem** — Em conexões lentas, os cards ficam sem conteúdo visual por mais tempo. Adicionar um placeholder de cor com proporção correta.
+- [~] **Table of Contents (ToC)** — Descartado: complexidade alta para o volume atual de posts. Pode ser reavaliado no futuro.
+- [x] **Tempo estimado de leitura** — Calculado via `palavras ÷ 200`. Exibido no cabeçalho do post junto à data, em linha separada do badge de idioma.
+- [~] **Link explícito "Voltar para o blog"** — Descartado: o link "Blog" no topo do post já cumpre essa função.
+- [x] **Skeleton/placeholder para GIFs na listagem** — Shimmer animado exibido enquanto o GIF carrega, com transição suave para a imagem.
 
 ### Tier 3 — Impacto médio, esforço médio/alto
 
@@ -54,5 +54,7 @@ Diagnóstico gerado em 2026-05-08. Atualizar o status (`[ ]` → `[x]`) conforme
 | 2026-05-08 | Font-size mínimo mobile (`0.75rem` → `1rem`) | branch `ui-ux/tier-1` |
 | 2026-05-08 | Breadcrumb `Blog › Título` nos posts | branch `ui-ux/tier-1` |
 | 2026-05-08 | Badge pill com flag na troca de idioma | branch `ui-ux/tier-1` |
+| 2026-05-09 | Tempo estimado de leitura (`palavras ÷ 200`) no cabeçalho do post | branch `main` |
+| 2026-05-09 | Skeleton shimmer nos GIFs da listagem com transição suave | branch `main` |
 
 > Atualizar esta tabela com o link do PR ou hash do commit a cada item concluído.

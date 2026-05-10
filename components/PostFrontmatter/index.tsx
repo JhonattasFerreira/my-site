@@ -10,6 +10,7 @@ import type { Lang, PostFrontmatter } from "@/types";
 type Props = PostFrontmatter & {
   language: Lang;
   oppositeUrl: string;
+  readingTime: number;
   children: React.ReactNode;
 };
 
@@ -18,6 +19,7 @@ type TitleProps = {
   date: string;
   language: Lang;
   oppositeUrl: string;
+  readingTime: number;
 };
 
 const PostFrontmatterLayout = ({
@@ -28,6 +30,7 @@ const PostFrontmatterLayout = ({
   oppositeUrl,
   gif,
   altTextGif,
+  readingTime,
 }: Props) => {
   return (
     <div className={styles.container}>
@@ -41,6 +44,7 @@ const PostFrontmatterLayout = ({
             date={date}
             language={language}
             oppositeUrl={oppositeUrl}
+            readingTime={readingTime}
           />
           <section className={styles.gifSection}>
             <ImageBlock src={gif} alt={altTextGif} />
@@ -53,12 +57,21 @@ const PostFrontmatterLayout = ({
   );
 };
 
-const Title = ({ title, date, language, oppositeUrl }: TitleProps) => {
+const Title = ({ title, date, language, oppositeUrl, readingTime }: TitleProps) => {
+  const readingLabel =
+    language === EN_LANGUAGE
+      ? `${readingTime} min read`
+      : `${readingTime} min de leitura`;
+
   return (
     <>
       <h1 className={styles.title}>{title}</h1>
       <section className={styles.options}>
-        <time dateTime={date}>{formatDate(date, language)}</time>
+        <div className={styles.meta}>
+          <time dateTime={date}>{formatDate(date, language)}</time>
+          <span className={styles.separator}>·</span>
+          <span>{readingLabel}</span>
+        </div>
         {language === EN_LANGUAGE ? (
           <Link
             aria-label="Change to Brazilian Portuguese"
