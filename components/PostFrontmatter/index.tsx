@@ -5,6 +5,7 @@ import styles from "./PostFrontmatter.module.css";
 import SocialFooter from "@/components/SocialFooter";
 import { EN_LANGUAGE, PT_BR_LANGUAGE } from "@/utils/constants";
 import ImageBlock from "@/components/Image";
+import ProgressBar from "@/components/ProgressBar";
 import type { Lang, PostFrontmatter } from "@/types";
 
 type Props = PostFrontmatter & {
@@ -34,6 +35,7 @@ const PostFrontmatterLayout = ({
 }: Props) => {
   return (
     <div className={styles.container}>
+      <ProgressBar />
       <header>
         <NavItem item={{ name: "Blog", url: `/${language}/blog` }} />
       </header>

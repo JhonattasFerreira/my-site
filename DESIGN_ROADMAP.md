@@ -562,7 +562,7 @@ Adicionar seta no canto do `articleContent` no hover (via pseudo-elemento ou íc
 
 ## Parte 6 — Progress Bar de Leitura
 
-**Status:** `[ ] pendente`  
+**Status:** `[x] concluída`  
 **Depende de:** Parte 1.
 
 ### Objetivo
@@ -688,4 +688,4 @@ As Partes 3, 4, 5 e 6 dependem apenas da Parte 1 (tokens) e podem ser feitas em 
 - [x] Parte 3 — Tipografia Fluida
 - [x] Parte 4 — Estilos dos Elementos Markdown
 - [x] Parte 5 — Layout e Cards
-- [ ] Parte 6 — Progress Bar de Leitura
+- [x] Parte 6 — Progress Bar de Leitura
