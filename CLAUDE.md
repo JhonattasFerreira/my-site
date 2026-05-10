@@ -23,6 +23,7 @@ npm run test:coverage # relatório de cobertura
 - **react-syntax-highlighter** — highlight de blocos de código (Prism, carregado com lazy load)
 - **react-icons** — ícones SVG
 - **@vercel/analytics** + **@vercel/speed-insights** — analytics e métricas de performance
+- **@giscus/react** — seção de comentários nos posts via GitHub Discussions
 - **Vitest** — test runner (unit + component tests)
 - **React Testing Library** — component rendering tests (jsdom environment)
 
@@ -101,6 +102,7 @@ O componente `Image` detecta o caminho `p5Examples` e renderiza um `<iframe>` no
 - **`app/robots.ts`** gera o `robots.txt` dinamicamente apontando para o sitemap.
 - **`utils/constants.ts`** centraliza constantes globais: `BASE_URL`, `SITE_NAME`, nomes de idioma, extensões de arquivo Markdown, metadados das páginas de listagem, etc.
 - **`types/index.ts`** centraliza todos os tipos TypeScript do projeto (`Lang`, `PostFrontmatter`, `PostMetadata`, `PostContent`, etc.).
+- **Comentários via Giscus** — `components/Comments` renderiza o widget ao final de cada post. Os comentários são armazenados no GitHub Discussions do repositório (`JhonattasFerreira/my-site`, categoria `Announcements`). O `lang` do widget acompanha o idioma do post. O componente usa `"use client"` e carrega de forma lazy. Seus testes mocam `@giscus/react` com `vi.mock` e inspecionam as props via `vi.mocked(Giscus).mock.calls`.
 
 ## Testes
 
@@ -110,6 +112,3 @@ O componente `Image` detecta o caminho `p5Examples` e renderiza um `<iframe>` no
 - O `CodeBlock` usa `next/dynamic`, então seus testes mocam o módulo inteiro com `vi.mock("next/dynamic")`.
 - Nomes dos `describe` e `it` sempre em inglês.
 
-## Roadmap de UI/UX
-
-O arquivo `UI_UX_ROADMAP.md` na raiz do projeto contém o diagnóstico completo de UI/UX e o checklist priorizado de melhorias. Consultar este arquivo antes de iniciar qualquer tarefa de UI/UX e atualizar o status (`[ ]` → `[x]`) e a tabela de histórico sempre que um item for concluído.

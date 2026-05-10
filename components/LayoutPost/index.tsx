@@ -3,6 +3,7 @@ import PostFrontmatter from "@/components/PostFrontmatter";
 import ImageBlock from "@/components/Image";
 import CodeBlock from "@/components/CodeBlock";
 import LinkTag from "@/components/LinkTag";
+import Comments from "@/components/Comments";
 import getReadingTime from "@/utils/getReadingTime";
 import type { Lang, PostFrontmatter as PostFrontmatterType } from "@/types";
 
@@ -36,6 +37,7 @@ const LayoutPost = ({ content, frontmatter, language, oppositeUrl }: Props) => {
       >
         {content}
       </ReactMarkdown>
+      <Comments lang={language} />
     </PostFrontmatter>
   );
 };

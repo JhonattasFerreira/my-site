@@ -2,7 +2,7 @@
 
 Welcome to the repository of my personal website. Here, you can find my blog posts as well as the overall structure of the blog.
 
-It was developed using React, Next.js, TypeScript, and gray-matter.
+It was developed using React, Next.js, TypeScript, and gray-matter. Comments are powered by [Giscus](https://giscus.app), which uses GitHub Discussions as the backend — no database required.
 
 If you'd like to learn more about how the blog was built, check out the posts where I explain the development process and how it has evolved over time:
 
