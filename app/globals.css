@@ -1,8 +1,25 @@
+:root {
+  --color-bg: #092635;
+  --color-text: #ffffff;
+  --color-accent: #9ec8b9;
+  --color-accent-muted: #5c8374;
+  --color-accent-dark: #1b4242;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-overlay-hover: rgba(0, 0, 0, 1);
+  --color-badge-bg: rgba(92, 131, 116, 0.12);
+  --color-badge-bg-hover: rgba(92, 131, 116, 0.3);
+  --color-badge-border: #5c8374;
+
+  --color-shimmer-start: #1a2a24;
+  --color-shimmer-mid: #243d33;
+  --color-shimmer-peak: #2e5044;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #092635;
+  background-color: var(--color-bg);
   height: 100vh;
   color: white;
 }
@@ -13,7 +30,7 @@ a:visited {
 }
 
 a:hover {
-  color: #9ec8b9;
+  color: var(--color-accent);
 }
 
 /* custom scrollbar */
@@ -26,12 +43,12 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #5c8374;
+  background-color: var(--color-accent-muted);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #1b4242;
+  background-color: var(--color-accent-dark);
 }
