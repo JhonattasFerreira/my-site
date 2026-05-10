@@ -28,4 +28,11 @@ describe("PostFrontmatter", () => {
       expect(screen.getByText(/5 min de leitura/i)).toBeInTheDocument();
     });
   });
+
+  describe("accessibility", () => {
+    it("main element has id for skip link target", () => {
+      render(<PostFrontmatterLayout {...baseProps} />);
+      expect(screen.getByRole("main")).toHaveAttribute("id", "main-content");
+    });
+  });
 });

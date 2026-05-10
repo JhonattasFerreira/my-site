@@ -24,6 +24,9 @@ export default async function LangLayout({ children, params }: Props) {
   return (
     <html lang={lang}>
       <body className={raleway.className}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
         <AnalyticsProviders />
       </body>

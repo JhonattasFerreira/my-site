@@ -8,12 +8,18 @@
 
 .articleBox {
   width: 100%;
-  height: 25vw;
+  height: clamp(160px, 20vw, 300px);
   position: relative;
   overflow: hidden;
   margin-bottom: 4vw;
   display: flex;
   align-items: flex-end;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.articleBox:hover {
+  border-color: var(--color-accent-muted);
 }
 
 .articleBox a {
@@ -27,7 +33,7 @@
   position: relative;
   z-index: 1;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-overlay);
   border-radius: 5px;
   padding: 0.3rem;
   width: calc(100% - 2rem);
@@ -37,16 +43,16 @@
 }
 
 .articleBox a:hover .articleContent {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: var(--color-overlay-hover);
 }
 
 .articleTitleText {
-  font-size: 1rem;
+  font-size: clamp(1.1rem, 2.2vw, 2.5rem);
   margin: 0;
 }
 
 .articleDate {
-  font-size: 0.75rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   margin: 0;
 }
 
@@ -57,18 +63,18 @@
 }
 
 .titleName {
-  font-size: 10vw;
+  font-size: clamp(2rem, 6vw, 4rem);
   margin: 0;
 }
 
 .title a {
-  font-size: 12pt;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   padding-top: 1.3vh;
 }
 
 .title a:hover .languageBadge {
-  background: rgba(92, 131, 116, 0.3);
-  border-color: #9ec8b9;
+  background: var(--color-badge-bg-hover);
+  border-color: var(--color-accent);
 }
 
 .languageBadge {
@@ -76,9 +82,9 @@
   align-items: center;
   gap: 0.25rem;
   padding: 0.1rem 0.4rem;
-  border: 1px solid #5c8374;
+  border: 1px solid var(--color-badge-border);
   border-radius: 9999px;
-  background: rgba(92, 131, 116, 0.12);
+  background: var(--color-badge-bg);
   font-size: 0.85em;
   font-style: normal;
   white-space: nowrap;
@@ -86,64 +92,10 @@
 }
 
 .listBlogPosts {
-  padding-top: 9vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3vw;
+  padding-top: clamp(4rem, 9vh, 8rem);
   display: flex;
   flex-direction: column;
-  margin: 0 3vw;
-}
-
-@media (min-width: 600px) and (max-width: 961px) {
-  .articleBox {
-    width: 100%;
-    height: 20vw;
-  }
-
-  .articleTitleText {
-    font-size: 2rem;
-  }
-
-  .articleDate {
-    font-size: 1rem;
-  }
-
-  .titleName {
-    font-size: 7vw;
-  }
-
-  .listBlogPosts {
-    padding-top: 9vh;
-    margin: 0 6vw;
-  }
-
-  .title a {
-    font-size: 13pt;
-  }
-}
-
-@media (min-width: 962px) {
-  .articleBox {
-    width: 100%;
-    height: 15vw;
-  }
-
-  .articleTitleText {
-    font-size: 2.5rem;
-  }
-
-  .articleDate {
-    font-size: 1rem;
-  }
-
-  .titleName {
-    font-size: 4.5vw;
-  }
-
-  .listBlogPosts {
-    padding-top: 13vh;
-    margin: 0 15vw;
-  }
-
-  .title a {
-    font-size: 13.5pt;
-  }
 }

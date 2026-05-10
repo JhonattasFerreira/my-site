@@ -28,11 +28,11 @@ a:hover .gifLoaded {
   inset: 0;
   background: linear-gradient(
     90deg,
-    #1a2a24 0%,
-    #243d33 40%,
-    #2e5044 50%,
-    #243d33 60%,
-    #1a2a24 100%
+    var(--color-shimmer-start) 0%,
+    var(--color-shimmer-mid) 40%,
+    var(--color-shimmer-peak) 50%,
+    var(--color-shimmer-mid) 60%,
+    var(--color-shimmer-start) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.6s infinite linear;

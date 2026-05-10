@@ -4,7 +4,7 @@
   justify-content: flex-end;
   padding-right: 2vw;
   padding-top: 1vh;
-  font-size: 5vw;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
 }
 
 .nav a {
@@ -12,17 +12,5 @@
 }
 
 .nav a:hover {
-  color: #9ec8b9;
-}
-
-@media (min-width: 600px) and (max-width: 961px) {
-  .nav {
-    font-size: 4vw;
-  }
-}
-
-@media (min-width: 962px) {
-  .nav {
-    font-size: 2.7vw;
-  }
+  color: var(--color-accent);
 }

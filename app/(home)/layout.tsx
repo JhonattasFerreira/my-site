@@ -28,9 +28,14 @@ export const metadata = {
 type Props = { children: React.ReactNode };
 
 export default function HomeLayout({ children }: Props) {
+  // overflow: hidden must be on html/body, not just .container —
+  // the shake animation translates the container beyond the viewport.
   return (
     <html lang="en" style={{ overflow: "hidden" }}>
       <body className={raleway.className} style={{ overflow: "hidden" }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
         <AnalyticsProviders />
       </body>
