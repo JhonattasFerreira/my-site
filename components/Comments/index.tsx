@@ -8,7 +8,7 @@ type Props = {
 };
 
 const GISCUS_LANG_MAP: Record<string, string> = {
-  "pt-br": "pt-BR",
+  "pt-br": "pt",
 };
 
 const Comments = ({ lang }: Props) => {
