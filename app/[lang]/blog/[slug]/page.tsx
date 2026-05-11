@@ -13,6 +13,8 @@ import getOppositeFilenameSuffix from "@/utils/post/getOppositeFilenameSuffix";
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
+export const dynamicParams = false;
+
 export const generateStaticParams = async () => {
   const enPosts = getPostMetadata(CONTENT_FOLDER, EN_LANGUAGE);
   const ptPosts = getPostMetadata(CONTENT_FOLDER, PT_BR_LANGUAGE);
