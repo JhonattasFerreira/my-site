@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "../home.module.css";
 import NavItem from "@/components/NavItem";
 import Link from "next/link";
@@ -34,6 +34,24 @@ export default function Home() {
     ballSize,
   } = useHomeAnimation(rectangleRef, navRef);
 
+  const [trembleIntensity, setTrembleIntensity] = useState(0);
+
+  const ACTIVATION_RADIUS = 250;
+  const MAX_TREMBLE_PX = 5;
+  const MIN_DURATION = 0.1;
+  const BASE_DURATION = 0.35;
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ballsTrembling || !navRef.current) return;
+    const rect = navRef.current.getBoundingClientRect();
+    const dx = Math.max(rect.left - e.clientX, 0, e.clientX - rect.right);
+    const dy = Math.max(rect.top - e.clientY, 0, e.clientY - rect.bottom);
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    setTrembleIntensity(Math.max(0, 1 - distance / ACTIVATION_RADIUS));
+  };
+
+  const handleMouseLeave = () => setTrembleIntensity(0);
+
   const isRectFloating = (["resting", "approaching", "grabbing", "lifting"] as Phase[]).includes(phase);
   const isLifting = phase === "lifting";
 
@@ -41,6 +59,8 @@ export default function Home() {
     <div
       className={`${styles.container}${phase === "shaking" ? ` ${styles.containerShaking}` : ""}`}
       onAnimationEnd={phase === "shaking" ? () => setPhase("resting") : undefined}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
     >
       <header ref={headerRef}>
         <div ref={navRef}>
@@ -104,7 +124,7 @@ export default function Home() {
             className={[
               styles.ball,
               ballsJumping ? styles.ballJumping : "",
-              ballsTrembling ? styles.ballTrembling : "",
+              trembleIntensity > 0 && ballsTrembling ? styles.ballProximity : ballsTrembling ? styles.ballTrembling : "",
             ].join(" ")}
             style={{
               left: ballPositions[i].left,
@@ -119,7 +139,9 @@ export default function Home() {
                   ? "left 3s ease-in-out, top 3s ease-in-out, opacity 0.6s ease-out"
                   : "left 2.2s ease-in-out, top 2.2s ease-in-out, opacity 0.6s ease-out",
               animationDelay: ballsTrembling ? ball.trembleDelay : undefined,
-            }}
+              "--td": `${trembleIntensity * MAX_TREMBLE_PX}px`,
+              "--td-duration": `${BASE_DURATION - trembleIntensity * (BASE_DURATION - MIN_DURATION)}s`,
+            } as React.CSSProperties}
           >
             <div className={styles.ballEye} />
             <div className={styles.ballEye} />
