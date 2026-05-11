@@ -58,6 +58,21 @@
   display: flex;
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.013); }
+}
+
+.breathe {
+  display: inline-block;
+  transform-origin: left center;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.breathe:hover {
+  animation-duration: 1.8s;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
@@ -172,7 +187,8 @@
   }
 
   .ballTrembling,
-  .ballJumping {
+  .ballJumping,
+  .breathe {
     animation: none;
   }
 }

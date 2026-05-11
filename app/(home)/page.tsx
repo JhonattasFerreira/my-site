@@ -50,7 +50,7 @@ export default function Home() {
 
       <main id="main-content" className={styles.mainContent}>
         <h1 className={`${styles.title} ${jersey_10.className}`}>
-          <span>&gt; Jhonattas;</span>
+          <span className={styles.breathe}>&gt; Jhonattas;</span>
           <span className={styles.cursor}>
             &gt; I&apos;m a Software Engineer
             {phase === "idle" && (
