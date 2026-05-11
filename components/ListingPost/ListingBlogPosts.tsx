@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./listing.module.css";
 import formatDate from "@/utils/date/formatDate";
 import GifCard from "@/components/GifCard";
+import TiltCard from "@/components/TiltCard";
 import type { Lang, PostMetadata } from "@/types";
 
 type Props = { posts: PostMetadata[]; language: Lang };
@@ -10,7 +11,7 @@ const ListingBlogPosts = ({ posts, language }: Props) => {
   return (
     <div className={styles.listBlogPosts}>
       {posts.map((post, index) => (
-        <article key={post.slug} className={styles.articleBox}>
+        <TiltCard key={post.slug} articleClassName={styles.articleBox}>
           <Link href={"/" + language + "/blog/" + post.slug}>
             <GifCard
               src={post.gif}
@@ -27,7 +28,7 @@ const ListingBlogPosts = ({ posts, language }: Props) => {
               </em>
             </div>
           </Link>
-        </article>
+        </TiltCard>
       ))}
     </div>
   );

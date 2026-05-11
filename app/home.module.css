@@ -58,6 +58,21 @@
   display: flex;
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.013); }
+}
+
+.breathe {
+  display: inline-block;
+  transform-origin: left center;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.breathe:hover {
+  animation-duration: 1.8s;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
@@ -132,6 +147,17 @@
   100% { transform: translate(0,    0); }
 }
 
+@keyframes trembleProximity {
+  0%   { transform: translate(0, 0); }
+  15%  { transform: translate(calc(-1    * var(--td)), calc( 0.75 * var(--td))); }
+  30%  { transform: translate(calc( 1    * var(--td)), calc(-0.75 * var(--td))); }
+  45%  { transform: translate(calc(-0.75 * var(--td)), calc(-1    * var(--td))); }
+  60%  { transform: translate(calc( 1    * var(--td)), calc( 0.5  * var(--td))); }
+  75%  { transform: translate(calc(-0.5  * var(--td)), calc( 1    * var(--td))); }
+  90%  { transform: translate(calc( 0.75 * var(--td)), calc(-0.5  * var(--td))); }
+  100% { transform: translate(0, 0); }
+}
+
 .ball {
   position: fixed;
   border-radius: 50%;
@@ -144,6 +170,10 @@
 
 .ballTrembling {
   animation: tremble 0.4s ease-in-out infinite;
+}
+
+.ballProximity {
+  animation: trembleProximity var(--td-duration) ease-in-out infinite;
 }
 
 .ballEye {
@@ -172,7 +202,9 @@
   }
 
   .ballTrembling,
-  .ballJumping {
+  .ballJumping,
+  .ballProximity,
+  .breathe {
     animation: none;
   }
 }
