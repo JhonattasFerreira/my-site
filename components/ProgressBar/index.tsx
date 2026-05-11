@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./progressBar.module.css";
 import useScrollProgress from "./useScrollProgress";
+import LeafRain from "@/components/LeafRain";
 
 const VINE_PATH =
   "M 0,14 C 70,3 150,24 250,11 C 340,1 430,23 540,13 C 640,5 730,25 850,11 C 950,2 1060,22 1200,14";
@@ -20,7 +21,16 @@ const LEAVES = [
 const ProgressBar = () => {
   const { progress, scrolled } = useScrollProgress();
   const [pathLength, setPathLength] = useState(0);
+  const [showLeaves, setShowLeaves] = useState(false);
+  const celebrated = useRef(false);
   const pathRef = useRef<SVGPathElement>(null);
+
+  useEffect(() => {
+    if (progress >= 100 && !celebrated.current) {
+      celebrated.current = true;
+      setShowLeaves(true);
+    }
+  }, [progress]);
 
   useEffect(() => {
     if (pathRef.current && typeof pathRef.current.getTotalLength === "function") {
@@ -32,6 +42,8 @@ const ProgressBar = () => {
     pathLength > 0 ? pathLength * (1 - progress / 100) : undefined;
 
   return (
+    <>
+    {showLeaves && <LeafRain onDone={() => setShowLeaves(false)} />}
     <svg
       className={styles.vine}
       viewBox="0 0 1200 28"
@@ -65,6 +77,7 @@ const ProgressBar = () => {
         </g>
       ))}
     </svg>
+    </>
   );
 };
 
