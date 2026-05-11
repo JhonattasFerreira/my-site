@@ -7,7 +7,13 @@ type Props = {
   lang: Lang;
 };
 
+const GISCUS_LANG_MAP: Record<string, string> = {
+  "pt-br": "pt-BR",
+};
+
 const Comments = ({ lang }: Props) => {
+  const giscusLang = GISCUS_LANG_MAP[lang] ?? lang;
+
   return (
     <Giscus
       repo="JhonattasFerreira/my-site"
@@ -20,7 +26,7 @@ const Comments = ({ lang }: Props) => {
       emitMetadata="0"
       inputPosition="bottom"
       theme="preferred_color_scheme"
-      lang={lang}
+      lang={giscusLang}
       loading="lazy"
     />
   );

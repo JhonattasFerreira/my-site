@@ -36,9 +36,14 @@ describe("Comments", () => {
     expect(getLastProps()).toMatchObject({ mapping: "pathname" });
   });
 
-  it("passes the lang prop to Giscus", () => {
+  it("maps pt-br to pt-BR when passing lang to Giscus", () => {
     render(<Comments lang="pt-br" />);
-    expect(getLastProps()).toMatchObject({ lang: "pt-br" });
+    expect(getLastProps()).toMatchObject({ lang: "pt-BR" });
+  });
+
+  it("passes en lang unchanged to Giscus", () => {
+    render(<Comments lang="en" />);
+    expect(getLastProps()).toMatchObject({ lang: "en" });
   });
 
   it("loads comments lazily", () => {
