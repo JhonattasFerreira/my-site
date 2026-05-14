@@ -5,14 +5,14 @@ test.describe("Blog listing", () => {
     await page.goto("/en/blog");
     const articles = page.locator("article");
     await expect(articles.first()).toBeVisible();
-    await expect(articles).toHaveCount(9);
+    await expect(articles).toHaveCount(10);
   });
 
   test("PT-BR listing renders posts", async ({ page }) => {
     await page.goto("/pt-br/blog");
     const articles = page.locator("article");
     await expect(articles.first()).toBeVisible();
-    await expect(articles).toHaveCount(9);
+    await expect(articles).toHaveCount(10);
   });
 
   test("EN listing language switch points to PT-BR", async ({ page }) => {
